@@ -1,0 +1,49 @@
+.filtro-componente {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .filtro-componente h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filtro-opciones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    gap: 10px; /* Espacio entre los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  
+  /* Estilos para los componentes hijos (Dropdown, Checkboxx, etc.) */
+  .filtro-opciones > * {
+    flex: 1 1 auto; /* Permite que los elementos crezcan y se ajusten */
+    min-width: 200px; /* Ancho mínimo para cada elemento */
+    max-width: 300px; /* Ancho máximo para cada elemento */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .filtro-opciones {
+      flex-direction: row; /* Cambia a disposición horizontal en pantallas pequeñas */
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+      justify-content: space-between; /* Distribuye el espacio entre los elementos */
+      gap: 10px; /* Espacio entre los elementos */
+      overflow: visible; /* Elimina la barra de desplazamiento */
+    }
+  
+    .filtro-opciones > * {
+      flex: 1 1 calc(33.33% - 20px); /* Ajusta el ancho para 3 columnas */
+      min-width: 150px; /* Ancho mínimo para cada elemento */
+      max-width: none; /* Elimina el ancho máximo */
+    }
+  
+    .filtro-opciones .Checkboxx {
+      order: 1; /* Coloca los Checkboxx al final */
+      width: 100%; /* Ocupa todo el ancho disponible */
+      text-align: center; /* Centra el contenido */
+    }
+  }

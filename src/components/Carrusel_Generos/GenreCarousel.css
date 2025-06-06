@@ -1,0 +1,84 @@
+/* Estilos para PC */
+.genre-carousel {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #1a1a1a;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.genre-item {
+  background-color: #333;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.genre-item:hover {
+  background-color: #646cff;
+  transform: translateY(-5px);
+}
+
+/* Estilos para móvil */
+.mobile-genre-menu {
+  display: none; /* Ocultar en PC */
+}
+
+.mobile-menu-button {
+  background-color: #646cff;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-genre-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.mobile-genre-item {
+  background-color: #333;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-genre-item:hover {
+  background-color: #646cff;
+}
+
+/* Media query para móvil */
+@media (max-width: 768px) {
+  .genre-list {
+    display: none; /* Ocultar lista horizontal en móvil */
+  }
+
+  .mobile-genre-menu {
+    display: block; /* Mostrar menú desplegable en móvil */
+  }
+} 

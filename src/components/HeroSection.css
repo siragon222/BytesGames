@@ -1,0 +1,51 @@
+.hero-section {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 70%), var(--bg-image);
+    background-size: 2000px 660px;
+    background-position: center -5%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10%;
+    padding-top: 10%;
+    color: #ffffff; 
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+  }
+  
+  .hero-button {
+    padding: 10px 20px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 35%), var(--bg-image);
+      background-size: 2000px 660px;
+      background-position: 81% -5%;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 0;
+      padding-top: 16px;
+      text-align: center;
+    }
+  
+    .hero-title {
+      margin-top: 16px;
+    }
+  } 

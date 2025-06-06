@@ -1,0 +1,46 @@
+.genre-list {
+  margin: 20px 0;
+  width: 200px; /* Ancho fijo para el contenedor */
+}
+
+.genre-title-container {
+  border: 2px solid red;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+}
+
+.genre-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: white; /* Texto blanco para contraste */
+}
+
+.generos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.genero {
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.genero:hover {
+  background-color: #f8f8f8;
+}
+
+.genero:last-child {
+  border-bottom: none; /* Eliminar la línea del último género */
+} 

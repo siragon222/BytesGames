@@ -1,0 +1,104 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dropdown-menu {
+  animation: fadeIn 0.3s ease-in-out; /* Aplicar la animación de aparición */
+  position: absolute; /* Asegurar que el menú desplegable esté posicionado correctamente */
+  top: 100%; /* Posicionar debajo del botón "Juegos" */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar el centrado */
+  width: auto; /* Ajustar el ancho automáticamente */
+  min-width: max-content; /* Asegurar que el menú no se reduzca más allá del contenido */
+  background: linear-gradient(135deg, #e3241e, #b91d1a); /* Gradiente de rojo */
+  border: none;
+  box-shadow: none;
+  padding: 20px; /* Padding para la versión de PC */
+  border-radius: 8px; /* Bordes redondeados para la versión de PC */
+  display: flex;
+  flex-direction: row; /* Diseño horizontal para PC */
+  gap: 20px; /* Espacio entre elementos para PC */
+  box-sizing: border-box; /* Incluir padding y border en el ancho */
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0; /* Eliminar el margen inferior para evitar espacios innecesarios */
+  width: auto; /* Ajustar el ancho automáticamente */
+  background-color: transparent; /* Fondo transparente para los elementos */
+}
+
+.dropdown-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 0; /* Eliminar el margen derecho */
+  margin-bottom: 10px; /* Espacio entre la imagen y los subcategorías */
+}
+
+.dropdown-item h3 {
+  margin: 0 0 5px 0; /* Espaciado para el título */
+  font-size: 16px; /* Tamaño de fuente */
+  color: white; /* Asegurar que el texto sea visible */
+}
+
+.subcategories {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  background-color: transparent; /* Fondo transparente para las subcategorías */
+}
+
+.subcategories a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #ffffff; /* Color del texto en blanco */
+  transition: background-color 0.3s ease;
+}
+
+.subcategories a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Estilos específicos para móvil */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    width: 100%; /* Ocupar todo el ancho en móvil */
+    padding: 0; /* Eliminar padding para que los elementos lleguen al borde */
+    border-radius: 0; /* Eliminar bordes redondeados en móvil */
+    flex-direction: column; /* Diseño vertical en móvil */
+    gap: 0; /* Eliminar espacio entre elementos en móvil */
+    align-items: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .dropdown-item {
+    width: 100%; /* Ocupar todo el ancho en móvil */
+    padding: 10px 0; /* Añadir padding vertical para separar los elementos */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde inferior para separar visualmente los elementos */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none; /* Eliminar el borde inferior del último elemento */
+  }
+
+  .subcategories {
+    align-items: center; /* Centrar los subcategorías */
+  }
+
+  .subcategories a {
+    padding: 5px 0; /* Añadir padding vertical para separar los subcategorías */
+    text-align: center; /* Centrar el texto en móvil */
+  }
+
+  .subcategories a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Añadir un fondo al hacer hover en móvil */
+  }
+}

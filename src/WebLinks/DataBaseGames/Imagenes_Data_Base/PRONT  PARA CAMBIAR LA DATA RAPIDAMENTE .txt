@@ -1,0 +1,1 @@
+en esta carpeta hay unas imagenes usas sus nombres para sustituir la info completa las imagenes que hacen falta en la @GameDatabase.jsx  import BurnoutParadise from y la image:

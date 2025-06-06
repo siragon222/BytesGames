@@ -1,0 +1,34 @@
+.hero-slider-container {
+  position: relative;
+  z-index: 1; /* Asegurar que el HeroSlider esté detrás del MetricCard */
+  margin-top: 0; /* Eliminar cualquier margen superior */
+}
+
+/* Asegurarse de que el Header2 tenga un z-index mayor */
+.header2 {
+  position: relative;
+  z-index: 2; /* Asegurar que el Header2 esté por encima del HeroSlider */
+  margin-top: 0; /* Eliminar cualquier margen superior */
+}
+
+main {
+  margin-top: 0; /* Eliminar cualquier margen superior */
+  padding-top: 0; /* Eliminar cualquier padding superior */
+}
+
+.separator {
+  position: relative;
+  z-index: 1; /* Asegurar que el Separator esté detrás del MetricCard */
+}
+
+.featured-games {
+  position: relative;
+  z-index: 1; /* Asegurar que el FeaturedGames esté detrás del MetricCard */
+}
+
+.metric-card-overlay {
+  position: absolute; /* Posición absoluta */
+  top: 600px; /* Ajustar la posición desde la parte superior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+} 
