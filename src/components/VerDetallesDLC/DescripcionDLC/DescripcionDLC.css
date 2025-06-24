@@ -1,0 +1,30 @@
+.descripcion-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.603);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+  background-image: linear-gradient(
+    to bottom right, 
+    rgba(0, 0, 0, 0.308), /* Color inicial (rojo semitransparente) */
+    rgba(255, 0, 0, 0.678)  /* Color final (azul semitransparente) */
+  );
+}
+
+.descripcion-titulo {
+  color: #ffffff; /* Rojo */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.descripcion-contenido {
+  color: #ffffff; /* Blanco */
+  font-size: 16px;
+  line-height: 1.6;
+} 

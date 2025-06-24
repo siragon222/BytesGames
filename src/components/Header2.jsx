@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../assets/logo.svg';
 import DropdownMenu from './DropdownMenu';
 import SearchBar from './SearchBar';
+import Divisas from './Divisas/Divisas';
 import './Header2.css';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +55,10 @@ const Header2 = () => {
             <li><Link to="/nosotros">Nosotros</Link></li>
           </ul>
         </nav>
-        <SearchBar />
+        <div className="header-actions">
+          <SearchBar />
+          <Divisas />
+        </div>
       </div>
     </header>
   );

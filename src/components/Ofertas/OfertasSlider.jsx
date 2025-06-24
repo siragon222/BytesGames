@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Card from '../Card'; // Import the Card component
 import './OfertasSlider.css'; // Import the CSS file
 import './OfertasGames.css'; // Import the OfertasGames CSS file
@@ -17,6 +17,35 @@ const OfertasSlider = () => {
   const swiperRef = useRef(null);
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
+  const sectionRef = useRef(null); // Ref for the section to observe
+  const [isVisible, setIsVisible] = useState(false); // State to control animation, set to false initially for scroll trigger
+
+  // Observa la visibilidad de la sección
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Si la sección es visible, actualiza el estado
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Desconecta el observador una vez que la animación se ha activado
+        }
+      },
+      {
+        threshold: 0.1, // Porcentaje de la sección visible para activar
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Limpia el observador al desmontar el componente
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   // Inicializa Swiper
   useEffect(() => {
@@ -82,7 +111,7 @@ const OfertasSlider = () => {
   };
 
   return (
-    <div className="ofertas-slider-background">
+    <div className={`ofertas-slider-background ${isVisible ? 'animate-visible' : ''}`} ref={sectionRef}>
       <h2 className="slider-title">Últimas Ofertas</h2>
       <div className="slide-container ofertas-slide-container swiper">
         <div className="ofertas-slide-content">
@@ -90,10 +119,15 @@ const OfertasSlider = () => {
             {filteredGames.map((game) => (
               <div key={game.id} className="card swiper-slide">
                 <Card
+                  id={game.id}
                   image={game.image}
                   title={game.title}
-                  platforms={`Plataformas: ${game.platforms}`}
-                  price={`Precio: ${game.price}`}
+                  platforms={game.platforms}
+                  price={game.price}
+                  discount={game.discount}
+                  nuevo={game.nuevo}
+                  playstationPlus={game.PlystationPlus}
+                  stock={game.stock}
                   onButtonClick={() => console.log(`View details for ${game.title}`)}
                 />
               </div>

@@ -9,16 +9,13 @@
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto; /* Ensure body adjusts to content */
   background-color: #ffffff;
 }
 
 .slider-background {
-  height: 30vh;
-  width: 50vw;
+  height: auto; /* Changed from 30vh */
+  width: 100%; /* Changed from 50vw */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -35,7 +32,7 @@ body {
 }
 
 .slide-content {
-  margin: 20px;
+  margin: 0px;
   overflow: hidden;
   border-radius: 25px;
 }
@@ -175,8 +172,9 @@ body {
 .slider-title {
   text-align: center;
   font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  color: #FFF;
+  margin-bottom: 0px;
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -203,10 +201,49 @@ body {
   max-width: 800px !important;
   margin: 0 auto !important;
   width: 100% !important;
+  padding-top: 0px; /* Elimina el padding superior para acercar el slider al título */
+  margin-top: -10px; /* Añade un margen negativo para acercar el slider al título */
+}
+
+/* Animación de entrada desde la derecha */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .ofertas-slider-background {
-  background: none; /* Elimina el fondo solo para este componente */
+  background-color: rgb(255, 0, 0); /* Aplica el color rojo */
   width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-  padding: 25px 25px; /* Añade un pequeño padding para evitar que las cards toquen los bordes */
+  padding: 0px 25px 10px 25px; /* Reduce el padding superior a 0 y mantiene el inferior en 10px */
+  border-radius: 10px; /* Redondea los bordes del contenedor */
+  margin-top: 20px; /* Añade un margen superior para separarlo de otros elementos */
+  margin-bottom: 20px; /* Añade un margen inferior */
+  display: flex; /* Habilita flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 0px; /* Elimina el espacio entre los elementos flex */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), inset 0 0 10px 5px rgba(255, 255, 255, 0.2); /* Sombra externa e interna con gradiente */
+  opacity: 0; /* Asegura que el elemento esté oculto inicialmente */
+  transform: translateX(100%); /* Coloca el elemento fuera de la vista inicialmente */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transición para la aparición suave */
+}
+
+.ofertas-slider-background.animate-visible {
+  animation: slideInRight 1s ease-out forwards; /* Aplica la animación cuando la clase está presente */
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .ofertas-slider-background,
+  .ofertas-slider-background.animate-visible {
+    animation: none; /* Deshabilita la animación en móvil */
+    opacity: 1; /* Asegura que esté visible en móvil sin animación */
+  }
 }

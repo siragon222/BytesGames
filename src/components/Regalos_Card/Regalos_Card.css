@@ -1,0 +1,211 @@
+.regalos-card {
+  display: flex;
+  flex-direction: column;
+  border: none; /* Rely on strong shadows and gradients for definition */
+  border-radius: 15px; /* Rounded, premium feel */
+  overflow: hidden;
+  margin-bottom: 25px;
+  background-color: #1a1a1a; /* Base dark color */
+  background-image: linear-gradient(
+    180deg, /* Top to bottom gradient */
+    rgba(30, 0, 0, 0.8), /* Dark red at top */
+    rgba(10, 10, 10, 0.9) /* Very dark almost black at bottom */
+  );
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8); /* Strong, deep shadow */
+  flex: 1 1 calc(50% - 10px); /* This makes two cards fit per row */
+  transition: all 0.3s ease-out;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.regalos-card:hover {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0.7), /* Brighter red at top on hover */
+    rgba(30, 30, 30, 0.95) /* Darker bottom on hover */
+  );
+  transform: translateY(-10px) scale(1.04); /* More noticeable lift and slight scale */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9); /* Even stronger shadow on hover */
+}
+
+.regalos-card-gift-label {
+  width: 100%;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 8px 0; /* Adjusted padding */
+  font-size: 1.0em; /* Adjusted font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border-bottom: 2px solid #a00000;
+}
+
+.regalos-card-image-container {
+  width: 100%;
+  min-width: unset;
+  height: 220px; /* Increased height for images */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Changed to column to stack label and image */
+  justify-content: flex-start; /* Align items to the start of the cross-axis */
+  align-items: center;
+  border-bottom: 1px solid #333;
+  margin-top: 0; /* No external margin, controlled by flex */
+  position: relative; /* Keep relative for other potential inner positioning if needed */
+}
+
+.regalos-card-image {
+  width: 100%;
+  height: 100%; /* Will take remaining height within flex container */
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.regalos-card:hover .regalos-card-image {
+  filter: brightness(1);
+}
+
+.regalos-card-info {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.regalos-card-title {
+  font-size: 1.7em; /* Balanced title size */
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #fdd5d5;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /* More defined text shadow */
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.regalos-card-platforms,
+.regalos-card-price {
+  display: none; /* Explicitly hide platforms and price */
+}
+
+.regalos-card-button {
+  background: none;
+  border: 2px solid #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: bold;
+  align-self: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Slightly stronger button shadow */
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  position: static;
+  z-index: auto;
+}
+
+.regalos-card-button::before {
+  content: none;
+}
+
+.regalos-card-button:hover {
+  background-color: #ff4500;
+  transform: scale(1.06); /* Slightly more pronounced button scale on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .regalos-card {
+    flex-direction: column;
+    flex: 1 1 100%; /* Take full width on small screens */
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .regalos-card-gift-label {
+    font-size: 1em; /* Adjust font size for mobile */
+    padding: 10px 0;
+  }
+
+  .regalos-card-image-container {
+    height: 200px; /* Increased height for images on small screens */
+    margin-top: 35px; /* Adjust margin for mobile label */
+  }
+
+  .regalos-card-title {
+    font-size: 1.5em;
+  }
+
+  .regalos-card-button {
+    padding: 8px 18px;
+    font-size: 0.9em;
+  }
+
+  /* Horizontal card specific overrides for mobile */
+  .regalos-card--horizontal {
+    flex-direction: column; /* Revert to column on smaller screens */
+    max-width: 85%; /* Adjust max-width for small screens */
+    min-width: unset; /* Remove min-width for small screens */
+    align-self: auto; /* Remove centering when stacked */
+  }
+
+  .regalos-card--horizontal .regalos-card-image-container {
+    height: 200px; /* Increased height for images on small screens */
+    margin-top: 0; /* Ensure no extra margin when label is inside */
+    border-right: none; /* Remove border-right */
+    border-bottom: 1px solid #333; /* Reintroduce bottom border */
+  }
+
+  .regalos-card--horizontal .regalos-card-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .regalos-card--horizontal .regalos-card-title {
+    font-size: 1.5em;
+  }
+
+  .regalos-card--horizontal .regalos-card-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .regalos-card {
+    flex-direction: column; /* Ensure it stays column on very small screens */
+    flex: 1 1 100%; /* Take full width on very small screens */
+    max-width: 95%;
+  }
+
+  .regalos-card-gift-label {
+    font-size: 0.9em;
+    padding: 8px 0;
+  }
+
+  .regalos-card-image-container {
+    height: 180px; /* Increased height for images on very small screens */
+    margin-top: 30px; /* Adjust margin for smaller mobile label */
+  }
+
+  .regalos-card-title {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+  }
+
+  .regalos-card-button {
+    padding: 6px 15px;
+    font-size: 0.8em;
+  }
+}

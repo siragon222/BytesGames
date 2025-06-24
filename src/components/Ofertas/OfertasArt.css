@@ -10,15 +10,47 @@
   }
 }
 
+/* Animación de entrada desde la izquierda */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Estilos para el contenedor */
 .oferta-art-container {
-  animation: slideIn 1s ease-out;
+  /* animation: slideIn 1s ease-out; Removida para ser aplicada condicionalmente */
   width: 100%;
-  height: 500px;
+  height: auto; /* Changed from 700px to auto to allow height to adjust to content */
+  min-height: 300px; /* Added a minimum height to ensure visibility */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   overflow: hidden;
+  opacity: 0; /* Asegura que el elemento esté oculto inicialmente */
+  transform: translateX(-100%); /* Coloca el elemento fuera de la vista inicialmente desde la izquierda */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transición para la aparición suave */
+}
+
+.oferta-art-container.animate-visible {
+  animation: slideInLeft 1s ease-out forwards; /* Aplica la animación cuando la clase está presente */
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .oferta-art-container,
+    .oferta-art-container.animate-visible {
+        animation: none; /* Deshabilita la animación en móvil */
+        opacity: 1; /* Asegura que esté visible en móvil sin animación */
+        transform: translateX(0); /* Resetea la posición en móvil */
+    }
 }
 
 /* Estilos para la imagen */

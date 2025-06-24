@@ -1,325 +1,166 @@
 import React from 'react';
 import Card from '../../components/Card';
-import BurnoutParadise from './Imagenes_Data_Base/PortadaDataBase/Burnout_Paradise.webp';
-import AssassinsCreedValhalla from './Imagenes_Data_Base/PortadaDataBase/Assassin_s-Creed-Valhalla.webp';
-import CallOfDutyBlackOps from './Imagenes_Data_Base/PortadaDataBase/Call_Of_Duty_Black_Ops.webp';
-import CallOfDutyInfiniteWarfare from './Imagenes_Data_Base/PortadaDataBase/Call_of_Duty_iInfinite_Warfare.webp';
-import CrashBandicoot from './Imagenes_Data_Base/PortadaDataBase/Crash_Bandicoot.webp';
-import CrashBandicootTrilogy from './Imagenes_Data_Base/PortadaDataBase/Crash_Bandicoot_Trilogy.webp';
 
 // Exportar la lista de juegos como una constante
 export const games = [
   {
     id: 1,
-    image: AssassinsCreedValhalla,
+    image: 'https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp',
     title: 'Assassin\'s Creed Valhalla',
-    platforms: 'PC, PS4, PS5, Xbox One, Xbox Series X/S',
-    price: '$59.99',
-    genre: 'Action RPG',
-    year: 2020,
-    discount: '10%'
+    platforms: 'PS4, PS5',
+    price: '$50',
+    stock: 'si',
+    nuevo: 'no',
+    Oculto: 'no',
+    type: 'game', // Added type property
+    PlystationPlus: 'si',
+    discount: '20%',
+    discountDate: '2025-12-31',
+    ListadaDlcPs3: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcPs4: '1000000', // Added ListadaDlc property
+    ListadaDlcPs5: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXbox360: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXboxOne: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXboxSeriesX: '1000000, 1000002', // Added ListadaDlc property
+    JuegosdeRegaloPs3: '1,2,3',
+    JuegosdeRegaloPs4: '1,2,3',
+    JuegosdeRegaloPs5: '1,2,3',
+    JuegosdeRegaloXbox360: '1,2,3',
+    JuegosdeRegaloXboxOne: '1,2,3',
+    JuegosdeRegaloXboxSeriesX: '1,2,3',
+    // Data para Detalles del juego @SeleccionaComponente
+    genre: 'Action, RPG, Deportes',
+    pegiRating: 'PEGI 18',
+    developer: 'Ubisoft Montreal',
+    publisher: 'Ubisoft',
+    descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente superpoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
+    releaseDate: '',
+    // Data para Selecciona tu edición para el compoente @SeleccionaComponente
+    editions: {
+      PlayStation: { },
+      PS3: {
+        Común: { price: 25.00, description: 'Incluye el juego base para PS4.', discount: 'yes' },
+        Estándar: { price: 55.00, description: 'Incluye el juego base + contenido adicional para PS4.', discount: 'yes' },
+        Premium: { price: 95.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS4.', discount: 'yes' },
+      },
+      PS4: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+      },
+      PS5: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+      },
+    },
+    // Data para Selecciona tu licencia del compoente @SeleccionaComponente
+    licensePrices: {
+      PlayStation: { },
+      PS3: {
+        Principal: { price: 50.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Alquiler: { price: 108.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      PS4: {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Secundaria: { price: 20.00, description: '⚠️ Esta licencia, al ser adquirida para PS4, no será compatible ni podrá usarse en PS5.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      PS5: {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Secundaria: { price: 20.00, description: '⚠️ Esta licencia, al ser adquirida para PS5, no será compatible ni podrá usarse en PS4.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+    },
+    fotos: [
+      'https://i.ibb.co/60Pf5FSS/Assassin-s-Creed-Valhalla-1-1-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/84tNbvf4/Assassin-s-Creed-Valhalla-4-2-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/xKvsmZDk/Assassin-s-Creed-Valhalla-2-4-11zon.webp',
+    ],
+    portadaUrl: 'https://i.ibb.co/kgxm4jV5/portada-Assassin-s-Creed-Valhalla-5-11zon.webp',
   },
   {
     id: 2,
-    image: 'ruta/a/imagen2.jpg',
-    title: 'Battlefield 1',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$19.99',
-    genre: 'Shooter',
-    year: 2016,
-    discount: '15%'
-  },
-  {
-    id: 3,
-    image: 'ruta/a/imagen3.jpg',
-    title: 'Bloodborne (Incluye DLC)',
-    platforms: 'PS4',
-    price: '$39.99',
-    genre: 'Action RPG',
-    year: 2015,
-    discount: '20%'
-  },
-  {
-    id: 4,
-    image: 'ruta/a/imagen4.jpg',
-    title: 'WWE',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$49.99',
-    genre: 'Sports',
-    year: 2022,
-    discount: '10%'
-  },
-  {
-    id: 5,
-    image: 'ruta/a/imagen5.jpg',
-    title: 'Borderlands 3',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$59.99',
-    genre: 'Shooter',
-    year: 2019,
-    discount: '10%'
-  },
-  {
-    id: 6,
-    image: BurnoutParadise,
-    title: 'Burnout: Paradise',
-    platforms: 'PC, PS3, Xbox 360',
-    price: '$19.99',
-    genre: 'Racing',
-    year: 2008,
-    discount: '15%'
-  },
-  {
-    id: 7,
-    image: CrashBandicootTrilogy,
-    title: 'Crash Bandicoot Trilogy',
-    platforms: 'PS4',
-    price: '$39.99',
-    genre: 'Platformer',
-    year: 2017,
-    discount: '20%'
-  },
-  {
-    id: 8,
-    image: CrashBandicoot,
-    title: 'Crash Bandicoot 4',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$49.99',
-    genre: 'Platformer',
-    year: 2020,
-    discount: '10%'
-  },
-  {
-    id: 9,
-    image: 'ruta/a/imagen9.jpg',
-    title: 'Crash Team Racing',
-    platforms: 'PS4',
-    price: '$39.99',
-    genre: 'Racing',
-    year: 2019,
-    discount: '15%'
-  },
-  {
-    id: 10,
-    image: 'ruta/a/imagen10.jpg',
-    title: 'Cars 3',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$29.99',
-    genre: 'Racing',
-    year: 2017,
-    discount: '10%'
-  },
-  {
-    id: 11,
-    image: CallOfDutyBlackOps,
-    title: 'Call Of Duty: Black Ops 3 (Incluye DLC)',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$49.99',
-    genre: 'Shooter',
-    year: 2015,
-    discount: '20%'
-  },
-  {
-    id: 12,
-    image: CallOfDutyInfiniteWarfare,
-    title: 'Call of Duty: Infinite Warfare',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$39.99',
-    genre: 'Shooter',
-    year: 2016,
-    discount: '15%'
-  },
-  {
-    id: 13,
-    image: 'ruta/a/imagen13.jpg',
-    title: 'Call of Duty Vanguard',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$59.99',
-    genre: 'Shooter',
-    year: 2021,
-    discount: '10%'
-  },
-  {
-    id: 14,
-    image: 'ruta/a/imagen14.jpg',
-    title: 'DOOM',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$19.99',
-    genre: 'Shooter',
-    year: 2016,
-    discount: '15%'
-  },
-  {
-    id: 15,
-    image: 'ruta/a/imagen15.jpg',
-    title: 'DmC Devil May Cry',
-    platforms: 'PC, PS3, Xbox 360',
-    price: '$29.99',
-    genre: 'Action',
-    year: 2013,
-    discount: '10%'
-  },
-  {
-    id: 16,
-    image: 'ruta/a/imagen16.jpg',
-    title: 'Dragon Ball Xenoverse (Con todos los DLC)',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$39.99',
-    genre: 'Fighting',
-    year: 2015,
-    discount: '20%'
-  },
-  {
-    id: 17,
-    image: 'ruta/a/imagen17.jpg',
-    title: 'Dragon Ball Xenoverse 2',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$49.99',
-    genre: 'Fighting',
-    year: 2016,
-    discount: '15%'
-  },
-  {
-    id: 18,
-    image: 'ruta/a/imagen18.jpg',
-    title: 'Dragon Ball Fighter Of Z',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$59.99',
-    genre: 'Fighting',
-    year: 2018,
-    discount: '10%'
-  },
-  {
-    id: 19,
-    image: 'ruta/a/imagen19.jpg',
-    title: 'Final Fantasy XV',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$29.99',
-    genre: 'RPG',
-    year: 2016,
-    discount: '15%'
-  },
-  {
-    id: 20,
-    image: 'ruta/a/imagen20.jpg',
-    title: 'FIFA',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$59.99',
-    genre: 'Sports',
-    year: 2022,
-    discount: '10%'
-  },
-  {
-    id: 21,
-    image: 'ruta/a/imagen21.jpg',
-    title: 'Injustice (Con todos los DLC)',
-    platforms: 'PC, PS3, Xbox 360',
-    price: '$19.99',
-    genre: 'Fighting',
-    year: 2013,
-    discount: '15%'
-  },
-  {
-    id: 22,
-    image: 'ruta/a/imagen22.jpg',
-    title: 'Injustice 2 (Con todos los DLC)',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$39.99',
-    genre: 'Fighting',
-    year: 2017,
-    discount: '20%'
-  },
-  {
-    id: 23,
-    image: 'ruta/a/imagen23.jpg',
-    title: 'Infamous Second Son',
-    platforms: 'PS4',
-    price: '$29.99',
-    genre: 'Action',
-    year: 2014,
-    discount: '10%'
-  },
-  {
-    id: 24,
-    image: 'ruta/a/imagen24.jpg',
-    title: 'LIMBO',
-    platforms: 'PC, PS3, Xbox 360',
-    price: '$9.99',
-    genre: 'Puzzle',
-    year: 2010,
-    discount: '15%'
-  },
-  {
-    id: 25,
-    image: 'ruta/a/imagen25.jpg',
-    title: 'Lost Words',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$19.99',
-    genre: 'Adventure',
-    year: 2019,
-    discount: '10%'
-  },
-  {
-    id: 26,
-    image: 'ruta/a/imagen26.jpg',
-    title: 'Gran Turismo Sports',
-    platforms: 'PS4',
-    price: '$39.99',
-    genre: 'Racing',
-    year: 2017,
-    discount: '15%'
-  },
-  {
-    id: 27,
-    image: 'ruta/a/imagen27.jpg',
-    title: 'God Of War 4',
-    platforms: 'PS4',
-    price: '$49.99',
-    genre: 'Action',
-    year: 2018,
-    discount: '20%'
-  },
-  {
-    id: 28,
-    image: 'ruta/a/imagen28.jpg',
-    title: 'God Of War Ragnarok',
+    image: 'https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp',
+    title: 'Assassin\'s Creed Valhalla',
     platforms: 'PS4, PS5',
-    price: '$69.99',
-    genre: 'Action',
-    year: 2022,
-    discount: '10%'
+    price: '$50',
+    stock: 'si',
+    nuevo: 'no',
+    Oculto: 'no',
+    type: 'game', // Added type property
+    PlystationPlus: 'si',
+    discount: '20%',
+    discountDate: '2025-12-31',
+    ListadaDlcPs3: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcPs4: '1000000', // Added ListadaDlc property
+    ListadaDlcPs5: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXbox360: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXboxOne: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXboxSeriesX: '1000000, 1000002', // Added ListadaDlc property
+    JuegosdeRegaloPs3: '1,2,3',
+    JuegosdeRegaloPs4: '1,2,3',
+    JuegosdeRegaloPs5: '1,2,3',
+    JuegosdeRegaloXbox360: '1,2,3',
+    JuegosdeRegaloXboxOne: '1,2,3',
+    JuegosdeRegaloXboxSeriesX: '1,2,3',
+    // Data para Detalles del juego @SeleccionaComponente
+    genre: 'Action, RPG, Deportes',
+    pegiRating: 'PEGI 18',
+    developer: 'Ubisoft Montreal',
+    publisher: 'Ubisoft',
+    descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente superpoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
+    releaseDate: '',
+    // Data para Selecciona tu edición para el compoente @SeleccionaComponente
+    editions: {
+      PlayStation: { },
+      PS3: {
+        Común: { price: 25.00, description: 'Incluye el juego base para PS4.', discount: 'yes' },
+        Estándar: { price: 55.00, description: 'Incluye el juego base + contenido adicional para PS4.', discount: 'yes' },
+        Premium: { price: 95.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS4.', discount: 'yes' },
+      },
+      PS4: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+      },
+      PS5: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+      },
+    },
+    // Data para Selecciona tu licencia del compoente @SeleccionaComponente
+    licensePrices: {
+      PlayStation: { },
+      PS3: {
+        Principal: { price: 50.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Alquiler: { price: 108.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      PS4: {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Secundaria: { price: 20.00, description: '⚠️ Esta licencia, al ser adquirida para PS4, no será compatible ni podrá usarse en PS5.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      PS5: {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Secundaria: { price: 20.00, description: '⚠️ Esta licencia, al ser adquirida para PS5, no será compatible ni podrá usarse en PS4.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+    },
+    fotos: [
+      'https://i.ibb.co/60Pf5FSS/Assassin-s-Creed-Valhalla-1-1-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/84tNbvf4/Assassin-s-Creed-Valhalla-4-2-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/xKvsmZDk/Assassin-s-Creed-Valhalla-2-4-11zon.webp',
+    ],
+    portadaUrl: 'https://i.ibb.co/kgxm4jV5/portada-Assassin-s-Creed-Valhalla-5-11zon.webp',
   },
-  {
-    id: 29,
-    image: 'ruta/a/imagen29.jpg',
-    title: 'Goat Simulator',
-    platforms: 'PC, PS3, Xbox 360',
-    price: '$9.99',
-    genre: 'Simulation',
-    year: 2014,
-    discount: '15%'
-  },
-  {
-    id: 30,
-    image: 'ruta/a/imagen30.jpg',
-    title: 'Marvel Avengers',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$59.99',
-    genre: 'Action',
-    year: 2020,
-    discount: '10%'
-  },
-  {
-    id: 31,
-    image: 'ruta/a/imagen31.jpg',
-    title: 'Mortal Kombat 11 (CON DLC)',
-    platforms: 'PC, PS4, Xbox One',
-    price: '$49.99',
-    genre: 'Fighting',
-    year: 2019,
-    discount: '20%'
-  },
-  
+ 
+ 
   // Agrega más juegos según sea necesario
 ];
 
@@ -338,7 +179,11 @@ const GameDatabase = () => {
           title={game.title}
           platforms={game.platforms}
           price={game.price}
+          discount={game.discount}
+          nuevo={game.nuevo}
+          PlystationPlus={game.PlystationPlus}
           genre={game.genre}
+          stock={game.stock}
           onButtonClick={() => handleClick(game.id)}
         />
       ))}

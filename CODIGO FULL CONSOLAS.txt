@@ -1,0 +1,145 @@
+  {
+    id: 1,
+    image: 'https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp',
+    title: 'Assassin\'s Creed Valhalla',
+    platforms: 'PS4, PS5',
+    price: '$50',
+    stock: 'si',
+    nuevo: 'no',
+    Oculto: 'no',
+    type: 'game', // Added type property
+    PlystationPlus: 'si',
+    discount: '20%',
+    discountDate: '2025-12-31',
+    ListadaDlcPs3: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcPs4: '1000000', // Added ListadaDlc property
+    ListadaDlcPs5: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXbox360: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXboxOne: '1000000, 1000002', // Added ListadaDlc property
+    ListadaDlcXboxSeriesX: '1000000, 1000002', // Added ListadaDlc property
+    JuegosdeRegaloPs3: '1,2,3',
+    JuegosdeRegaloPs4: '1,2,3',
+    JuegosdeRegaloPs5: '1,2,3',
+    JuegosdeRegaloXbox360: '1,2,3',
+    JuegosdeRegaloXboxOne: '1,2,3',
+    JuegosdeRegaloXboxSeriesX: '1,2,3',
+    // Data para Detalles del juego @SeleccionaComponente
+    genre: 'Action, RPG, Deportes',
+    pegiRating: 'PEGI 18',
+    developer: 'Ubisoft Montreal',
+    publisher: 'Ubisoft',
+    descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente superpoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
+    releaseDate: '',
+    // Data para Selecciona tu edición para el compoente @SeleccionaComponente
+    editions: {
+      PlayStation: { },
+      PS3: {
+        Común: { price: 25.00, description: 'Incluye el juego base para PS4.', discount: 'yes' },
+        Estándar: { price: 55.00, description: 'Incluye el juego base + contenido adicional para PS4.', discount: 'yes' },
+        Premium: { price: 95.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS4.', discount: 'yes' },
+      },
+      PS4: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+      },
+      PS5: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+      },
+      
+      Xbox: { },
+      'Xbox 360': {
+        Común: { price: 25.00, description: 'Incluye el juego base para Xbox 360.', discount: 'yes' },
+        Estándar: { price: 55.00, description: 'Incluye el juego base + contenido adicional para Xbox 360.', discount: 'yes' },
+        Premium: { price: 95.00, description: 'Incluye el juego base + contenido adicional + DLCs para Xbox 360.', discount: 'yes' },
+      },
+      'xbox One': {
+        Común: { price: 30.00, description: 'Incluye el juego base para Xbox One.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para Xbox One.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para Xbox One.', discount: 'yes' },
+      },
+      'xbox Series X': {
+        Común: { price: 30.00, description: 'Incluye el juego base para Xbox Series X.', discount: 'yes' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para Xbox Series X.', discount: 'yes' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para Xbox Series X.', discount: 'yes' },
+      },
+      PC: {
+        Steam: {
+          Común: { price: 20.00, description: 'Incluye el juego base para PC (Steam).', discount: 'no' },
+          Estándar: { price: 45.00, description: 'Incluye el juego base + contenido adicional para PC (Steam).', discount: 'yes' },
+          Premium: { price: 85.00, description: 'Incluye el juego base + contenido adicional + DLCs para PC (Steam).', discount: 'yes' },
+        },
+        Origin: {
+          Común: { price: 22.00, description: 'Incluye el juego base para PC (Origin).', discount: 'no' },
+          Estándar: { price: 47.00, description: 'Incluye el juego base + contenido adicional para PC (Origin).', discount: 'yes' },
+          Premium: { price: 87.00, description: 'Incluye el juego base + contenido adicional + DLCs para PC (Origin).', discount: 'yes' },
+        },
+        'Epic Games': {
+          Común: { price: 21.00, description: 'Incluye el juego base para PC (Epic Games).', discount: 'no' },
+          Estándar: { price: 46.00, description: 'Incluye el juego base + contenido adicional para PC (Epic Games).', discount: 'yes' },
+          Premium: { price: 86.00, description: 'Incluye el juego base + contenido adicional + DLCs para PC (Epic Games).', discount: 'yes' },
+        },
+      },
+    },
+    // Data para Selecciona tu licencia del compoente @SeleccionaComponente
+    licensePrices: {
+      PlayStation: { },
+      PS3: {
+        Principal: { price: 50.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Alquiler: { price: 108.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      PS4: {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Secundaria: { price: 20.00, description: '⚠️ Esta licencia, al ser adquirida para PS4, no será compatible ni podrá usarse en PS5.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      PS5: {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Secundaria: { price: 20.00, description: '⚠️ Esta licencia, al ser adquirida para PS5, no será compatible ni podrá usarse en PS4.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+      },
+      Xbox: { },
+      'Xbox 360': {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'no' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Secundaria: { price: 22.00, description: 'Licencia secundaria para Xbox.', discount: 'yes' },
+      },
+      'xbox One': {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Secundaria: { price: 22.00, description: 'Licencia secundaria para Xbox.', discount: 'yes' },
+      },
+      'xbox Series X': {
+        Principal: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Alquiler: { price: 10.00, description: 'Licencia principal para una cuenta.', discount: 'yes' },
+        Secundaria: { price: 22.00, description: 'Licencia secundaria para Xbox.', discount: 'yes' },
+      },
+      PC: {
+        Steam: {
+          Principal: { price: 10.00, description: 'Licencia principal para una cuenta (Steam).', discount: 'yes' },
+          Alquiler: { price: 10.00, description: 'Licencia de alquiler para una cuenta (Steam).', discount: 'yes' },
+          Secundaria: { price: 18.00, description: 'Licencia secundaria para PC.', discount: 'yes' },
+        },
+        Origin: {
+          Principal: { price: 11.00, description: 'Licencia principal para una cuenta (Origin).', discount: 'yes' },
+          Alquiler: { price: 11.00, description: 'Licencia de alquiler para una cuenta (Origin).', discount: 'yes' },
+          Secundaria: { price: 18.00, description: 'Licencia secundaria para PC.', discount: 'yes' },
+        },
+        'Epic Games': {
+          Principal: { price: 9.00, description: 'Licencia principal para una cuenta (Epic Games).', discount: 'yes' },
+          Alquiler: { price: 9.00, description: 'Licencia de alquiler para una cuenta (Epic Games).', discount: 'yes' },
+          Secundaria: { price: 18.00, description: 'Licencia secundaria para PC.', discount: 'yes' },
+        },
+      },
+    },
+    fotos: [
+      'https://i.ibb.co/60Pf5FSS/Assassin-s-Creed-Valhalla-1-1-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/84tNbvf4/Assassin-s-Creed-Valhalla-4-2-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/xKvsmZDk/Assassin-s-Creed-Valhalla-2-4-11zon.webp',
+    ],
+    portadaUrl: 'https://i.ibb.co/kgxm4jV5/portada-Assassin-s-Creed-Valhalla-5-11zon.webp',
+  },

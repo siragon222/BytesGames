@@ -1,0 +1,272 @@
+.filter-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.filter-toggle-button {
+  padding: 15px;
+  background-color: #1f1f1f;
+  color: white;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.filter-toggle-button:hover {
+  background-color: #ff4500;
+  border-color: #ff4500;
+  transform: scale(1.05);
+}
+
+.filter-button-icon {
+  font-size: 20px;
+}
+
+.filter-component {
+  padding: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+  color: #fff;
+  background-image: none;
+}
+
+.filter-component.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.filter-section {
+  flex: 1;
+  min-width: 215px;
+  margin-bottom: 0;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-section:hover {
+  background-color: rgba(255, 255, 255, 0.005);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.filter-section h3 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: medium;
+  padding: 10px 15px;
+  letter-spacing: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.filter-section h3:hover {
+  color: #ff0505;
+}
+
+.toggle-icon {
+  font-size: 14px;
+  color: #ff0505;
+}
+
+.filter-content {
+  max-height: 200px;
+  overflow-y: auto;
+  transition: max-height 0.5s ease-in-out;
+  padding: 10px 15px 15px;
+}
+
+.filter-content.collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.filter-section label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.filter-section label:hover {
+  color: #ff0505;
+}
+
+.filter-section input[type="checkbox"] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff0000;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-section input[type="checkbox"]:checked {
+  background-color: #ff0505;
+  border-color: #ff0505;
+}
+
+.filter-section input[type="checkbox"]:checked::before {
+  content: '';
+  display: block;
+  color: white;
+  font-size: 9px;
+  text-align: center;
+  line-height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-section select,
+.filter-section input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ff0000;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1f1f1f;
+  margin-bottom: 8px;
+  transition: border-color 0.3s ease;
+  appearance: none;
+}
+
+.filter-section input[type="number"] {
+  width: calc(50% - 7px);
+  margin-right: 14px;
+}
+
+.filter-section input[type="number"]:last-of-type {
+  margin-right: 0;
+}
+
+.filter-section select:focus,
+.filter-section input[type="number"]:focus {
+  outline: none;
+  border-color: #ff0505;
+  box-shadow: 0 0 0 2px rgba(255, 5, 5, 0.2);
+}
+
+.filter-section button {
+  padding: 15px;
+  background-color: #1f1f1f;
+  color: white;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.filter-section button:hover {
+  background-color: #ff4500;
+  border-color: #ff4500;
+  transform: scale(1.05);
+}
+
+.filter-section select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FF6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.filter-content.genres {
+  padding-right: 5px;
+}
+
+/* Custom Scrollbar para WebKit browsers, ahora aplicado a .filter-content */
+.filter-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filter-content::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 3px;
+}
+
+.filter-content::-webkit-scrollbar-thumb:hover {
+  background-color: #ff0505;
+}
+
+.apply-filters-button {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 15px;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-filters-button:hover {
+  background-color: #ff4500;
+  border-color: #ff4500;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-component {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .filter-group {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    margin-bottom: 15px;
+  }
+}

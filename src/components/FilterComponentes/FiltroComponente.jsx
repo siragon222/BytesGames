@@ -8,9 +8,9 @@ const FiltroComponente = ({ children }) => {
     <div className="filtro-componente">
       <h2>Filtro Componente</h2>
       <div className="filtro-opciones">
-        <Dropdown id="dropdown1" label="CONSOLAS" />
-        <Dropdown id="dropdown2" label="GENERO" />
-        <Dropdown id="dropdown3" label="ORDENAR POR:" />
+        <Dropdown id="dropdown1" label="CONSOLAS" items={['PS3', 'PS4', 'PS5', 'Xbox', '360', 'ONE', 'SERIES X']} />
+        <Dropdown id="dropdown2" label="GENERO" items={['Acción', 'Aventura', 'RPG', 'Estrategia', 'Deportes']} />
+        <Dropdown id="dropdown3" label="ORDENAR POR:" items={['Más Relevantes', 'Precio: Menor a Mayor', 'Precio: Mayor a Menor', 'Más Recientes']} />
         <Checkboxx />
         <Checkboxx />
         {children}

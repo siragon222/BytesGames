@@ -1,0 +1,43 @@
+.portada-container {
+  width: 100%;
+  height: 450px; /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+  position: fixed; /* Cambiado a 'fixed' para que no se mueva */
+  top: 0;
+  left: 0;
+  z-index: 1; /* z-index menor que el de los otros elementos */
+  clip-path: ellipse(100% 100% at 50% 0%); /* Máscara de recorte curva en la parte superior */
+}
+
+.portada-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+.portada-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+  );
+  animation: brillo 3s infinite; /* Aplica la animación de brillo */
+  pointer-events: none; /* Evita que el brillo interfiera con interacciones */
+  z-index: 1; /* Coloca el brillo por encima de la imagen */
+}
+
+@keyframes brillo {
+  0% {
+      left: -100%;
+  }
+  100% {
+      left: 100%;
+  }
+}

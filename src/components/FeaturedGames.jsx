@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import Card from './Card'; // Importar el componente Card
 import imagen1 from '../assets/imagen1.jpg'; // Importar la imagen desde assets
 import './FeaturedGames.css'; // Importar el archivo CSS para el carrusel
+import { games } from '../../WebLinks/DataBaseGames/GameDatabase'; // Import the games list
 
 const FeaturedGames = () => {
   const sliderRef = useRef(null); // Referencia al contenedor del carrusel
@@ -12,6 +13,9 @@ const FeaturedGames = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0); // Estado para almacenar la posición inicial del toque
   const [touchEndX, setTouchEndX] = useState(0); // Estado para almacenar la posición final del toque
+
+  const featuredGameIds = [1, 2, 3, 4, 5, 6, 7]; // Example IDs for featured games
+  const featuredGamesData = games.filter(game => featuredGameIds.includes(game.id));
 
   // Función para detectar si el dispositivo es móvil
   const checkIfMobile = () => {
@@ -104,71 +108,23 @@ const FeaturedGames = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Ejemplo de 6 tarjetas de juego con contenido personalizado */}
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="The Witcher 3" 
-              platforms="Plataformas: PC, PS5, Xbox" 
-              price="Precio: $29.99" 
-              onButtonClick={handleClick} 
-            />
+          <div className="card-wrapper swiper-wrapper">
+            {featuredGamesData.map((game) => (
+              <div key={game.id} className="card swiper-slide">
+                <Card
+                  id={game.id}
+                  image={game.image}
+                  title={game.title}
+                  platforms={game.platforms}
+                  price={game.price}
+                  discount={game.discount}
+                  nuevo={game.nuevo}
+                  PlystationPlus={game.PlystationPlus}
+                  onButtonClick={() => console.log(`View details for ${game.title}`)}
+                />
+              </div>
+            ))}
           </div>
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="Cyberpunk 2077" 
-              platforms="Plataformas: PC, PS5, Xbox" 
-              price="Precio: $49.99" 
-              onButtonClick={handleClick} 
-            />
-          </div>
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="Red Dead Redemption 2" 
-              platforms="Plataformas: PC, PS4, Xbox One" 
-              price="Precio: $39.99" 
-              onButtonClick={handleClick} 
-            />
-          </div>
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="Red Dead Redemption 2" 
-              platforms="Plataformas: PC, PS4, Xbox One" 
-              price="Precio: $39.99" 
-              onButtonClick={handleClick} 
-            />
-          </div>
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="Red Dead Redemption 2" 
-              platforms="Plataformas: PC, PS4, Xbox One" 
-              price="Precio: $39.99" 
-              onButtonClick={handleClick} 
-            />
-          </div>
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="Red Dead Redemption 2" 
-              platforms="Plataformas: PC, PS4, Xbox One" 
-              price="Precio: $39.99" 
-              onButtonClick={handleClick} 
-            />
-          </div>
-          <div className="carousel-card">
-            <Card 
-              image={imagen1} 
-              title="Red Dead Redemption 2" 
-              platforms="Plataformas: PC, PS4, Xbox One" 
-              price="Precio: $39.99" 
-              onButtonClick={handleClick} 
-            />
-          </div>
-          {/* Agrega más tarjetas según sea necesario */}
         </div>
         {!isMobile && (
           <button className="carousel-button next" onClick={() => handleScroll('next')}>&#10095;</button> // Botón para avanzar

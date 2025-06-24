@@ -1,0 +1,37 @@
+.contenedor-principal {
+  position: relative; /* Necesario para que el posicionamiento absoluto funcione */
+}
+
+.contenedor-sobrepuesto {
+  position: relative; /* Mantén el posicionamiento relativo */
+  z-index: 2; /* Asegura que esté por encima de PortadaComponente */
+  display: flex;
+  gap: 20px; /* Espacio entre los contenedores */
+  padding: 20px;
+  margin-top: 200px; /* Margen superior para bajar los componentes */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin-left: auto; /* Centra el contenedor horizontalmente */
+  margin-right: auto; /* Centra el contenedor horizontalmente */
+}
+
+.contenedor-izquierda {
+  flex: 2; /* Ocupa 2/3 del espacio disponible */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre los componentes */
+}
+
+.contenedor-derecha {
+  flex: 1; /* Ocupa 1/3 del espacio disponible */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor-sobrepuesto {
+    flex-direction: column; /* Cambia la dirección a columna */
+  }
+
+  .contenedor-derecha {
+    order: -1; /* Mueve el componente de la derecha arriba */
+  }
+} 

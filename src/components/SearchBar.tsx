@@ -32,7 +32,7 @@ const SearchBar: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="search-container">
+    <div className={`search-container ${isExpanded ? 'is-expanded' : ''}`}>
       <input
         type="text"
         placeholder="Buscar..."

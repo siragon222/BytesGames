@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dropdown.css'; // Asegúrate de crear un archivo CSS para los estilos
 
-const Dropdown = ({ id, label }) => {
+const Dropdown = ({ id, label, items }) => {
   const handleLinkClick = () => {
     const checkbox = document.getElementById(id);
     if (checkbox) {
@@ -17,10 +17,9 @@ const Dropdown = ({ id, label }) => {
           {label} <i className="uil uil-arrow-down"></i>
         </label>
         <div className="section-dropdown">
-          <a href="#" onClick={handleLinkClick}>Dropdown Linkssss <i className="uil uil-arrow-right"></i></a>
-          <a href="#" onClick={handleLinkClick}>Dropdown Linkssss <i className="uil uil-arrow-right"></i></a>
-          <a href="#" onClick={handleLinkClick}>Dropdown Linkssss <i className="uil uil-arrow-right"></i></a>
-          <a href="#" onClick={handleLinkClick}>Dropdown Linkssss <i className="uil uil-arrow-right"></i></a>
+          {items.map((item, index) => (
+            <a href="#" key={index} onClick={handleLinkClick}>{item} <i className="uil uil-arrow-right"></i></a>
+          ))}
         </div>
       </div>
     </div>

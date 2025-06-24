@@ -11,7 +11,6 @@ import MetricCard from '../../components/MetricCard';
 import SliderLogos from '../../components/SliderLogos/SliderLogos';
 import OfertasGames from '../../components/Ofertas/OfertasGames';
 import SliderNoticias from '../../components/SliderNoticias/SliderNoticias';
-import OfertasSlider from '../../components/Ofertas/OfertasSlider';
 
 const Homecontenido = () => {
   return (
@@ -19,9 +18,6 @@ const Homecontenido = () => {
       <main>
         <HeroSlider />
         <Separator />
-        <div className="metric-card-overlay">
-          <MetricCard />
-        </div>
         <SliderNoticias />
         <SliderLogos />
         <OfertasGames />
@@ -36,3 +32,7 @@ const Homecontenido = () => {
 };
 
 export default Homecontenido; 
+
+<div className="metric-card-overlay">
+<MetricCard />
+</div>

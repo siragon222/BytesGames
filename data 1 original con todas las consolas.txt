@@ -1,0 +1,139 @@
+  {
+    id: 1,
+    image: 'https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp',
+    title: 'Assassin\'s Creed Valhalla',
+    platforms: 'PC, PS4, PS5',
+    price: '$10',
+    stock: 'si',
+    nuevo: 'no',
+    dlc: 'no',
+    PlystationPlus: 'si',
+    // Data para Selecciona tu edición para el compoente @SeleccionaComponente
+    editions: {
+      PlayStation: {
+        Común: { price: 20.99, description: 'Incluye el juego base.' },
+        Estándar: { price: 50.99, description: 'Incluye el juego base + contenido adicional.' },
+        Premium: { price: 89.99, description: 'Incluye el juego base + contenido adicional + DLCs.' },
+      },
+      PS3: {
+        Común: { price: 99.99, description: 'Incluye el juego base para PS3.' },
+        Estándar: { price: 99.99, description: 'Incluye el juego base + contenido adicional para PS3.' },
+      },
+      PS4: {
+        Común: { price: 25.00, description: 'Incluye el juego base para PS4.' },
+        Estándar: { price: 55.00, description: 'Incluye el juego base + contenido adicional para PS4.' },
+        Premium: { price: 95.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS4.' },
+      },
+      PS5: {
+        Común: { price: 30.00, description: 'Incluye el juego base para PS5.' },
+        Estándar: { price: 60.00, description: 'Incluye el juego base + contenido adicional para PS5.' },
+        Premium: { price: 100.00, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.' },
+      },
+      Xbox: {}, // Add a generic Xbox entry
+      PC: {}, // Add a generic PC entry
+      'Xbox 360': {
+        Común: { price: 15.00, description: 'Incluye el juego base para Xbox 360.' },
+        Estándar: { price: 45.00, description: 'Incluye el juego base + contenido adicional para Xbox 360.' },
+      },
+      'Xbox One': {
+        Común: { price: 20.00, description: 'Incluye el juego base para Xbox One.' },
+        Estándar: { price: 50.00, description: 'Incluye el juego base + contenido adicional para Xbox One.' },
+        Premium: { price: 90.00, description: 'Incluye el juego base + contenido adicional + DLCs para Xbox One.' },
+      },
+      'Xbox Series X': {
+        Común: { price: 28.00, description: 'Incluye el juego base para Xbox Series X.' },
+        Estándar: { price: 58.00, description: 'Incluye el juego base + contenido adicional para Xbox Series X.' },
+        Premium: { price: 98.00, description: 'Incluye el juego base + contenido adicional + DLCs para Xbox Series X.' },
+      },
+      'Steam': {
+        Común: { price: 18.00, description: 'Incluye el juego base para PC (Steam).' },
+        Estándar: { price: 48.00, description: 'Incluye el juego base + contenido adicional para PC (Steam).' },
+        Premium: { price: 88.00, description: 'Incluye el juego base + contenido adicional + DLCs para PC (Steam).' },
+      },
+      'Origin': {
+        Común: { price: 17.00, description: 'Incluye el juego base para PC (Origin).' },
+        Estándar: { price: 47.00, description: 'Incluye el juego base + contenido adicional para PC (Origin).' },
+        Premium: { price: 87.00, description: 'Incluye el juego base + contenido adicional + DLCs para PC (Origin).' },
+      },
+      'Epic Games': {
+        Común: { price: 16.00, description: 'Incluye el juego base para PC (Epic Games).' },
+        Estándar: { price: 46.00, description: 'Incluye el juego base + contenido adicional para PC (Epic Games).' },
+        Premium: { price: 86.00, description: 'Incluye el juego base + contenido adicional + DLCs para PC (Epic Games).' },
+      },
+    },
+    descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente superpoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
+    // Data para Selecciona tu licencia del compoente @SeleccionaComponente
+    licensePrices: {
+      PlayStation: {
+        Principal: 50.99,
+        Secundario: 5.99,
+        Alquiler: 3.99,
+        Familiar: 15.99,
+      },
+      PS3: {
+        Principal: 99.99,
+        Secundario: 5.00,
+      },
+      PS4: {
+        Principal: 55.00,
+        Secundario: 6.00,
+        Alquiler: 4.00,
+      },
+      PS5: {
+        Principal: 60.00,
+        Secundario: 7.00,
+        Alquiler: 5.00,
+        Familiar: 20.00,
+      },
+      'Xbox 360': {
+        Principal: 10.99,
+        Secundario: 5.99,
+        Alquiler: 3.99,
+        Familiar: 15.99,
+      },
+      'Xbox One': {
+        Principal: 9.99,
+        Secundario: 4.99,
+        Alquiler: 2.99,
+      },
+      'Xbox Series X': {
+        Principal: 12.99,
+        Secundario: 6.99,
+        Alquiler: 4.99,
+        Familiar: 18.99,
+      },
+      'Steam': {
+        Principal: 8.99,
+        Secundario: 3.99,
+        Alquiler: 1.99,
+        Estudiante: 6.99,
+      },
+      'Origin': {
+        Principal: 7.99,
+        Secundario: 2.99,
+        Alquiler: 0.99,
+        Estudiante: 5.99,
+      },
+      'Epic Games': {
+        Principal: 6.99,
+        Secundario: 1.99,
+        Alquiler: 0.50,
+        Estudiante: 4.99,
+      },
+     // Data para Seleccionar las imagenes para el componente @GaleriaFotos
+    },
+    fotos: [
+      'https://i.ibb.co/60Pf5FSS/Assassin-s-Creed-Valhalla-1-1-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/84tNbvf4/Assassin-s-Creed-Valhalla-4-2-11zon.webp',
+      'https://i.ibb.co/cHHGhNq/Assassin-s-Creed-Valhalla-5-1-11zon.webp',
+      'https://i.ibb.co/xKvsmZDk/Assassin-s-Creed-Valhalla-2-4-11zon.webp',
+    ],
+     // Data para Seleccionar la portada para el componente @Portada Componente
+    portadaUrl: 'https://i.ibb.co/kgxm4jV5/portada-Assassin-s-Creed-Valhalla-5-11zon.webp',
+    genre: 'Action RPG',
+    pegiRating: 'PEGI 18',
+    developer: 'Ubisoft Montreal',
+    publisher: 'Ubisoft',
+    releaseDate: '10 noviembre 2020'
+  },

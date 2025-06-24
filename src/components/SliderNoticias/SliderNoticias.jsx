@@ -83,7 +83,11 @@ const SliderNoticias = () => {
                   image={game.image}
                   title={game.title}
                   platforms={`Plataformas: ${game.platforms}`}
-                  price={`Precio: ${game.price}`}
+                  price={game.price}
+                  discount={game.discount}
+                  nuevo={game.nuevo}
+                  playstationPlus={game.PlystationPlus}
+                  stock={game.stock}
                   onButtonClick={() => console.log(`View details for ${game.title}`)}
                 />
               </div>
