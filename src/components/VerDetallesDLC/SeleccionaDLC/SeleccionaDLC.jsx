@@ -232,7 +232,7 @@ const SeleccionaDLC = ({ game }) => {
         </div>
       )}
 
-      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && (
+      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && game.licensePrices.Ocultar !== 'si' && (
         <div className="license-section">
           <h3 className="section-title">Selecciona tu licencia</h3>
           <div className="license-buttons">

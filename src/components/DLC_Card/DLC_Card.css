@@ -42,10 +42,27 @@
 }
 
 .dlc-card-content {
-  list-style: disc;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   color: #fff;
+}
+
+.dlc-card-content li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.dlc-card-content li::before {
+  content: '\2714'; /* Heavy Check Mark (bolder) */
+  color: #4CAF50; /* Color of the checkmark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em; /* Adjust size */
+  font-family: 'Segoe UI Symbol', 'Arial Unicode MS', sans-serif; /* Ensure symbol renders */
 }
 
 .dlc-card-price {

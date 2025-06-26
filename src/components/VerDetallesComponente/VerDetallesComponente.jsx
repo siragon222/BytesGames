@@ -145,7 +145,7 @@ const VerDetallesComponente = () => {
                       id={dlc.id}
                       image={dlc.image}
                       name={dlc.title}
-                      content={[dlc.descripcionContenido]}
+                      content={dlc.descripcionContenidoDlc}
                       price={dlc.price}
                     />
                   ))}
