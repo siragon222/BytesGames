@@ -9,8 +9,6 @@ export const dlcGames = [
     title: 'Battlefield 4 Premium Edition',
     Lenguaje: "",
     platforms: 'PS4, PS5',
-    stock: 'si',
-    nuevo: 'no',
     Oculto: 'no',
     type: 'dlc',
     PlystationPlus: 'no',
@@ -22,14 +20,14 @@ export const dlcGames = [
     PlayStation: {
     },
     PS3: {
-    Premium: { price: 95.00, description: 'Incluye el DLC base + contenido adicional + DLCs exclusivos para PS4.' },
+      Premium: { price: 1.5, description: 'Incluye el juego base + contenido adicional + DLCs para PS3.', discount: 'yes' },
     },
     PS4: {
-    Premium: { price: 95.00, description: 'Incluye el DLC base + contenido adicional + DLCs exclusivos para PS4.' },
+      Premium: { price: 6.5, description: 'Incluye el juego base + contenido adicional + DLCs para PS4.', discount: 'yes' },        
     },
     PS5: {
-    Premium: { price: 100.00, description: 'Incluye el DLC base + contenido adicional + DLCs exclusivos para PS5.' },
-    },
+      Premium: { price: 7.5, description: 'Incluye el juego base + contenido adicional + DLCs para PS5.', discount: 'yes' },
+    }
     },
     descripcionContenido: 'Domina la guerra total con Battlefield 4 Premium Edition. Esta edición completa incluye el juego base de Battlefield 4 y los cinco packs de expansión digital con toneladas de contenido nuevo, incluyendo 20 mapas, nuevos modos de juego y un arsenal de armas y vehículos. Experimenta la destrucción dinámica y el caos de la guerra multijugador a una escala inigualable.',
     descripcionContenidoDlc:['Battlefield 4', 'Los cinco packs de expansión', 'Opciones exclusivas de personalización', 'Posición prioritaria en las colas de los servidores', '12 Battlepacks adicionales'],
