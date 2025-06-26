@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './Countdown.css'; // Import the CSS file
 
-const Countdown = ({ releaseDate, onOfferEnd }) => {
+const Countdown = ({ discountDate, onOfferEnd }) => {
   const [timeLeft, setTimeLeft] = useState(null);
   const [offerEnded, setOfferEnded] = useState(false);
   const [displayEndDate, setDisplayEndDate] = useState('');
 
   useEffect(() => {
-    if (!releaseDate) {
+    if (!discountDate) {
       setTimeLeft(null);
       setOfferEnded(false);
       return;
     }
 
-    const dates = releaseDate.split(',').map(date => date.trim());
+    const dates = discountDate.split(',').map(date => date.trim());
     let startDate = null;
     let endDate = null;
 
@@ -32,7 +32,7 @@ const Countdown = ({ releaseDate, onOfferEnd }) => {
     }
 
     if (isNaN(endDate.getTime())) {
-      console.error('Invalid end date format:', releaseDate);
+      console.error('Invalid end date format:', discountDate);
       setTimeLeft(null);
       setOfferEnded(false);
       return;
@@ -77,7 +77,7 @@ const Countdown = ({ releaseDate, onOfferEnd }) => {
     }
 
     return () => clearInterval(timer);
-  }, [releaseDate, onOfferEnd]);
+  }, [discountDate, onOfferEnd]);
 
   if (!timeLeft && !offerEnded) {
     return null; // Don't render if no valid date or offer not started/ended

@@ -126,7 +126,7 @@ const OfertasSlider = () => {
                   price={game.price}
                   discount={game.discount}
                   nuevo={game.nuevo}
-                  playstationPlus={game.PlystationPlus}
+                  PlystationPlus={game.PlystationPlus}
                   stock={game.stock}
                   onButtonClick={() => console.log(`View details for ${game.title}`)}
                 />

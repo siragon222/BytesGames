@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './SeleccionaComponente.css'; // Importar el archivo CSS para estilos
 import PlayStationIcon from '../../assets/playstation.svg';
 import XboxIcon from '../../assets/xbox.svg';
@@ -7,6 +7,7 @@ import PlayStationPlusIcon from '../../assets/playstation-plus-logo2.svg';
 import MandoFailSearch from '../../assets/mando_fail_seach.svg'; // Import the new SVG
 import { CurrencyContext } from '../../context/CurrencyContext';
 import Countdown from '../Countdown'; // Import the new Countdown component
+import { useNavigate } from 'react-router-dom';
 
 const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game como prop y add onConsoleSelect prop
   const [selectedPlatform, setSelectedPlatform] = useState(null);
@@ -102,6 +103,8 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
     return '';
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="selecciona-componente">
       <h1 className="game-title">{game ? game.title : 'Cargando...'}</h1> {/* Usar el título del juego */}
@@ -109,7 +112,9 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       {game && game.PlystationPlus === 'si' && (
         <button
           className="playstation-plus-button"
-          onClick={() => alert('¡Este juego incluye beneficios de PlayStation Plus!')}
+          onClick={() => {
+            navigate('/PreguntasFrecuentes#playstation-plus');
+          }}
         >
           <img src={PlayStationPlusIcon} alt="PlayStation Plus" />
         </button>
@@ -120,7 +125,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       {game && game.releaseDate && game.releaseDate.trim() !== '' && (
         <div className="offer-countdown-section">
           <Countdown 
-            releaseDate={game.releaseDate}
+            discountDate={game.discountDate}
             onOfferEnd={() => setHasOfferEnded(true)} // Callback to set hasOfferEnded to true
           />
         </div>
@@ -238,7 +243,10 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
                     {selectedCurrency.symbol}{(prices.discounted * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                   </span>
                   {selectedLicense === license && (
-                    <p className="license-description-in-button">{licenseDetail.description}</p>
+                    <p 
+                      className="license-description-in-button"
+                      dangerouslySetInnerHTML={{ __html: licenseDetail.description }}
+                    ></p>
                   )}
                 </button>
               );
@@ -247,7 +255,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
         </div>
       )}
 
-      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && (
+      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && game.editions.Ocultar !== 'si' && (
         <div className="edition-section">
           <h3 className="section-title">Selecciona tu edición</h3>
           <div className="license-buttons">

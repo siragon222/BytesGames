@@ -73,7 +73,7 @@ const SliderNoticias = () => {
 
   return (
     <div className="slider-background">
-      <h2 className="slider-title">Últimas Noticias</h2>
+      <h2 className="slider-title">Últimas Recomendaciones</h2>
       <div className="slide-container swiper">
         <div className="slide-content">
           <div className="card-wrapper swiper-wrapper">
@@ -86,7 +86,7 @@ const SliderNoticias = () => {
                   price={game.price}
                   discount={game.discount}
                   nuevo={game.nuevo}
-                  playstationPlus={game.PlystationPlus}
+                  PlystationPlus={game.PlystationPlus}
                   stock={game.stock}
                   onButtonClick={() => console.log(`View details for ${game.title}`)}
                 />

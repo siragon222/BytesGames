@@ -11,6 +11,7 @@ import VerDetallesComponente from './components/VerDetallesComponente/VerDetalle
 import VerDetallesDLC from './components/VerDetallesDLC/VerDetallesDLC';
 import { GameProvider } from './context/GameContext';
 import { CurrencyProvider } from './context/CurrencyContext';
+import PreguntasFrecuentes from './components/PreguntasFrecuentes/PreguntasFrecuentes';
 
 function App() {
   // Simple console deterrent
@@ -53,6 +54,7 @@ function App() {
               <Route path="/ver-detalles" element={<VerDetallesComponente />} />
               {/* Nueva ruta para VerDetallesDLC */}
               <Route path="/VerDetallesDLC" element={<VerDetallesDLC />} />
+              <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
             </Routes>
             <Footer />
           </main>

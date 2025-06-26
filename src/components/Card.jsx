@@ -36,7 +36,7 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
   const discountedPrice = originalPrice * (1 - discountValue);
 
   // Función para manejar el clic en el botón
-  const handleButtonClick = () => {
+  const handleClick = () => {
     const gameName = title.toLowerCase().replace(/\s+/g, '-'); // Convertir el título a un formato de URL
     navigate(`/ver-detalles?q=${gameName}`); // Navegar a la URL con el nombre del juego
   };
@@ -46,6 +46,7 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
       className={`game-card ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleClick}
     >
       {nuevo === 'si' && <div className="new-label">Nuevo</div>}
       {discount && <div className="discount-label">{discount}</div>}
@@ -93,7 +94,6 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
       </div>
       <button 
         className="card-button"
-        onClick={handleButtonClick}
       >
         VER DETALLES
       </button>

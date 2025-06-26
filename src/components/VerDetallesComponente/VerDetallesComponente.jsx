@@ -21,8 +21,8 @@ const VerDetallesComponente = () => {
   React.useEffect(() => {
     if (gameName) {
       const formattedGameName = gameName.replace(/-/g, ' ');
-      const game = games.find(g => g.title.toLowerCase() === formattedGameName);
-      const dlc = dlcGames.find(d => d.title.toLowerCase() === formattedGameName);
+      const game = games.find(g => g.title.toLowerCase() === formattedGameName.toLowerCase());
+      const dlc = dlcGames.find(d => d.title.toLowerCase() === formattedGameName.toLowerCase());
 
       if (game) {
         setSelectedGame(game);

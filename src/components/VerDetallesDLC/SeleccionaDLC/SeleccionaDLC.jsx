@@ -3,9 +3,13 @@ import './SeleccionaDLC.css'; // Updated import for DLC-specific CSS
 import PlayStationIcon from '../../../assets/playstation.svg';
 import XboxIcon from '../../../assets/xbox.svg';
 import PcIcon from '../../../assets/pc.svg';
+import PlayStationPlusIcon from '../../../assets/playstation-plus-logo2.svg';
+import MandoFailSearch from '../../../assets/mando_fail_seach.svg';
 import { CurrencyContext } from '../../../context/CurrencyContext';
+import Countdown from '../../Countdown';
+import { useNavigate } from 'react-router-dom';
 
-const SeleccionaDLC = ({ game }) => { // Recibir game como prop
+const SeleccionaDLC = ({ game }) => {
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [selectedPlayStationConsole, setSelectedPlayStationConsole] = useState(null);
   const [selectedXboxConsole, setSelectedXboxConsole] = useState(null);
@@ -13,6 +17,23 @@ const SeleccionaDLC = ({ game }) => { // Recibir game como prop
   const [selectedEdition, setSelectedEdition] = useState('');
   const [selectedLicense, setSelectedLicense] = useState('');
   const { selectedCurrency } = useContext(CurrencyContext);
+  const [hasOfferEnded, setHasOfferEnded] = useState(false);
+
+  const dlcDiscount = game.discount ? parseFloat(game.discount.replace("%", "")) / 100 : 0;
+  const dlcDiscountDate = game.discountDate;
+
+  const calculatePrice = (originalPrice, itemDiscountAllowed) => {
+    if (hasOfferEnded) {
+      return { original: originalPrice, discounted: originalPrice, hasDiscount: false };
+    }
+
+    if (dlcDiscount > 0 && itemDiscountAllowed === 'yes' && new Date() < new Date(dlcDiscountDate)) {
+      const discounted = originalPrice * (1 - dlcDiscount);
+      return { original: originalPrice, discounted: discounted, hasDiscount: true };
+    }
+    
+    return { original: originalPrice, discounted: originalPrice, hasDiscount: false };
+  };
 
   const handlePlatformSelect = (platform) => {
     setSelectedPlatform(platform);
@@ -55,28 +76,49 @@ const SeleccionaDLC = ({ game }) => { // Recibir game como prop
     setSelectedLicense(license);
   };
 
-  const currentPlatform = selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher || (selectedPlatform === 'PC' && game.editions.PC ? 'PC' : selectedPlatform);
-  const editionPrices = game.editions;
+  const currentPlatformKey = selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher || (selectedPlatform === 'PC' && game.editions.PC ? 'PC' : selectedPlatform);
+  
+  const editionPrices = (selectedPlatform === 'PC' && selectedPcLauncher)
+  ? (game.editions.PC && game.editions.PC[selectedPcLauncher])
+  : game.editions[currentPlatformKey];
 
-  const platformLicenses = currentPlatform ? Object.keys(game.licensePrices[currentPlatform] || {}) : [];
+  const licensePricesData = (selectedPlatform === 'PC' && selectedPcLauncher)
+  ? (game.licensePrices.PC && game.licensePrices.PC[selectedPcLauncher])
+  : game.licensePrices[currentPlatformKey];
 
-  const licensePrices = game.licensePrices;
-
-  const getEditionDescription = () => {
-    if (currentPlatform && selectedEdition) {
-      return `${editionPrices[currentPlatform][selectedEdition].description} Precio: ${selectedCurrency.symbol} ${(editionPrices[currentPlatform][selectedEdition].price * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-    }
-    return '';
-  };
+  const platformLicenses = currentPlatformKey ? Object.keys(licensePricesData || {}) : [];
+  
+  const navigate = useNavigate();
 
   return (
     <div className="selecciona-componente">
       <h1 className="game-title">{game ? game.title : 'Cargando...'}</h1>
+
+      {game && game.PlystationPlus === 'si' && ( // Apply conditional rendering for PlayStation Plus button
+        <button
+          className="playstation-plus-button"
+          onClick={() => {
+            navigate('/PreguntasFrecuentes#playstation-plus');
+          }}
+        >
+          <img src={PlayStationPlusIcon} alt="PlayStation Plus" />
+        </button>
+      )}
+
       <hr className="divider" />
-      {/* Removed PlayStation Plus button as DLCs don't seem to have this property */}
+
+      {game && game.releaseDate && game.releaseDate.trim() !== '' && ( // Conditional rendering for Countdown
+        <div className="offer-countdown-section">
+          <Countdown 
+            discountDate={dlcDiscountDate}
+            onOfferEnd={() => setHasOfferEnded(true)}
+          />
+        </div>
+      )}
+
       {game && game.stock === 'no' ? (
         <div className="out-of-stock-container">
-          {/* Removed MandoFailSearch image as it's not relevant for DLCs */}
+          <img src={MandoFailSearch} alt="Producto Agotado" className="out-of-stock-image" />
           <p className="out-of-stock-message">¡Atención! Este DLC está agotado. Revisa más tarde o contacta con SOPORTE para RESERVACIONES.</p>
         </div>
       ) : (
@@ -101,7 +143,7 @@ const SeleccionaDLC = ({ game }) => { // Recibir game como prop
                 <span>Xbox</span>
               </button>
             )}
-            {game.editions.PC && (
+            {game.editions.PC && ( // Added PC platform button
               <button 
                 className={`platform-button ${selectedPlatform === 'PC' ? 'active' : ''}`}
                 onClick={() => handlePlatformSelect('PC')}
@@ -147,7 +189,7 @@ const SeleccionaDLC = ({ game }) => { // Recibir game como prop
       {selectedPlatform === 'PC' && (
         <div className="pc-launcher-buttons">
           <h3 className="section-title">Selecciona tu Launcher de PC</h3>
-          {game && ['Steam', 'Origin', 'Epic Games'].filter(launcher => game.editions[launcher]).map((launcher) => (
+          {game && ['Steam', 'Origin', 'Epic Games'].filter(launcher => game.editions.PC && game.editions.PC[launcher]).map((launcher) => (
             <button
               key={launcher}
               className={`platform-button ${selectedPcLauncher === launcher ? 'active' : ''}`}
@@ -159,44 +201,72 @@ const SeleccionaDLC = ({ game }) => { // Recibir game como prop
         </div>
       )}
 
-      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher || (selectedPlatform === 'PC' && game.editions.PC)) && (
+      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && game.editions.Ocultar !== 'si' && ( // Conditional rendering for edition section and Ocultar
         <div className="edition-section">
           <h3 className="section-title">Selecciona tu edición</h3>
-          <select 
-            className="edition-select"
-            onChange={handleEditionChange} 
-            value={selectedEdition}
-          >
-            <option value="">Selecciona una edición</option>
-            {Object.entries(editionPrices[currentPlatform] || {}).map(([edition, details]) => (
-              <option key={edition} value={edition}>
-                {edition} - <span className="price-text">{selectedCurrency.symbol} {(details.price * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
-              </option>
-            ))}
-          </select>
-          {selectedEdition && (
-            <p className="edition-description">
-              {editionPrices[currentPlatform][selectedEdition].description} Precio: <span className="price-text">{selectedCurrency.symbol} {(editionPrices[currentPlatform][selectedEdition].price * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
-            </p>
-          )}
+          <div className="license-buttons">
+            {Object.entries(editionPrices || {}).map(([edition, details]) => {
+              const prices = calculatePrice(details.price, details.discount);
+              return (
+                <button 
+                  key={edition}
+                  className={`license-button ${selectedEdition === edition ? 'active' : ''}`}
+                  onClick={() => handleEditionChange({ target: { value: edition } })}
+                >
+                  <div className="edition-text">{edition}</div>
+                  <span className="price-text">
+                    {prices.hasDiscount && 
+                      <span style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: 'medium', color: '#888' }}>
+                        {selectedCurrency.symbol}{(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                      </span>
+                    }
+                    {selectedCurrency.symbol}{(prices.discounted * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                  </span>
+                  {selectedEdition === edition && (
+                    <p className="edition-description-in-button">{details.description}</p>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
 
-      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher || (selectedPlatform === 'PC' && game.editions.PC)) && (
+      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && (
         <div className="license-section">
           <h3 className="section-title">Selecciona tu licencia</h3>
           <div className="license-buttons">
-            {platformLicenses.map((license) => (
-              <button 
-                key={license}
-                className={`license-button ${selectedLicense === license ? 'active' : ''}`}
-                onClick={() => handleLicenseSelect(license)}
-              >
-                {license} – <span className="price-text">{selectedCurrency.symbol} {(licensePrices[currentPlatform][license].price * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
-              </button>
-            ))}
+            {platformLicenses.map((license) => {
+              const licenseDetail = licensePricesData[license];
+              
+              if (!licenseDetail) return null;
+
+              const prices = calculatePrice(licenseDetail.price, licenseDetail.discount);
+              return (
+                <button 
+                  key={license}
+                  className={`license-button ${selectedLicense === license ? 'active' : ''}`}
+                  onClick={() => handleLicenseSelect(license)}
+                >
+                  <div className="license-text">{license}</div>
+                  <span className="price-text">
+                    {prices.hasDiscount && 
+                      <span style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: 'medium', color: '#888' }}>
+                        {selectedCurrency.symbol}{(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                      </span>
+                    }
+                    {selectedCurrency.symbol}{(prices.discounted * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                  </span>
+                  {selectedLicense === license && (
+                    <p 
+                      className="license-description-in-button"
+                      dangerouslySetInnerHTML={{ __html: licenseDetail.description }}
+                    ></p>
+                  )}
+                </button>
+              );
+            })}
           </div>
-          {selectedLicense && <p className="license-description">Licencia seleccionada: {selectedLicense} - {licensePrices[currentPlatform][selectedLicense].description}</p>}
         </div>
       )}
 

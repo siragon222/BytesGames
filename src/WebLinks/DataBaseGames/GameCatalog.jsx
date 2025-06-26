@@ -62,7 +62,7 @@ const GameCatalog = ({ games }) => {
                 genre={game.genre}
                 discount={game.discount}
                 nuevo={game.nuevo}
-                playstationPlus={game.PlystationPlus}
+                PlystationPlus={game.PlystationPlus}
                 stock={game.stock}
                 onButtonClick={() => console.log(`Ver detalles del juego con ID: ${game.id}`)}
               />

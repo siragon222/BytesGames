@@ -120,7 +120,8 @@ const FilterComponent = ({ onFilterChange }) => {
               {[
                 'Acción', 'Aventura', 'Arcades', 'Carreras', 'Deportes', 'Estrategia',
                 'Fantasía', 'Horror', 'Lucha', 'Plataformas', 'Shooter', 'Simulación',
-                'Wargame', 'RPG', 'MMO', 'Cooperativo', 'VR', 'Indies'
+                'RPG', 'MMO', 'Cooperativo', 'Realidad Virtual', 'Indies',
+                'Supervivencia', 'Mundo Abierto', 'Musical'
               ].map(genre => (
                 <label key={genre}>
                   <input

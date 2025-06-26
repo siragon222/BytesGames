@@ -1,0 +1,115 @@
+.faq-container {
+  max-width: 800px; /* Re-added to center the component */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+  /* Styles from SeleccionaComponente.css */
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+}
+
+.faq-container h1 {
+  color: #fdd5d5; /* Adjusted to match section-title */
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold; /* Added from section-title */
+}
+
+.faq-list {
+  text-align: left; /* Reverted to left-align or default for block centering */
+  display: block;
+  width: 100%;
+}
+
+.faq-item {
+  border: 2px solid #ff0000; /* Matching platform-button border */
+  margin: 0 auto 10px auto;
+  border-radius: 12px; /* Matching platform-button border-radius */
+  overflow: hidden;
+  background: none; /* Ensure no default background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Adjusted from platform-button */
+  display: block;
+  max-width: 700px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transitions */
+}
+
+.faq-question {
+  background-color: #1f1f1f; /* Matching platform-button background */
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #fff; /* Matching platform-button text color */
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #ff4500; /* Matching platform-button hover */
+  border-color: #ff4500; /* Matching platform-button hover */
+}
+
+.faq-question .question-text {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.faq-question .arrow {
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff; /* Changed arrow color to white */
+  transition: transform 0.3s ease;
+}
+
+.faq-question .arrow.up {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 20px;
+  background-color: #1f1f1f; /* Matching license-button background */
+  border-top: 1px solid #eee;
+  color: #ffffff; /* Matching license-description color */
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 15px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-container h1 {
+    font-size: 24px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .faq-answer {
+    font-size: 13px;
+    padding: 12px;
+  }
+} 
