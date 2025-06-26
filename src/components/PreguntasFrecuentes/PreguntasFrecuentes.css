@@ -1,8 +1,13 @@
 .faq-container {
-  max-width: 800px; /* Re-added to center the component */
+  width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
   /* Styles from SeleccionaComponente.css */
   border: 1px solid #1f1f1f;
@@ -13,10 +18,11 @@
 }
 
 .faq-container h1 {
-  color: #fdd5d5; /* Adjusted to match section-title */
+  color: #ffffff; /* Changed to white */
   margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold; /* Added from section-title */
+  font-size: 38px; /* Increased font size */
+  font-weight: bold;
+  text-transform: uppercase; /* Added for uppercase */
 }
 
 .faq-list {

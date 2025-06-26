@@ -56,8 +56,20 @@ const PeruFlagSVG = (
 
 const Divisas = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming 768px as mobile breakpoint
   const { selectedCurrency, updateCurrency } = useContext(CurrencyContext);
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const currencyOptions = [
     { name: 'Venezuela', code: 'BS', flag: VenezuelaFlagSVG, factor: 138 },
@@ -99,7 +111,7 @@ const Divisas = () => {
         <span className="dropdown-arrow">{isOpen ? '▲' : '▼'}</span>
       </button>
       {isOpen && (
-        <ul className="currency-dropdown">
+        <ul className={isMobile ? "currency-modal" : "currency-dropdown"}>
           {currencyOptions.map((option) => (
             <li key={option.code} onClick={() => handleCurrencySelect(option)}>
               <span className="currency-flag">{option.flag}</span>

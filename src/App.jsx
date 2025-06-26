@@ -5,7 +5,6 @@ import Header2 from './components/Header2';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import JuegosPs3 from './WebLinks/Header/Juegos/Ps3Juegos';
 import Homecontenido from './WebLinks/Home/Homecontenido';
-import SearchResults from './components/SearchResults';
 import ResultSearch from './WebLinks/Header/Juegos/ResultSearch';
 import VerDetallesComponente from './components/VerDetallesComponente/VerDetallesComponente';
 import VerDetallesDLC from './components/VerDetallesDLC/VerDetallesDLC';
@@ -14,25 +13,6 @@ import { CurrencyProvider } from './context/CurrencyContext';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes/PreguntasFrecuentes';
 
 function App() {
-  // Simple console deterrent
-  // This is not foolproof but can deter casual users
-  const devToolsDetector = () => {
-    const threshold = 160; // Adjust as needed
-    if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
-      document.body.innerHTML = '<h1>Developer tools detected! This action is not allowed.</h1>';
-      document.body.style.background = 'black';
-      document.body.style.color = 'red';
-      document.body.style.textAlign = 'center';
-      document.body.style.paddingTop = '100px';
-    }
-  };
-
-  React.useEffect(() => {
-    window.addEventListener('resize', devToolsDetector);
-    devToolsDetector(); // Initial check
-    return () => window.removeEventListener('resize', devToolsDetector);
-  }, []);
-
   return (
     <CurrencyProvider>
       <BrowserRouter>

@@ -40,6 +40,16 @@
   margin-left: 5px;
 }
 
+@media (max-width: 1200px) {
+  .dropdown-arrow {
+    display: none; /* Hide the arrow on mobile */
+  }
+
+  .divisas-container {
+    min-width: 0; /* Allow currency container to shrink */
+  }
+}
+
 .currency-dropdown {
   position: absolute;
   top: 100%;
@@ -68,4 +78,65 @@
 .currency-dropdown li:hover {
   background-color: #d90429;
   color: #fff;
+}
+
+.currency-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.currency-modal li {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-size: 1.2em;
+  width: 100%;
+  justify-content: center;
+}
+
+.currency-modal li:hover {
+  background-color: #d90429;
+}
+
+.close-button-container {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.close-modal-button {
+  background-color: #d90429;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.close-modal-button:hover {
+  background-color: #b11919;
+}
+
+@media (max-width: 1200px) {
+  .currency-dropdown {
+    display: none; /* Hide default dropdown on mobile */
+  }
 } 

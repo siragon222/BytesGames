@@ -9,16 +9,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      // Disable right-click
-      document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-      // Disable text selection
-      document.addEventListener('selectstart', (e) => e.preventDefault());
-      document.addEventListener('copy', (e) => {
-        e.preventDefault();
-        alert('Copying is not allowed!');
-      });
-    </script>
   </body>
 </html>

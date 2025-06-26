@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../assets/logo.svg';
-import DropdownMenu from './DropdownMenu';
+import LogoMobil from '../assets/logoMobil.svg';
 import SearchBar from './SearchBar';
 import Divisas from './Divisas/Divisas';
 import './Header2.css';
@@ -8,14 +8,21 @@ import { Link } from 'react-router-dom';
 
 const Header2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1200);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -23,7 +30,7 @@ const Header2 = () => {
       <div className="header2-container">
         <div className="logo-container">
           <Link to="/">
-            <img src={Logo} alt="Logo" />
+            <img src={isMobile ? LogoMobil : Logo} alt="Logo" className={isMobile ? "logo-mobil" : ""} />
           </Link>
         </div>
         <nav>
@@ -42,17 +49,10 @@ const Header2 = () => {
             </svg>
           </div>
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <li
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-              onClick={handleDropdownToggle}
-            >
-              <Link to="/categorias">Juegos</Link>
-              {(isDropdownOpen || isMenuOpen) && <DropdownMenu />}
+            <li>
+              <Link to="/ResultSearch">Juegos</Link>
             </li>
-            <li><Link to="/ofertas">Ofertas</Link></li>
-            <li><Link to="/ayuda">Ayuda</Link></li>
-            <li><Link to="/nosotros">Nosotros</Link></li>
+            <li><Link to="/preguntasfrecuentes">Ayuda</Link></li>
           </ul>
         </nav>
         <div className="header-actions">
