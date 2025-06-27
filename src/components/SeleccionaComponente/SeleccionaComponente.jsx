@@ -5,6 +5,7 @@ import XboxIcon from '../../assets/xbox.svg';
 import PcIcon from '../../assets/pc.svg';
 import PlayStationPlusIcon from '../../assets/playstation-plus-logo2.svg';
 import MandoFailSearch from '../../assets/mando_fail_seach.svg'; // Import the new SVG
+import BuyIcon from '../../assets/buy.svg'; // Import the buy SVG
 import { CurrencyContext } from '../../context/CurrencyContext';
 import Countdown from '../Countdown'; // Import the new Countdown component
 import { useNavigate } from 'react-router-dom';
@@ -74,10 +75,12 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
 
   const handleEditionChange = (event) => {
     setSelectedEdition(event.target.value);
+    setSelectedLicense(''); // Ensure only one is selected
   };
 
   const handleLicenseSelect = (license) => {
     setSelectedLicense(license);
+    setSelectedEdition(''); // Ensure only one is selected
   };
 
   // Precios y descripciones de ediciones por plataforma (usar los datos del juego)
@@ -104,6 +107,55 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
   };
 
   const navigate = useNavigate();
+
+  const whatsappNumber = '+584140757350';
+  
+  const handleWhatsAppClick = () => {
+    let whatsappMessage = `Hola! Estoy interesado en hacer una compra del juego: ${game.title}`;
+    let itemPrice = 0;
+    let itemName = '';
+    let platformAndConsole = '';
+
+    if (selectedPlatform) {
+      platformAndConsole = ` para la plataforma ${selectedPlatform}`;
+      if (selectedPlayStationConsole) {
+        platformAndConsole += ` (${selectedPlayStationConsole})`;
+      } else if (selectedXboxConsole) {
+        platformAndConsole += ` (${selectedXboxConsole})`;
+      } else if (selectedPcLauncher) {
+        platformAndConsole += ` (${selectedPcLauncher})`;
+      }
+    }
+
+    whatsappMessage += platformAndConsole;
+
+    if (selectedLicense) {
+      const licenseDetail = licensePricesData[selectedLicense];
+      if (licenseDetail) {
+        const prices = calculatePrice(licenseDetail.price, licenseDetail.discount);
+        itemName = `licencia: ${selectedLicense}`;
+        if (prices.hasDiscount) {
+          whatsappMessage += `, ${itemName} con descuento. Precio original: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}, Precio con descuento: ${selectedCurrency.symbol}${prices.discounted.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        } else {
+          whatsappMessage += `, ${itemName} por un precio de: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        }
+      }
+    } else if (selectedEdition) {
+      const editionDetail = editionPrices[selectedEdition];
+      if (editionDetail) {
+        const prices = calculatePrice(editionDetail.price, editionDetail.discount);
+        itemName = `edición: ${selectedEdition}`;
+        if (prices.hasDiscount) {
+          whatsappMessage += `, ${itemName} con descuento. Precio original: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}, Precio con descuento: ${selectedCurrency.symbol}${prices.discounted.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        } else {
+          whatsappMessage += `, ${itemName} por un precio de: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        }
+      }
+    }
+    
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="selecciona-componente">
@@ -246,6 +298,20 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
                     <p 
                       className="license-description-in-button"
                       dangerouslySetInnerHTML={{ __html: licenseDetail.description }}
+                      onClick={(e) => {
+                        if (e.target.tagName === 'A' && e.target.getAttribute('href') === '/PreguntasFrecuentes') {
+                          e.preventDefault(); // Prevent default link navigation
+                          let faqAnchor = '';
+                          if (license === 'Principal') {
+                            faqAnchor = '#cuenta-principal';
+                          } else if (license === 'Secundaria') {
+                            faqAnchor = '#cuenta-secundaria';
+                          } else if (license === 'Alquiler') {
+                            faqAnchor = '#alquiler';
+                          }
+                          navigate(`/PreguntasFrecuentes${faqAnchor}`);
+                        }
+                      }}
                     ></p>
                   )}
                 </button>
@@ -284,6 +350,13 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
             })}
           </div>
         </div>
+      )}
+
+      {(selectedLicense || selectedEdition) && (
+        <button className="hace-compra-button" onClick={handleWhatsAppClick}>
+          <img src={BuyIcon} alt="Buy" className="button-icon" />
+          Hacer Compra
+        </button>
       )}
 
       <div className="game-details">

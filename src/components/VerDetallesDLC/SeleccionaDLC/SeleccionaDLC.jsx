@@ -88,6 +88,15 @@ const SeleccionaDLC = ({ game }) => {
 
   const platformLicenses = currentPlatformKey ? Object.keys(licensePricesData || {}) : [];
   
+  const getEditionDescription = () => {
+    if (currentPlatformKey && selectedEdition) {
+      const edition = editionPrices[selectedEdition];
+      const prices = calculatePrice(edition.price, edition.discount);
+      return `${edition.description} ${selectedCurrency.symbol}${prices.hasDiscount ? `<span style="text-decoration: line-through; margin-right: 10px; font-weight: medium; color: #888;">${(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span> ` : ''}${selectedCurrency.symbol}${(prices.discounted * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    }
+    return '';
+  };
+
   const navigate = useNavigate();
 
   return (

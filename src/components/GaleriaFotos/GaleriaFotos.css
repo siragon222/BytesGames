@@ -80,11 +80,19 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #e3241e; /* Red background on hover */
+  color: white;
 }
 
 .prev-btn,
@@ -92,11 +100,20 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: #e3241e; /* Red background on hover */
+  color: white;
 }
 
 .prev-btn {
@@ -111,11 +128,19 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: none;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+  background: #e3241e; /* Red background on hover */
+  color: white;
 }
 
 .video-responsive {
@@ -134,4 +159,19 @@
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.rotate-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 1001;
+  max-width: 80%;
 } 

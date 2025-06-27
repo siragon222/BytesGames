@@ -294,9 +294,47 @@
 
 .license-description-in-button,
 .edition-description-in-button {
-  font-size: 0.9em; /* Smaller font size for descriptions */
-  color: #ffffff; /* Lighter color for readability */
-  margin-top: 5px; /* Small space between price and description */
+  font-size: 0.8em;
+  color: #c0c0c0;
+  margin-top: 5px;
   text-align: center;
-  padding: 0 5px;
+  max-width: 250px; /* Limit width of description */
 }
+
+.hace-compra-button {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(255, 0, 0, 0.7)); /* Blends with component's background */
+  color: white;
+  padding: 18px 35px;
+  border: 2px solid #ff0000; /* Red border matching platform buttons */
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  /* animation: pulse-button 2s infinite ease-in-out; */ /* Removing for now */
+}
+
+.hace-compra-button .button-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.hace-compra-button:hover {
+  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); /* Reverse gradient on hover */
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger but still subtle shadow on hover */
+}
+
+/* Removing @keyframes pulse-button for now */
+/* @keyframes pulse-button { ... } */

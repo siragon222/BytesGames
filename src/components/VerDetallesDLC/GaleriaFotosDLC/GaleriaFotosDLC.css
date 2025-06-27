@@ -1,119 +1,14 @@
-.galeria-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.vista-previa {
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.918);
-}
-
-.vista-previa-imagen {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.vista-previa-imagen:hover {
-  transform: scale(1.05);
-}
-
-.galeria-miniatura {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.miniatura {
-  width: 120px;
-  height: 80px;
-  cursor: pointer;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.918);
-}
-
-.miniatura:hover {
-  transform: scale(1.1);
-  border-color: #ff0000;
-}
-
-.fullscreen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom right, 
-    rgba(107, 0, 0, 0.253), /* Azul semitransparente */
-    rgba(139, 3, 3, 0.5) /* Blanco semitransparente */
-  );
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.fullscreen-image {
-  max-width: 90%;
-  max-height: 90%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.prev-btn,
-.next-btn {
+.rotate-message {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  font-size: 24px;
-  cursor: pointer;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 1001;
+  max-width: 80%;
 }
-
-.prev-btn {
-  left: 20px;
-}
-
-.next-btn {
-  right: 20px;
-}
-
-.fullscreen-btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-} 

@@ -11,11 +11,14 @@ import VerDetallesDLC from './components/VerDetallesDLC/VerDetallesDLC';
 import { GameProvider } from './context/GameContext';
 import { CurrencyProvider } from './context/CurrencyContext';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes/PreguntasFrecuentes';
+import ScrollToTop from './components/ScrollToTop';
+import Separator from './components/Separator';
 
 function App() {
   return (
     <CurrencyProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <GameProvider>
           <main>
             <Header2 />

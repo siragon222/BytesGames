@@ -5,47 +5,44 @@ import Card from '../../components/Card';
 export const games = [
   {
     id: 1,
-    image: 'https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp',
-    title: 'Assassin\'s Creed Valhalla',
+    image: "https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp",
+    title: "Assassin\'s Creed Valhalla",
     Lenguaje: "",
-    platforms: 'PS4, PS5',
-    price: '$16',
-    stock: 'si',
-    nuevo: 'no',
-    Oculto: 'no',
-    type: 'game', // Added type property
-    PlystationPlus: 'si',
-    discount: '',
-    discountDate: '',
-    ListadaDlcPs4: '', // Added ListadaDlc property
-    ListadaDlcPs5: '', // Added ListadaDlc property
-    JuegosdeRegaloPs4: '2',
-    JuegosdeRegaloPs5: '2',
-    // Data para Detalles del juego @SeleccionaComponente
+    platforms: "PS4, PS5",
+    price: "$16",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "si",
+    discount: "25%",
+    discountDate: "28 junio 2025",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "2",
+    JuegosdeRegaloPs5: "2",
     genre: 'Action, RPG',
-    pegiRating: 'PEGI 18',
-    developer: 'Ubisoft Montreal',
-    publisher: 'Ubisoft',
-    descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente superpoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
-    releaseDate: '10 de noviembre de 2020',
-    // Data para Selecciona tu edición para el compoente @SeleccionaComponente
+    pegiRating: "PEGI 18",
+    developer: "Ubisoft Montreal",
+    publisher: "Ubisoft",
+    descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente sobrepoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
+    releaseDate: "10 de noviembre de 2020",
     editions: {
-      Ocultar: 'si', // si se desaparece el titulo: selecciona tu edicion
-      PlayStation: { },
-      PS4: { },
-      PS5: { },
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {},
+      PS5: {}
     },
-    // Data para Selecciona tu licencia del compoente @SeleccionaComponente
     licensePrices: {
-      PlayStation: { },
+      PlayStation: {},
       PS4: {
-        Principal: { price: 16, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
-        Secundaria: { price: 7.50, description: 'Licencia Secundaria es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
-        Alquiler: { price: 5, description: 'Licencia Alquiler es...<a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
+        Principal: { price: 16, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
+        Secundaria: { price: 7.50, description: 'Licencia Secundaria es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
+        Alquiler: { price: 5, description: 'Licencia Alquiler es...<a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
       },
       PS5: {
-        Principal: { price: 18, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
-        Secundaria: { price: 7.50, description: 'Licencia Secundaria es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
+        Principal: { price: 18, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
+        Secundaria: { price: 7.50, description: 'Licencia Secundaria es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
       },
     },
     fotos: [
@@ -141,7 +138,7 @@ export const games = [
     "licensePrices": {
       PlayStation: {},
       PS4: {
-        Principal: { price: 9.50, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
+        Principal: { price: 9.50, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
         Secundaria: { price: 6.50, description: 'Licencia Secundaria es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
         Alquiler: { price: 4.00, description: 'Licencia Alquiler es...<a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
       },
@@ -256,7 +253,7 @@ export const games = [
     "licensePrices": {
       PlayStation: {},
       PS3: {
-        Principal: { price: 1, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
+        Valor: { price: 1, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },
       },
       PS4: {
         Principal: { price: 5, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'no' },

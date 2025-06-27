@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './GaleriaFotos.css'; // Asegúrate de crear este archivo para los estilos
 
 const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
@@ -6,8 +6,31 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoverIndex, setHoverIndex] = useState(0);
   const [isShowingVideo, setIsShowingVideo] = useState(false);
+  const [showRotateMessage, setShowRotateMessage] = useState(false);
   const fullscreenImageRef = useRef(null);
   
+
+  useEffect(() => {
+    const checkOrientation = () => {
+      if (window.matchMedia("(orientation: portrait)").matches && window.innerWidth < 768) {
+        setShowRotateMessage(true);
+      } else {
+        setShowRotateMessage(false);
+      }
+    };
+
+    // Initial check
+    checkOrientation();
+
+    // Listen for orientation changes
+    window.addEventListener("orientationchange", checkOrientation);
+    window.addEventListener("resize", checkOrientation); // Also check on resize for wider compatibility
+
+    return () => {
+      window.removeEventListener("orientationchange", checkOrientation);
+      window.removeEventListener("resize", checkOrientation);
+    };
+  }, []);
 
   const handleThumbnailClick = (index) => {
     if (youtubeVideoId && index === videoThumbnailIndex) {
@@ -75,6 +98,11 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
 
       {(isFullScreen || isShowingVideo) && (
         <div className="fullscreen-overlay">
+          {showRotateMessage && (
+            <div className="rotate-message">
+              Por favor, gira tu teléfono para una mejor vista.
+            </div>
+          )}
           <button className="close-btn" onClick={handleCloseFullScreen}>
             X
           </button>
@@ -93,7 +121,7 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
                 &#10095;
               </button>
               <button className="fullscreen-btn" onClick={handleFullScreen}>
-                🚀
+                &#x2922;
               </button>
             </>
           )}

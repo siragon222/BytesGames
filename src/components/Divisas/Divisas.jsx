@@ -8,8 +8,17 @@ const VenezuelaFlagSVG = (
     <rect width="9" height="2" fill="#FCB103" />
     <rect y="2" width="9" height="2" fill="#0033A0" />
     <rect y="4" width="9" height="2" fill="#CF0921" />
-    {/* Simplified stars - you can replace with actual star path */}
-    <circle cx="4.5" cy="3" r="0.5" fill="white" />
+    {/* Corrected 8 stars for Venezuela flag following a curve */}
+    <g transform="translate(4.5, 3)">
+      <circle cx="-2.0" cy="0.5" r="0.25" fill="white" />
+      <circle cx="-1.5" cy="0.0" r="0.25" fill="white" />
+      <circle cx="-1.0" cy="-0.4" r="0.25" fill="white" />
+      <circle cx="-0.4" cy="-0.7" r="0.25" fill="white" />
+      <circle cx="0.2" cy="-0.7" r="0.25" fill="white" />
+      <circle cx="0.8" cy="-0.4" r="0.25" fill="white" />
+      <circle cx="1.3" cy="0.0" r="0.25" fill="white" />
+      <circle cx="1.8" cy="0.5" r="0.25" fill="white" />
+    </g>
   </svg>
 );
 
@@ -72,11 +81,11 @@ const Divisas = () => {
   }, []);
 
   const currencyOptions = [
-    { name: 'Venezuela', code: 'BS', flag: VenezuelaFlagSVG, factor: 138 },
-    { name: 'Colombia', code: 'COP', flag: ColombiaFlagSVG, factor: 4000 }, // Example factor
-    { name: 'Chile', code: 'CLP', flag: ChileFlagSVG, factor: 4000 }, // Example factor
-    { name: 'Peru', code: 'PEN', flag: PeruFlagSVG, factor: 3.8 }, // Example factor, ensure to update with actual
-    { name: 'USA', code: 'USD', flag: UsaFlagSVG, factor: 1 }, // Base currency
+    { name: 'Venezuela', code: 'BS', flag: VenezuelaFlagSVG, factor: 138, symbol: 'Bs' },
+    { name: 'Colombia', code: 'COP', flag: ColombiaFlagSVG, factor: 4000, symbol: 'COP' }, // Example factor
+    { name: 'Chile', code: 'CLP', flag: ChileFlagSVG, factor: 4000, symbol: 'CLP' }, // Example factor
+    { name: 'Peru', code: 'PEN', flag: PeruFlagSVG, factor: 3.8, symbol: '/S' }, // Example factor, ensure to update with actual
+    { name: 'USA', code: 'USD', flag: UsaFlagSVG, factor: 1, symbol: '$' }, // Base currency
   ];
 
   const currentCurrency = currencyOptions.find(opt => opt.code === selectedCurrency.code);
