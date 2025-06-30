@@ -279,8 +279,14 @@ const SeleccionaDLC = ({ game }) => {
         </div>
       )}
 
+      {(selectedLicense || selectedEdition) && (
+        <button className="hace-compra-button" onClick={handleWhatsAppClick}>
+          <img src="/src/assets/buy.svg" alt="Buy" className="button-icon" />
+          Hacer Compra
+        </button>
+      )}
+
       <div className="game-details">
-        <h3 className="section-title">Detalles del DLC</h3>
         <p><span className="detail-title">Puntuación:</span> <span className="detail-info">{game.pegiRating || 'N/A'}</span></p>
         <p><span className="detail-title">Desarrollador:</span> <span className="detail-info">{game.developer || 'N/A'}</span></p>
         <p><span className="detail-title">Distribuidor:</span> <span className="detail-info">{game.publisher || 'N/A'}</span></p>

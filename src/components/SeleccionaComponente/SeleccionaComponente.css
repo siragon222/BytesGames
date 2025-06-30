@@ -11,8 +11,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
   background-image: linear-gradient(
     to bottom right, 
-    rgba(0, 0, 0, 0.308), /* Color inicial (rojo semitransparente) */
-    rgba(255, 0, 0, 0.678)  /* Color final (azul semitransparente) */
+    rgb(0, 0, 0), /* Color inicial (rojo semitransparente) */
+    rgb(255, 0, 0)  /* Color final (azul semitransparente) */
   );
 }
 
@@ -88,10 +88,9 @@
 
 .license-buttons {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 8px;
   margin-top: 15px;
-  flex-wrap: wrap;
 }
 
 .license-button {

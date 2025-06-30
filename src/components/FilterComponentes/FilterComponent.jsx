@@ -74,7 +74,7 @@ const FilterComponent = ({ onFilterChange }) => {
     setConsoles([]);
     setGenres([]);
     setSortBy([]);
-    setPriceRange({ min: '', max: '' });
+    setPriceRange({ min: '', max: 200 * selectedCurrency.factor });
     onFilterChange({ consoles: [], genres: [], sortBy: [], priceRange: { min: 0, max: 200 * selectedCurrency.factor } });
   };
 
@@ -100,7 +100,7 @@ const FilterComponent = ({ onFilterChange }) => {
           <div className="filter-section">
             <h3 onClick={() => toggleSection('consoles')}>Consolas</h3>
             <div className={`filter-content ${collapsedSections.consoles ? 'collapsed' : ''}`}>
-              {['PS3', 'PS4', 'PS5', 'Xbox', '360', 'ONE', 'SERIES X', 'PC'].map(console => (
+              {['PS3', 'PS4', 'PS5'].map(console => (
                 <label key={console}>
                   <input
                     type="checkbox"

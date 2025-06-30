@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Logo from '../assets/logo.svg';
 import LogoMobil from '../assets/logoMobil.svg';
 import SearchBar from './SearchBar';
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const Header2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,8 +22,25 @@ const Header2 = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -33,7 +51,7 @@ const Header2 = () => {
             <img src={isMobile ? LogoMobil : Logo} alt="Logo" className={isMobile ? "logo-mobil" : ""} />
           </Link>
         </div>
-        <nav>
+        <nav ref={menuRef}>
           <div className="mobile-menu-icon" onClick={toggleMenu}>
             <svg
               width="24"
@@ -50,9 +68,9 @@ const Header2 = () => {
           </div>
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
             <li>
-              <Link to="/ResultSearch">Juegos</Link>
+              <Link to="/ResultSearch" onClick={closeMenu}>Juegos</Link>
             </li>
-            <li><Link to="/preguntasfrecuentes">Ayuda</Link></li>
+            <li><Link to="/preguntasfrecuentes" onClick={closeMenu}>Ayuda</Link></li>
           </ul>
         </nav>
         <div className="header-actions">

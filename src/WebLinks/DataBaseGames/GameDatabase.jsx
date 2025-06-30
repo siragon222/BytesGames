@@ -15,8 +15,8 @@ export const games = [
     Oculto: "no",
     type: "game",
     PlystationPlus: "si",
-    discount: "25%",
-    discountDate: "28 junio 2025",
+    discount: "",
+    discountDate: "",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
     JuegosdeRegaloPs4: "2",
@@ -44,6 +44,7 @@ export const games = [
         Principal: { price: 18, description: 'Licencia principal es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
         Secundaria: { price: 7.50, description: 'Licencia Secundaria es... <a href="/PreguntasFrecuentes" style="text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;">VER MÁS DETALLES.</a>', discount: 'yes' },
       },
+      
     },
     fotos: [
       'https://i.ibb.co/60Pf5FSS/Assassin-s-Creed-Valhalla-1-1-11zon.webp',

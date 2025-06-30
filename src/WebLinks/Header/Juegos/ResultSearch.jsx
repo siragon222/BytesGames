@@ -74,13 +74,14 @@ const ResultSearch = () => {
         return game.nuevo === 'si';
       }
       if (sortOption === 'listadaDlc') {
-        return game.listadaDlc !== '';
+        const hasDlcNumbers = (dlcString) => /\d/.test(dlcString);
+        return hasDlcNumbers(game.ListadaDlcPs3) || hasDlcNumbers(game.ListadaDlcPs4) || hasDlcNumbers(game.ListadaDlcPs5);
       }
       if (sortOption === 'pegiMenores') {
-        return game.pegiRating === 'Para Menores';
+        return ['PEGI 3', 'PEGI 7', 'PEGI 12'].includes(game.pegiRating);
       }
       if (sortOption === 'pegiAdultos') {
-        return game.pegiRating === 'Para Adultos';
+        return ['PEGI 16', 'PEGI 18'].includes(game.pegiRating);
       }
       return true;
     });
