@@ -276,7 +276,7 @@ export const games = [
     portadaUrl: "https://i.ibb.co/JjYcymTR/portada-Battlefield-4.webp"
   },
   {
-    id: 5,
+    id: 6,
     image: "",
     title: "Black Myth: Wukong",
     Lenguaje: "Español",
