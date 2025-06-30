@@ -169,6 +169,11 @@
     min-width: 0;
   }
 
+  .header-actions .divisas-container {
+    padding-right: 15px;
+    margin-left: auto;
+  }
+
   .search-container {
     flex-grow: 1;
     flex-basis: auto;
