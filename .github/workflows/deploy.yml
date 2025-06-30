@@ -19,7 +19,7 @@ jobs:
       - name: Build Vite project
         run: npm run build
 
-           - name: Upload dist/ to FTP
+             - name: Upload dist/ to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.bytesgames.co
@@ -27,4 +27,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/
           local-dir: dist/
+
 
