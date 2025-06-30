@@ -328,7 +328,9 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
         </div>
       )}
 
-      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && game.editions.Ocultar !== 'si' && (
+      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && 
+        // Check if the current platform has Ocultar set to "si"
+        (currentPlatformKey && game.editions[currentPlatformKey] && game.editions[currentPlatformKey].Ocultar !== "si") && (
         <div className="edition-section">
           <h3 className="section-title">Selecciona tu edición</h3>
           <div className="license-buttons">

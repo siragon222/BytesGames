@@ -8,7 +8,7 @@
   display: flex;
   gap: 20px; /* Espacio entre los contenedores */
   padding: 20px;
-  margin-top: 200px; /* Margen superior para bajar los componentes */
+  margin-top: 80px; /* Ajustado para estar debajo del header */
   max-width: 1200px; /* Ancho máximo del contenedor */
   margin-left: auto; /* Centra el contenedor horizontalmente */
   margin-right: auto; /* Centra el contenedor horizontalmente */
@@ -31,6 +31,24 @@
   justify-content: center; /* Center cards when they wrap */
   gap: 20px; /* Space between cards */
   margin-top: 20px; /* Space above the section */
+  max-width: 800px; /* Allows for two 380px cards + 20px gap + some buffer */
+  margin: 0 auto; /* Center the container */
+}
+
+.regalos-cards-container .regalos-card {
+  flex: 1 1 calc(50% - 10px); /* Each card takes up almost 50% minus half the gap */
+  max-width: 380px; /* Keep the original max-width */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 800px) { /* When screen is too small for two cards */
+  .regalos-cards-container {
+    max-width: 100%; /* Allow container to take full width */
+    justify-content: center; /* Ensure centering when stacked */
+  }
+  .regalos-cards-container .regalos-card {
+    flex: 1 1 100%; /* Make cards take full width */
+  }
 }
 
 /* Media query para pantallas pequeñas */

@@ -480,8 +480,8 @@ export const games = [
     portadaUrl: "https://i.ibb.co/ynfWgxyn/Dragon-Ball-Xenoverse-portada-6-11zon-6-11zon.webp"
   },
   {
-    id: 21,
-    image: "",
+    id: 9,
+    image: "https://i.ibb.co/SZjm6Gf/dragon-ball-xenoverse-2-cover.webp",
     title: "Dragon Ball Xenoverse 2",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -495,8 +495,8 @@ export const games = [
     discountDate: "",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4: "FIFA 17, Battlefield 4, Tom Clancys Ghost Recons Widlands",
-    JuegosdeRegaloPs5: "FIFA 17, Battlefield 4, Tom Clancys Ghost Recons Widlands",
+    JuegosdeRegaloPs4: "5, 5, 5",
+    JuegosdeRegaloPs5: "FIFA 17, 5, Tom Clancys Ghost Recons Widlands",
     genre: "Lucha, Acción, RPG, MMO",
     pegiRating: "PEGI 12",
     developer: "Dimps",
@@ -506,13 +506,11 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 17,
@@ -543,12 +541,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/XZdYxzqq/Dragon-Ball-Xenoverse-2-5-5-11zon-1-11zon.webp",
+      "https://i.ibb.co/9kX17hwj/Dragon-Ball-Xenoverse-2-1-1-11zon-3-11zon.webp",
+      "https://i.ibb.co/PZ5pvhXY/Dragon-Ball-Xenoverse-2-2-2-11zon-4-11zon.webp",
+      "https://i.ibb.co/zTFnB9SZ/Dragon-Ball-Xenoverse-2-3-3-11zon-5-11zon.webp",
+      "https://i.ibb.co/GvMCs3tt/Dragon-Ball-Xenoverse-2-4-4-11zon-6-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/zWskbDFt/Dragon-Ball-Xenoverse-2-portada-6-11zon-2-11zon.webp"
   },
   {
-    id: 22,
-    image: "",
+    id: 10,
+    image: "https://i.ibb.co/CKdh554d/Dragon-Ball-Sparking-Zero-cover.webp",
     title: "Dragon Ball: Sparking! Zero",
     Lenguaje: "Español",
     platforms: "PS5",
@@ -573,14 +577,10 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
       PS5: {}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
-      PS4: {},
       PS5: {
         Principal: {
           price: 55,
@@ -599,12 +599,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/Pz6mtXPN/Dragon-Ball-Sparking-Zero-3.webp",
+      "https://i.ibb.co/hxgn04pB/Dragon-Ball-Sparking-Zero-2.webp",
+      "https://i.ibb.co/k2DJ2jVq/Dragon-Ball-Sparking-Zero-1.webp",
+      "https://i.ibb.co/chxD6cCB/Dragon-Ball-Sparking-Zero-5.webp",
+      "https://i.ibb.co/fYSv4023/Dragon-Ball-Sparking-Zero-4.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/JR3bCMK4/Dragon-Ball-Sparking-Zero-portadaa.webp"
   },
   {
-    id: 27,
-    image: "",
+    id: 11,
+    image: "https://i.ibb.co/ZzCn7hMz/FIFA-17-cover.webp",
     title: "FIFA 17",
     Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
@@ -672,12 +678,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/1fg38QjP/FIFA-17-4-3-11zon-2-11zon.webp",
+      "https://i.ibb.co/gMPYB6NZ/FIFA-17-2-4-11zon-3-11zon.webp",
+      "https://i.ibb.co/d4sn6KDz/FIFA-17-5-5-11zon-4-11zon.webp",
+      "https://i.ibb.co/7thCz8SN/FIFA-17-1-1-11zon-6-11zon.webp",
+      "https://i.ibb.co/j9p5MBpX/FIFA-17-3-2-11zon-1-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/ycr4wfbY/portada-6-11zon-5-11zon.webp"
   },
   {
-    id: 28,
-    image: "",
+    id: 12,
+    image: "https://i.ibb.co/hR1r6rK1/FIFA-18-cover.webp",
     title: "FIFA 18",
     Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
@@ -745,12 +757,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/hJmtVhvm/FIFA-18-4-1-11zon-3-11zon.webp",
+      "https://i.ibb.co/xS5bkqzv/FIFA-18-3-6-11zon-2-11zon.webp",
+      "https://i.ibb.co/p6wp0NQw/FIFA-18-5-2-11zon-4-11zon.webp",
+      "https://i.ibb.co/G31t2RZs/FIFA-18-1-4-11zon-6-11zon.webp",
+      "https://i.ibb.co/NgJKMzD3/FIFA-18-2-5-11zon-1-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/1tkX6PXY/FIFA-18-PORTADA-3-11zon-5-11zon.webp"
   },
   {
-    id: 29,
-    image: "",
+    id: 13,
+    image: "https://i.ibb.co/jxR7vB5/FIFA-20-cover.webp",
     title: "FIFA 20",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -775,9 +793,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si",},
+      PS5: {Ocultar: "si",}
     },
     licensePrices: {
       PlayStation: {},
@@ -812,12 +829,19 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/DHtjjrWt/FIFA-20-1.webp",
+      "https://i.ibb.co/Q7sqxcKX/FIFA-20-5.webp",
+"https://i.ibb.co/qYQhJgcv/FIFA-20-4.webp",
+"https://i.ibb.co/Psjc7ymg/FIFA-20-3.webp",
+"https://i.ibb.co/0yW34Q0g/FIFA-20-2.webp"
+
+    ],
+    portadaUrl: "https://i.ibb.co/zW70n8X4/FIFA-20-portada.webp"
   },
   {
-    id: 30,
-    image: "",
+    id: 14,
+    image: "https://i.ibb.co/LzjkbQdh/FIFA-21-cover.webp",
     title: "FIFA 21",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -842,9 +866,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -879,12 +902,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/yBdXYPtg/fifa-21-4.webp",
+"https://i.ibb.co/yFR0RpPd/fifa-21-3.webp",
+"https://i.ibb.co/dsMG3xzM/fifa-21-2.webp",
+"https://i.ibb.co/RG7CXv1S/fifa-21-1.webp",
+"https://i.ibb.co/dswP2R9K/fifa-21-5.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/jPDRx7nX/fifa-21-portada.webp"
   },
   {
-    id: 31,
-    image: "",
+    id: 15,
+    image: "https://i.ibb.co/TND3r9L/FIFA-22-cover.webp",
     title: "FIFA 22",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -909,9 +938,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -946,12 +974,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/ynjJYBG0/FIFA-22-1.webp",
+"https://i.ibb.co/7N4Sk6Y2/FIFA-22-5.webp",
+"https://i.ibb.co/WvwJd5dy/FIFA-22-4.webp",
+"https://i.ibb.co/v6QBf4vk/FIFA-22-3.webp",
+"https://i.ibb.co/0RQ83TT5/FIFA-22-2.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/35y2hD7M/FIFA-22-portada.webp"
   },
   {
-    id: 32,
-    image: "",
+    id: 16,
+    image: "https://i.ibb.co/Xx9Gs32z/FIFA-23-cover.webp",
     title: "FIFA 23",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -976,9 +1010,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1013,12 +1046,19 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/3mFRcSxL/fifa-23-1.webp",
+      "https://i.ibb.co/B22jLmkr/fifa-23-4.webp",
+      "https://i.ibb.co/XrszFKGr/fifa-23-5.webp",
+      "https://i.ibb.co/d45Q1DgF/fifa-23-3.webp",
+      "https://i.ibb.co/SDZS7cFJ/fifa-23-2.webp"
+
+    ],
+    portadaUrl: "https://i.ibb.co/5XGZ2pwG/fifa-23-portada.webp"
   },
   {
-    id: 35,
-    image: "",
+    id: 17,
+    image: "https://i.ibb.co/KzDChQxS/god-of-war-4-cover.webp",
     title: "God of War",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1043,7 +1083,6 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
@@ -1080,12 +1119,19 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/QstTMKV/God-Of-War-4-2-2-11zon-2-11zon.webp",
+      "https://i.ibb.co/vxQG6Ng6/God-Of-War-4-4-4-11zon-4-11zon.webp",
+      "https://i.ibb.co/mVyCmf8T/God-Of-War-4-5-5-11zon-5-11zon.webp",
+      "https://i.ibb.co/QvhWPgM4/God-Of-War-4-1-1-11zon-1-11zon.webp",
+      "https://i.ibb.co/TxnRbwws/God-Of-War-4-3-3-11zon-3-11zon.webp"
+
+    ],
+    portadaUrl: "https://i.ibb.co/7JhMJSH2/God-Of-War-4-portada-6-11zon-6-11zon.webp"
   },
   {
-    id: 36,
-    image: "",
+    id: 18,
+    image: "https://i.ibb.co/9kKhGs7D/god-of-war-ragnarok-cover.webp",
     title: "God of War Ragnarök",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1116,7 +1162,6 @@ export const games = [
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 30,
@@ -1147,12 +1192,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/B2w74ZsH/God-Of-War-Ragnarok-4-4-11zon-4-11zon.webp",
+      "https://i.ibb.co/ks6zjfDJ/God-Of-War-Ragnarok-2-2-11zon-2-11zon.webp",
+      "https://i.ibb.co/ZpMWxW6s/God-Of-War-Ragnarok-5-5-11zon-5-11zon.webp",
+      "https://i.ibb.co/9HTbD3hk/God-Of-War-Ragnarok-1-1-11zon-1-11zon.webp",
+      "https://i.ibb.co/8SS8YYp/God-Of-War-Ragnarok-3-3-11zon-3-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/4nZbnzBf/God-Of-War-Ragnarok-portada-6-11zon-6-11zon.webp"
   },
   {
-    id: 60,
-    image: "",
+    id: 19,
+    image: "https://i.ibb.co/cKwxR0t7/nba-2k17-1-11zon-1-11zon.webp",
     title: "NBA 2K17",
     Lenguaje: "Español",
     platforms: "PS3",
@@ -1178,8 +1229,6 @@ export const games = [
       Ocultar: "si",
       PlayStation: {},
       PS3: {},
-      PS4: {},
-      PS5: {}
     },
     licensePrices: {
       PlayStation: {},
@@ -1190,15 +1239,19 @@ export const games = [
           discount: "no"
         }
       },
-      PS4: {},
-      PS5: {}
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/vxKD25QW/NBA-2-K17-4.webp",
+"https://i.ibb.co/v6gkdJwF/NBA-2-K17-3.webp",
+"https://i.ibb.co/8DC2Vj0W/NBA-2-K17-2.webp",
+"https://i.ibb.co/GfmNGCPy/NBA-2-K17-1.webp",
+"https://i.ibb.co/TDVXbrkr/NBA-2-K17-5.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/ksScsbzR/NBA-2-K17-portada.webp"
   },
   {
-    id: 61,
-    image: "",
+    id: 20,
+    image: "https://i.ibb.co/2X7vWWk/nba-2k-18-cover.webp",
     title: "NBA 2K18",
     Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
@@ -1214,7 +1267,7 @@ export const games = [
     ListadaDlcPs5: "",
     JuegosdeRegaloPs4: "",
     JuegosdeRegaloPs5: "",
-    genre: "Deportes, Simulación, Mundo Abierto",
+    genre: "Deportes, Simulación",
     pegiRating: "PEGI 3",
     developer: "Visual Concepts",
     publisher: "2K Sports",
@@ -1223,9 +1276,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1266,12 +1318,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/67ZjgWL3/NBA-2-K18-5.webp",
+"https://i.ibb.co/gbptySHX/NBA-2-K18-4.webp",
+"https://i.ibb.co/d4bBqKgS/NBA-2-K18-3.webp",
+"https://i.ibb.co/s9BN849b/NBA-2-K18-2.webp",
+"https://i.ibb.co/B5v7QVMX/NBA-2-K18-1.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/ZpyFtQvq/NBA-2-K18-portada.webp"
   },
   {
-    id: 62,
-    image: "",
+    id: 21,
+    image: "https://i.ibb.co/tTMWDxcT/NBA-2-K20-4-11zon-4-11zon.webp",
     title: "NBA 2K20",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1296,9 +1354,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1333,12 +1390,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/8QxCjR3/nba-2k20-1.webp",
+"https://i.ibb.co/20LbjxPT/nba-2k20-4.webp",
+"https://i.ibb.co/LKfGFjG/nba-2k20-3.webp",
+"https://i.ibb.co/8nrsVTk1/nba-2k20-2.webp",
+"https://i.ibb.co/BKBpStwP/nba-2k20-5.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/B2vq1jQX/nba-2k20-portada.webp"
   },
   {
-    id: 71,
-    image: "",
+    id: 22,
+    image: "https://i.ibb.co/kzds66G/Resident-Evil-0-HD-Remaster-cover.webp",
     title: "Resident Evil 0 HD Remaster",
     Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
@@ -1352,8 +1415,9 @@ export const games = [
     discountDate: "",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4: "Resident Evil 1 Remake",
-    JuegosdeRegaloPs5: "Resident Evil 1 Remake",
+    JuegosdeRegaloPs3: "23",
+    JuegosdeRegaloPs4: "23",
+    JuegosdeRegaloPs5: "23",
     genre: "Horror, Supervivencia, Aventura",
     pegiRating: "PEGI 18",
     developer: "Capcom",
@@ -1363,12 +1427,12 @@ export const games = [
     editions: {
       Ocultar: "no",
       PlayStation: {},
-      PS3: {
-        Estandar: 1,
-        Premium: 2
-      },
-      PS4: {},
-      PS5: {}
+      PS3: { 
+        Estándar: { price: 1, description: 'Incluye el juego base para PS3.', discount: 'no' },
+        Premium: { price: 2, description: 'Incluye el juego base + contenido adicional', discount: 'no'},
+        },
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1408,13 +1472,104 @@ export const games = [
           discount: "no"
         }
       }
+      
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/v9c45g5/Resident-Evil-0-HD-Remaster-5.webp",
+"https://i.ibb.co/3mBZhvYX/Resident-Evil-0-HD-Remaster-4.webp",
+"https://i.ibb.co/v4BbRQW2/Resident-Evil-0-HD-Remaster-3.webp",
+"https://i.ibb.co/VYgCGDV8/Resident-Evil-0-HD-Remaster-2.webp",
+"https://i.ibb.co/sdZdXRLt/Resident-Evil-0-HD-Remaster-1.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/KzR6jk4X/Resident-Evil-0-HD-Remaster-portada.webp"
   },
   {
-    id: 72,
-    image: "",
+    id: 23,
+    image: "https://i.ibb.co/F4DzCKRY/Resident-Evil-remaster-coverr.webp",
+    title: "Resident Evil 1 HD Remaster",
+    Lenguaje: "Español",
+    platforms: "PS3, PS4, PS5",
+    price: "$17",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs3: "22",
+    JuegosdeRegaloPs4: "22",
+    JuegosdeRegaloPs5: "22",
+    genre: "Horror, Supervivencia, Aventura",
+    pegiRating: "PEGI 18",
+    developer: "Capcom",
+    publisher: "Capcom",
+    descripcionContenido: "Prepárate para revivir el horror original. En Resident Evil HD Remaster, te sumergirás en la espeluznante mansión Spencer para descubrir la verdad detrás de la desaparición del equipo Bravo. Controla a los icónicos agentes de S.T.A.R.S., Chris Redfield y Jill Valentine, mientras exploran los retorcidos pasillos, resuelven complejos puzles y luchan por sobrevivir a las terroríficas criaturas que acechan en cada esquina. Esta versión remasterizada ofrece gráficos mejorados, sonido envolvente y la misma atmósfera claustrofóbica que definió el género del survival horror.",
+    releaseDate: "20 de enero de 2015",
+    editions: {
+      Ocultar: "no",
+      PlayStation: {},
+      PS3: { 
+        Estándar: { price: 1, description: 'Incluye el juego base para PS3.', discount: 'no' },
+        Premium: { price: 2, description: 'Incluye el juego base + contenido adicional', discount: 'no'},
+        },
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {
+        Principal: {
+          price: 1.5,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS4: {
+        Principal: {
+          price: 15,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 17,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+      
+    },
+    fotos: [
+        "https://i.ibb.co/HDVBG1BQ/Resident-Evil-remaster-5.webp",
+        "https://i.ibb.co/X1DJWyr/Resident-Evil-remaster-4.webp",
+        "https://i.ibb.co/1G42jG7S/Resident-Evil-remaster-3.webp",
+        "https://i.ibb.co/zj3QJNx/Resident-Evil-remaster-2.webp",
+        "https://i.ibb.co/ycL3y79y/Resident-Evil-remaster-1.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/kV47nmB6/Resident-Evil-remaster-portada.webp"
+  },
+  {
+    id: 24,
+    image: "https://i.ibb.co/Q3WTCMHV/Resident-Evil-2-cover.webp",
     title: "Resident Evil 2",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1439,13 +1594,11 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 20,
@@ -1476,12 +1629,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/BMbXyjx/Resident-Evil-2-Remake-4-4-11zon.webp",
+      "https://i.ibb.co/ks3xvZff/Resident-Evil-2-Remake-5-5-11zon.webp",
+      "https://i.ibb.co/VcqKYwz5/Resident-Evil-2-Remake-1-1-11zon.webp",
+      "https://i.ibb.co/mfwwXqM/Resident-Evil-2-Remake-2-2-11zon.webp",
+      "https://i.ibb.co/tTcKsWqj/Resident-Evil-2-Remake-3-3-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/gZ2gZqcb/Resident-Evil-2-Remake-portada-6-11zon.webp"
   },
   {
-    id: 73,
-    image: "",
+    id: 25,
+    image: "https://i.ibb.co/6R969r8N/Resident-Evil-3-cover.webp",
     title: "Resident Evil 3",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1506,13 +1665,11 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 20,
@@ -1543,12 +1700,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/T9zhdW7/Resident-Evil-3-2-2-11zon.webp",
+      "https://i.ibb.co/qLzsCy4h/Resident-Evil-3-3-3-11zon.webp",
+      "https://i.ibb.co/cShsFfBg/Resident-Evil-3-4-4-11zon.webp",
+      "https://i.ibb.co/RkdVv0t9/Resident-Evil-3-1-1-11zon.webp",
+      "https://i.ibb.co/pv4jMVnX/Resident-Evil-3-5-5-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/fGLPcnnd/Resident-Evil-3-portada-6-11zon.webp"
   },
   {
-    id: 74,
-    image: "",
+    id: 26,
+    image: "https://i.ibb.co/3mx8Pjhf/Resident-Evil-4-cover.webp",
     title: "Resident Evil 4",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1573,13 +1736,11 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 27,
@@ -1610,12 +1771,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/T9zhdW7/Resident-Evil-3-2-2-11zon.webp",
+      "https://i.ibb.co/qLzsCy4h/Resident-Evil-3-3-3-11zon.webp",
+      "https://i.ibb.co/cShsFfBg/Resident-Evil-3-4-4-11zon.webp",
+      "https://i.ibb.co/RkdVv0t9/Resident-Evil-3-1-1-11zon.webp",
+      "https://i.ibb.co/pv4jMVnX/Resident-Evil-3-5-5-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/fGLPcnnd/Resident-Evil-3-portada-6-11zon.webp"
   },
   {
-    id: 75,
-    image: "",
+    id: 27,
+    image: "https://i.ibb.co/PvmpLnrV/resident-evil-7-cover.webp",
     title: "Resident Evil 7: Biohazard",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1640,13 +1807,11 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 13,
@@ -1677,12 +1842,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/6J7MH8TD/Resident-Evil-7-Biohazard-1-1-11zon.webp",
+      "https://i.ibb.co/mV7qGq36/Resident-Evil-7-Biohazard-3-3-11zon.webp",
+      "https://i.ibb.co/G38W80s4/Resident-Evil-7-Biohazard-4-4-11zon.webp",
+      "https://i.ibb.co/MySfwLnj/Resident-Evil-7-Biohazard-5-5-11zon.webp",
+      "https://i.ibb.co/WvG16swz/Resident-Evil-7-Biohazard-2-2-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/mFRwNxLp/Resident-Evil-7-Biohazard-portada-6-11zon.webp"
   },
   {
-    id: 76,
-    image: "",
+    id: 28,
+    image: "https://i.ibb.co/3mVCCjZ2/Resident-Evil-Revelations-2-cover.webp",
     title: "Resident Evil Revelations 2",
     Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
@@ -1750,12 +1921,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/RTGycZNj/Resident-Evil-Revelations-2-1.webp",
+      "https://i.ibb.co/qY3ytTVj/Resident-Evil-Revelations-2-4.webp",
+      "https://i.ibb.co/wNjNScpw/Resident-Evil-Revelations-2-3.webp",
+      "https://i.ibb.co/CK6BfYtt/Resident-Evil-Revelations-2-2.webp",
+      "https://i.ibb.co/dsC763FP/Resident-Evil-Revelations-2-5.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/przc2NmW/Resident-Evil-Revelations-2-portada.webp"
   },
   {
-    id: 77,
-    image: "",
+    id: 29,
+    image: "https://i.ibb.co/LhH82Pvj/Resident-Evil-Village-cover.webp",
     title: "Resident Evil Village",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1817,12 +1994,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/5Prj7gP/Resident-Evil-Village-5-4-11zon.webp",
+      "https://i.ibb.co/1yt3xsj/Resident-Evil-Village-2-1-11zon.webp",
+      "https://i.ibb.co/Xry7jBg8/Resident-Evil-Village-3-2-11zon.webp",
+      "https://i.ibb.co/b5hrbQdr/resident-evil-village-4.webp",
+      "https://i.ibb.co/BHnksLSs/Resident-Evil-Village-1-6-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/FkJY0jcY/Resident-Evil-Village-portada-5-11zon.webp"
   },
   {
-    id: 86,
-    image: "",
+    id: 30,
+    image: "https://i.ibb.co/bjQtZm4v/UFC-2-cover.webp",
     title: "UFC 2",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1847,13 +2030,11 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
-      PS3: {},
       PS4: {
         Principal: {
           price: 8,
@@ -1884,12 +2065,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/5xsmQTDJ/ufc-2-1.webp",
+"https://i.ibb.co/Y4jNLSBr/ufc-2-5.webp",
+"https://i.ibb.co/zWwv0XG2/ufc-2-4.webp",
+"https://i.ibb.co/Nd9vNLgR/ufc-2-3.webp",
+"https://i.ibb.co/k6yxfbhn/ufc-2-2.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/21LpyTgF/ufc-2-portada.webp"
   },
   {
-    id: 92,
-    image: "",
+    id: 31,
+    image: "https://i.ibb.co/s9Jwy4PS/wwe-2k17-11-11zon-11-11zon.webp",
     title: "WWE 2K17",
     Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
@@ -1914,9 +2101,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1957,12 +2143,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/NgqfWFm1/WWE-2-K17-2.webp",
+"https://i.ibb.co/gbsGHN8b/WWE-2-K17-1.webp",
+"https://i.ibb.co/jvnD8Ww0/WWE-2-K17-5.webp",
+"https://i.ibb.co/yn5WZR5Q/WWE-2-K17-4.webp",
+"https://i.ibb.co/Jw26rnbt/WWE-2-K17-3.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/XQL1P70/WWE-2-K17-portada.webp"
   },
   {
-    id: 93,
-    image: "",
+    id: 32,
+    image: "https://i.ibb.co/dzj7yBJ/wwe-2k22-15-11zon-15-11zon.webp",
     title: "WWE 2K22",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1987,9 +2179,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -2024,12 +2215,18 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/tMgtqFjy/WWE-2-K22-5.webp",
+"https://i.ibb.co/GQmrFdmL/WWE-2-K22-4.webp",
+"https://i.ibb.co/39VdqHrb/WWE-2-K22-3.webp",
+"https://i.ibb.co/bgyv3Q29/WWE-2-K22-2.webp",
+"https://i.ibb.co/W4dXS46v/WWE-2-K22-1.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/dwZVNHhz/WWE-2-K22-portada.webp"
   },
   {
-    id: 94,
-    image: "",
+    id: 33,
+    image: "https://i.ibb.co/x83QtnRf/EA-Sports-FC-24-cover.webp",
     title: "EA Sports FC 24",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -2054,9 +2251,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -2091,8 +2287,14 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/N6ZDzTfW/EA-Sports-FC-24-5-5-11zon-3-11zon.webp",
+"https://i.ibb.co/7xvyJqGZ/EA-Sports-FC-24-4-4-11zon-2-11zon.webp",
+"https://i.ibb.co/prJcCWrT/EA-Sports-FC-24-1-1-11zon-5-11zon.webp",
+"https://i.ibb.co/SXtQNPYs/EA-Sports-FC-24-2-2-11zon-6-11zon.webp",
+"https://i.ibb.co/j9FFdSV0/EA-Sports-FC-24-3-3-11zon-1-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/8n3mg7ZB/EA-Sports-FC-24-portada-6-11zon-4-11zon.webp"
   },
   // Agrega más juegos según sea necesario
 ];

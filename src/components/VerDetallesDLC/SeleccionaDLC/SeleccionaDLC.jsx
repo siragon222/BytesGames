@@ -256,7 +256,8 @@ const SeleccionaDLC = ({ game }) => {
         </div>
       )}
 
-      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && game.editions.Ocultar !== 'si' && ( // Conditional rendering for edition section and Ocultar
+      {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && 
+        (currentPlatformKey && game.editions[currentPlatformKey] && game.editions[currentPlatformKey].Ocultar !== "si") && (
         <div className="edition-section">
           <h3 className="section-title">Selecciona tu edición</h3>
           <div className="license-buttons">
