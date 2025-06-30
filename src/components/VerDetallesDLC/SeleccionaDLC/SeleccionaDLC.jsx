@@ -99,6 +99,52 @@ const SeleccionaDLC = ({ game }) => {
 
   const navigate = useNavigate();
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = '+584140757350'; // Replace with the actual WhatsApp number
+    let message = `¡Hola! Estoy interesado en comprar el siguiente DLC:\n`;
+    message += `Artículo: ${game.title}\n`;
+
+    if (selectedPlatform) {
+      message += `Plataforma seleccionada: ${selectedPlatform}\n`;
+    }
+
+    if (selectedPlayStationConsole) {
+      message += ` (${selectedPlayStationConsole})\n`;
+    }
+    if (selectedXboxConsole) {
+      message += ` (${selectedXboxConsole})\n`;
+    }
+    if (selectedPcLauncher) {
+      message += ` (${selectedPcLauncher})\n`;
+    }
+
+    let finalPrice = 0;
+    let selectedItemName = '';
+
+    if (selectedEdition && currentPlatformKey && game.editions[currentPlatformKey] && game.editions[currentPlatformKey][selectedEdition]) {
+      const editionDetails = game.editions[currentPlatformKey][selectedEdition];
+      const prices = calculatePrice(editionDetails.price, editionDetails.discount);
+      finalPrice = prices.discounted;
+      selectedItemName = selectedEdition;
+      message += `Edición: ${selectedEdition} (${editionDetails.description.replace(/<[^>]*>?/gm, '').replace('Licencia principal es...', '').replace('Licencia Secundaria es...', '').replace('Licencia Alquiler es...', '').replace('VER MÁS DETALLES.', '').trim()})\n`;
+    } else if (selectedLicense && currentPlatformKey && game.licensePrices[currentPlatformKey] && game.licensePrices[currentPlatformKey][selectedLicense]) {
+      const licenseDetails = game.licensePrices[currentPlatformKey][selectedLicense];
+      const prices = calculatePrice(licenseDetails.price, licenseDetails.discount);
+      finalPrice = prices.discounted;
+      selectedItemName = selectedLicense;
+      message += `Licencia: ${selectedLicense} (${licenseDetails.description.replace(/<[^>]*>?/gm, '').replace('Licencia principal es...', '').replace('Licencia Secundaria es...', '').replace('Licencia Alquiler es...', '').replace('VER MÁS DETALLES.', '').trim()})\n`;
+    }
+
+    if (finalPrice > 0) {
+      message += `Precio: ${selectedCurrency.symbol}${(finalPrice * selectedCurrency.factor).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+    }
+
+    message += `\n¡Gracias!`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="selecciona-componente">
       <h1 className="game-title">{game ? game.title : 'Cargando...'}</h1>

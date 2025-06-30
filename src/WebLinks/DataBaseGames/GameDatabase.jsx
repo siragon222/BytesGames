@@ -336,8 +336,8 @@ export const games = [
     portadaUrl: "https://i.ibb.co/SD6XbJGJ/Black-Myth-Wukong-Portada.webp"
   },
   {
-    id: 19,
-    image: "",
+    id: 7,
+    image: "https://i.ibb.co/5WhkJRqP/dragon-ball-fighter-z-cover.webp",
     title: "Dragon Ball FighterZ",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -408,8 +408,8 @@ export const games = [
     portadaUrl: "https://i.ibb.co/Dg6mbVGq/Dragon-Ball-Fighter-Z-portada-6-11zon-3-11zon.webp"
   },
   {
-    id: 20,
-    image: "",
+    id: 8,
+    image: "https://i.ibb.co/B2B7LmYN/dragon-ball-xenoverse-cover.webp",
     title: "Dragon Ball Xenoverse",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -421,8 +421,8 @@ export const games = [
     PlystationPlus: "no",
     discount: "",
     discountDate: "",
-    ListadaDlcPs4: "Todos los DLCs",
-    ListadaDlcPs5: "Todos los DLCs",
+    ListadaDlcPs4: "1000001",
+    ListadaDlcPs5: "1000001",
     JuegosdeRegaloPs4: "",
     JuegosdeRegaloPs5: "",
     genre: "Lucha, Acción, RPG, MMO",
@@ -434,7 +434,6 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
@@ -471,8 +470,14 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/Z62sg2JZ/Dragon-Ball-Xenoverse-4-4-11zon-4-11zon.webp",
+      "https://i.ibb.co/63cc4FP/Dragon-Ball-Xenoverse-3-3-11zon-3-11zon.webp",
+      "https://i.ibb.co/NccfkNf/Dragon-Ball-Xenoverse-5-5-11zon-5-11zon.webp",
+      "https://i.ibb.co/YB99GwPL/Dragon-Ball-Xenoverse-1-1-11zon-1-11zon.webp",
+      "https://i.ibb.co/bgxTbmJ6/Dragon-Ball-Xenoverse-2-2-11zon-2-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/ynfWgxyn/Dragon-Ball-Xenoverse-portada-6-11zon-6-11zon.webp"
   },
   {
     id: 21,

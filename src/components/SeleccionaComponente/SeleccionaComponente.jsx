@@ -111,33 +111,36 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
   const whatsappNumber = '+584140757350';
   
   const handleWhatsAppClick = () => {
-    let whatsappMessage = `Hola! Estoy interesado en hacer una compra del juego: ${game.title}`;
+    let whatsappMessage = `Hola! Estoy interesado en hacer una compra del juego:\n`;
+    whatsappMessage += `Artículo: ${game.title}\n`;
     let itemPrice = 0;
     let itemName = '';
     let platformAndConsole = '';
 
     if (selectedPlatform) {
-      platformAndConsole = ` para la plataforma ${selectedPlatform}`;
+      whatsappMessage += `Plataforma seleccionada: ${selectedPlatform}`;
       if (selectedPlayStationConsole) {
-        platformAndConsole += ` (${selectedPlayStationConsole})`;
+        whatsappMessage += ` (${selectedPlayStationConsole})\n`;
       } else if (selectedXboxConsole) {
-        platformAndConsole += ` (${selectedXboxConsole})`;
+        whatsappMessage += ` (${selectedXboxConsole})\n`;
       } else if (selectedPcLauncher) {
-        platformAndConsole += ` (${selectedPcLauncher})`;
+        whatsappMessage += ` (${selectedPcLauncher})\n`;
       }
+    } else {
+      whatsappMessage += `\n`; // Add newline if no platform is selected yet to maintain spacing
     }
-
-    whatsappMessage += platformAndConsole;
 
     if (selectedLicense) {
       const licenseDetail = licensePricesData[selectedLicense];
       if (licenseDetail) {
         const prices = calculatePrice(licenseDetail.price, licenseDetail.discount);
         itemName = `licencia: ${selectedLicense}`;
+        whatsappMessage += `Licencia: ${selectedLicense} (${licenseDetail.description.replace(/<[^>]*>?/gm, '').replace('Licencia principal es...', '').replace('Licencia Secundaria es...', '').replace('Licencia Alquiler es...', '').replace('VER MÁS DETALLES.', '').trim()})\n`;
         if (prices.hasDiscount) {
-          whatsappMessage += `, ${itemName} con descuento. Precio original: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}, Precio con descuento: ${selectedCurrency.symbol}${prices.discounted.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+          whatsappMessage += `Precio Original: ${selectedCurrency.symbol}${(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
+          whatsappMessage += `Precio con descuento: ${selectedCurrency.symbol}${(prices.discounted * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
         } else {
-          whatsappMessage += `, ${itemName} por un precio de: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+          whatsappMessage += `Precio: ${selectedCurrency.symbol}${(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
         }
       }
     } else if (selectedEdition) {
@@ -145,14 +148,18 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       if (editionDetail) {
         const prices = calculatePrice(editionDetail.price, editionDetail.discount);
         itemName = `edición: ${selectedEdition}`;
+        whatsappMessage += `Edición: ${selectedEdition} (${editionDetail.description.replace(/<[^>]*>?/gm, '').replace('Incluye el juego base', '').replace('VER MÁS DETALLES.', '').trim()})\n`;
         if (prices.hasDiscount) {
-          whatsappMessage += `, ${itemName} con descuento. Precio original: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}, Precio con descuento: ${selectedCurrency.symbol}${prices.discounted.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+          whatsappMessage += `Precio Original: ${selectedCurrency.symbol}${(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
+          whatsappMessage += `Precio con descuento: ${selectedCurrency.symbol}${(prices.discounted * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
         } else {
-          whatsappMessage += `, ${itemName} por un precio de: ${selectedCurrency.symbol}${prices.original.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+          whatsappMessage += `Precio: ${selectedCurrency.symbol}${(prices.original * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
         }
       }
     }
     
+    whatsappMessage += `\n¡Gracias!`;
+
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(url, '_blank');
   };

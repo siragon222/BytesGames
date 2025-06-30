@@ -4,9 +4,9 @@ export const CurrencyContext = createContext();
 
 export const CurrencyProvider = ({ children }) => {
   const [selectedCurrency, setSelectedCurrency] = useState(() => {
-    // Initialize from localStorage or default to Venezuela (BS)
+    // Initialize from localStorage or default to Venezuela (USD as base)
     const savedCurrency = localStorage.getItem('selectedCurrency');
-    return savedCurrency ? JSON.parse(savedCurrency) : { name: 'Venezuela', code: 'BS', symbol: 'Bs', factor: 1 };
+    return savedCurrency ? JSON.parse(savedCurrency) : { name: 'United States Dollar', code: 'USD', symbol: '$ ', factor: 1 };
   });
 
   useEffect(() => {
