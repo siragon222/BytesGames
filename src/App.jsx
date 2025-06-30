@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './components/Footer';
 import './App.css';
 import Header2 from './components/Header2';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import JuegosPs3 from './WebLinks/Header/Juegos/Ps3Juegos';
 import Homecontenido from './WebLinks/Home/Homecontenido';
 import ResultSearch from './WebLinks/Header/Juegos/ResultSearch';
@@ -17,7 +17,7 @@ import Separator from './components/Separator';
 function App() {
   return (
     <CurrencyProvider>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <GameProvider>
           <main>
@@ -42,7 +42,7 @@ function App() {
             <Footer />
           </main>
         </GameProvider>
-      </HashRouter>
+      </BrowserRouter>
     </CurrencyProvider>
   );
 }
