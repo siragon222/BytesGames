@@ -1,6 +1,7 @@
 .divisas-container {
   position: relative;
   display: inline-block;
+  z-index: 1001; /* Ensure the currency container is above other elements */
 }
 
 .currency-button {
