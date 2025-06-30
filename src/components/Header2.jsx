@@ -52,7 +52,7 @@ const Header2 = () => {
           </Link>
         </div>
         <nav ref={menuRef}>
-          <div className="mobile-menu-icon" onClick={toggleMenu}>
+          <div className="mobile-menu-icon" onClick={toggleMenu} style={isMobile ? { paddingLeft: '12px' } : {}}>
             <svg
               width="24"
               height="24"
