@@ -277,7 +277,7 @@ export const games = [
   },
   {
     id: 6,
-    image: "",
+    image: "https://i.ibb.co/zh0JCLLB/Black-Myth-Wukong-Cover.webp",
     title: "Black Myth: Wukong",
     Lenguaje: "Español",
     platforms: "PS5",
@@ -302,8 +302,6 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
       PS5: {}
     },
     licensePrices: {
@@ -328,8 +326,14 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/Fk9pVJK2/Black-Myth-Wukong-5.webp",
+      "https://i.ibb.co/9kjNXcgD/Black-Myth-Wukong-4.webp",
+      "https://i.ibb.co/x86Wsxvr/Black-Myth-Wukong-3.webp",
+      "https://i.ibb.co/PzxhyYXh/Black-Myth-Wukong-2.webp",
+      "https://i.ibb.co/8n5t2jFM/Black-Myth-Wukong-1.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/SD6XbJGJ/Black-Myth-Wukong-Portada.webp"
   },
   {
     id: 19,
@@ -358,7 +362,6 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
       PS4: {},
       PS5: {}
     },
@@ -395,8 +398,14 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/SXqsvGzj/Dragon-Ball-Fighter-Z-3-3-11zon-6-11zon.webp",
+      "https://i.ibb.co/9HQHPs15/Dragon-Ball-Fighter-Z-5-5-11zon-2-11zon.webp",
+      "https://i.ibb.co/Y4g7TpPy/Dragon-Ball-Fighter-Z-1-1-11zon-4-11zon.webp",
+      "https://i.ibb.co/HDgqfjXp/Dragon-Ball-Fighter-Z-2-2-11zon-5-11zon.webp"
+
+    ],
+    portadaUrl: "https://i.ibb.co/Dg6mbVGq/Dragon-Ball-Fighter-Z-portada-6-11zon-3-11zon.webp"
   },
   {
     id: 20,
@@ -1938,6 +1947,140 @@ export const games = [
         },
         Secundaria: {
           price: 4.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 93,
+    image: "",
+    title: "WWE 2K22",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$10",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Lucha, Deportes, Simulación, Arcades",
+    pegiRating: "PEGI 16",
+    developer: "Visual Concepts",
+    publisher: "2K Sports",
+    descripcionContenido: "Con un motor de juego rediseñado y nuevos controles, WWE 2K22 \"Golpea Diferente\". Siente el poder de las Superestrellas, revive momentos clave de la carrera de Rey Mysterio en el 2K Showcase y construye tu propia facción en el nuevo modo Mi FACCIÓN.",
+    releaseDate: "8 de marzo de 2022",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS3: {},
+      PS4: {},
+      PS5: {}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 10,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 10,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 94,
+    image: "",
+    title: "EA Sports FC 24",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$13.5",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "si",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Deportes, Simulación, Cooperativo",
+    pegiRating: "PEGI 3",
+    developer: "EA Vancouver, EA Romania",
+    publisher: "EA Sports",
+    descripcionContenido: "EA SPORTS FC 24 marca el comienzo de una nueva era. Con más de 19,000 futbolistas, 700 equipos y 30 ligas, la autenticidad es inigualable. HyperMotionV, PlayStyles optimizados por Opta y un motor Frostbite revolucionado ofrecen la experiencia más realista.",
+    releaseDate: "29 de septiembre de 2023",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS3: {},
+      PS4: {},
+      PS5: {}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 13,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 2.3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 6,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 13.5,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 6,
           description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "no"
         }
