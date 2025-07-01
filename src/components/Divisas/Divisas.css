@@ -48,7 +48,7 @@
 
   .divisas-container {
     min-width: 0; /* Allow currency container to shrink */
-    padding-right: 20px;
+    padding-right: 25px;
   }
 }
 

@@ -126,7 +126,7 @@
   }
 
   .header2-container {
-    padding: 0 16px;
+    padding: 0 25px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -170,7 +170,6 @@
   }
 
   .header-actions .divisas-container {
-    padding-right: 15px;
     margin-left: auto;
   }
 
