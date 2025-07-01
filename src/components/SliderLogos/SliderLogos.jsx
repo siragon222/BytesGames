@@ -3,7 +3,6 @@ import './SliderLogos.css'; // Importa el archivo CSS
 
 const SliderLogos = () => {
   const logos = [
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Nintendo-Switch.svg", alt: "Nintendo Switch" },
     { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Geforce-Now.svg", alt: "Geforce Now" },
     { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Ubisoft-Logo.svg", alt: "Ubisoft" },
     { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Electronic-Arts.svg", alt: "Electronic Arts" },

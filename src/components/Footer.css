@@ -15,7 +15,6 @@
   margin: 0 auto;
 }
 
-.social-links a,
 .legal-links a {
   color: #fff;
   text-decoration: none;
@@ -23,20 +22,8 @@
   transition: color 0.3s ease;
 }
 
-.social-links a:hover,
 .legal-links a:hover {
   color: #ff0000;
-}
-
-.social-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.social-links a {
-  font-size: 24px;
 }
 
 .legal-links a {

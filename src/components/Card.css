@@ -61,7 +61,7 @@
 }
 
 .card-button {
-  background-color: #ff0000;
+  background: linear-gradient(to right, #e00a0a, #cc0000);
   color: #ffffff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -80,7 +80,7 @@
 }
 
 .card-button:hover {
-  background-color: #910000;
+  background: linear-gradient(to right, #cc0000, #990000);
 }
 
 .card-button:active {
