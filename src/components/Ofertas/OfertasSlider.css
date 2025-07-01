@@ -183,18 +183,13 @@ body {
     height: 50vh;
   }
   .slide-content {
-    margin: 10px 10px 5px 10px;
-    min-height: auto;
+    margin: 10px;
   }
   .card {
     padding: 10px;
   }
   .swiper-navBtn {
     display: none;
-  }
-  .ofertas-slide-content {
-    margin: 10px 10px 5px 10px;
-    min-height: auto;
   }
 }
 
@@ -259,23 +254,35 @@ body {
     animation: none !important;
   }
 
-  .slider-background {
-    height: 50vh;
+  .ofertas-slide-container {
+    max-width: 90% !important;
+    padding-bottom: 0;
   }
-  .slide-content {
-    margin: 10px 10px 5px 10px;
-    min-height: auto;
-  }
-  .card {
-    padding: 10px;
-  }
-  .swiper-navBtn {
-    display: none;
-  }
+
   .ofertas-slide-content {
     margin: 10px 10px 5px 10px;
     min-height: auto;
   }
+
+  .ofertas-card {
+    padding: 10px;
+  }
+
+  .swiper-navBtn {
+    display: none;
+  }
+
+  /* Original classes, kept for other contexts if they apply */
+  .slider-background {
+    height: 50vh;
+  }
+  .slide-content {
+    margin: 10px;
+  }
+  .card {
+    padding: 10px;
+  }
+  /* End original classes */
 }
 
 .ofertas-slide-content {
