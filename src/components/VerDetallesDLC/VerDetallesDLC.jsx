@@ -6,7 +6,6 @@ import DescripcionDLC from './DescripcionDLC/DescripcionDLC';
 import SeleccionaDLC from './SeleccionaDLC/SeleccionaDLC';
 import { GameContext } from '../../context/GameContext';
 import { dlcGames } from '../../WebLinks/DataBaseGames/DLCdatabase';
-import SliderRecomendados from '../SliderRecomendados/SliderRecomendados';
 import './VerDetallesDLC.css';
 
 const VerDetallesDLC = () => {
@@ -60,7 +59,6 @@ const VerDetallesDLC = () => {
           <SeleccionaDLC game={selectedGame} onConsoleSelect={handleConsoleChange} />
         </div>
       </div>
-      <SliderRecomendados selectedGame={selectedGame} />
     </div>
   );
 };

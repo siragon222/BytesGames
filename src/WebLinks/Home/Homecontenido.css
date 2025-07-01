@@ -6,15 +6,12 @@
 
 /* Asegurarse de que el Header2 tenga un z-index mayor */
 .header2 {
-  position: relative;
-  z-index: 2; /* Asegurar que el Header2 esté por encima del HeroSlider */
   margin-top: 0; /* Eliminar cualquier margen superior */
 }
 
 main {
   margin-top: 0; /* Eliminar cualquier margen superior */
   padding-top: 0; /* Eliminar cualquier padding superior */
-  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .separator {

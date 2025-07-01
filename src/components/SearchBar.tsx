@@ -12,8 +12,13 @@ const SearchBar: React.FC = () => {
 
   const handleClick = () => {
     if (isExpanded) {
-      setSearchText(''); // Clear search text when closing
-      navigate('/ResultSearch'); // Navigate to clear the URL parameter
+      // Si estamos expandidos y no hay texto, y no estamos en la página de resultados, simplemente cerramos.
+      if (searchText === '' && location.pathname !== '/ResultSearch') {
+        setSearchText('');
+      } else {
+        setSearchText(''); // Clear search text when closing
+        navigate('/ResultSearch'); // Navigate to clear the URL parameter
+      }
     }
     setIsExpanded(!isExpanded);
   };

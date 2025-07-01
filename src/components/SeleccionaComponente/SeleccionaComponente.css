@@ -301,7 +301,7 @@
 }
 
 .hace-compra-button {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(255, 0, 0, 0.7)); /* Blends with component's background */
+  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); /* Blends with component's background */
   color: white;
   padding: 18px 35px;
   border: 2px solid #ff0000; /* Red border matching platform buttons */
@@ -309,17 +309,17 @@
   font-size: 19px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: fit-content;
+  width: 100%; /* Add this line to make the button span the full width */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
-  /* animation: pulse-button 2s infinite ease-in-out; */ /* Removing for now */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.8s infinite ease-in-out;
 }
 
 .hace-compra-button .button-icon {
@@ -330,7 +330,7 @@
 }
 
 .hace-compra-button:hover {
-  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); /* Reverse gradient on hover */
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(255, 0, 0, 0.7)); /* Reverse gradient on hover */
   transform: scale(1.03);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger but still subtle shadow on hover */
 }

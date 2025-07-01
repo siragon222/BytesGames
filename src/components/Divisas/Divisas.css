@@ -93,38 +93,36 @@
 
 .currency-modal {
   position: fixed;
-  top: 70px; /* Adjust position from the top */
+  top: 0; /* Cover the entire screen from the top */
   left: 0;
   width: 100%;
-  max-height: calc(100vh - 70px); /* Leave space for header */
-  background: linear-gradient(to top, rgb(29, 28, 28), rgb(0, 0, 0)); /* Gradient background */
+  height: 100vh; /* Cover the entire viewport height */
+  background: linear-gradient(to top, rgba(29, 28, 28, 0.918), rgb(0, 0, 0)); /* Gradient background */
   backdrop-filter: blur(10px); /* Gaussian blur to the background */
   padding: 15px 0;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.466); /* Shadow from bottom */
-  transform: translateY(-8px); /* Start slightly above its final position */
-  transition: transform 0.9s ease-out, opacity 0.3s ease-out, visibility 0.5s ease-out; /* Combined transitions including visibility */
+  transition: opacity 0.3s ease-out, visibility 0.5s ease-out; /* Combined transitions including visibility */
   z-index: 9999; /* Changed to be above all components, including header */
-  border-bottom-left-radius: 20px; /* Radius for bottom-left corner */
-  border-bottom-right-radius: 20px; /* Radius for bottom-right corner */
+  border-bottom-left-radius: 0; /* Remove radius for full screen */
+  border-bottom-right-radius: 0; /* Remove radius for full screen */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Keep header at the top */
   list-style: none;
   margin: 0;
   box-sizing: border-box;
-  overflow-y: hidden; /* No scrollbar */
+  overflow-y: auto; /* Allow vertical scrolling */
   opacity: 0; /* Start hidden */
   visibility: hidden; /* Hide element completely when not active */
   pointer-events: none; /* Disable interaction when not active */
 }
 
 .currency-modal.active {
-  transform: translateY(0); /* Slide into view from top */
   opacity: 1; /* Fade in */
   visibility: visible; /* Make element visible */
   pointer-events: auto; /* Enable interaction when active */
-  transition: transform 0.3s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out; /* Combined transitions including visibility */
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out; /* Combined transitions including visibility */
 }
 
 .modal-header {
@@ -136,15 +134,39 @@
   color: white;
   font-size: 1.3em;
   font-weight: bold;
+  position: relative; /* Add this to make it a positioning context for absolute children */
+}
+
+.modal-header h2 {
+  line-height: 1.5; /* Ensure consistent line height */
+  margin: 0; /* Remove default margin */
 }
 
 .close-modal-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5em;
+  background: none; /* No background */
+  border: none; /* No border */
+  color: #fff; /* White 'X' */
+  font-size: 1.3em; /* Slightly larger */
+  font-weight: bold; /* Make the 'X' bolder for softer tips */
   cursor: pointer;
-  padding: 5px;
+  padding: 0; /* No padding */
+  border-radius: 50%; /* Rounded tips (circular shape if padding were present) */
+  /* Removed transition and hover effects */
+  position: absolute; /* Position absolutely within the header */
+  right: 0; /* Align to the right edge of the header */
+  top: 38%; /* Vertically center */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.close-modal-button:active,
+.close-modal-button:focus {
+  text-decoration: none; /* Remove underline on click/focus */
+  outline: none; /* Remove outline on focus */
+}
+
+.close-modal-button:hover {
+  background: none; /* Ensure no background on hover */
+  color: #fff; /* Ensure white color on hover */
 }
 
 .currency-modal li {
@@ -155,11 +177,25 @@
   gap: 8px;
   color: #fff;
   transition: background-color 0.3s ease, opacity 0.4s ease-out, transform 0.4s ease-out; /* Keep existing transitions */
-  font-size: 1.1em;
+  font-size: 1.8em; /* Make text larger */
   justify-content: center; /* Centered content */
   border-bottom: none; /* Remove separator */
   border-radius: 8px; /* Rounded corners for list items */
-  margin-bottom: -10px; /* Spacing between items */
+  margin-bottom: 10px; /* Spacing between items */
+}
+
+.currency-modal li .currency-flag {
+  width: 40px; /* Make flags larger */
+  height: 30px; /* Make flags larger */
+}
+
+.currency-options-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center options vertically */
+  flex-grow: 1; /* Take up remaining space */
+  width: 100%; /* Ensure it takes full width */
 }
 
 /* Hide previous close button styles */

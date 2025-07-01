@@ -19,19 +19,36 @@ const OfertasSlider = () => {
   const prevButtonRef = useRef(null);
   const sectionRef = useRef(null); // Ref for the section to observe
   const [isVisible, setIsVisible] = useState(false); // State to control animation, set to false initially for scroll trigger
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Observa la visibilidad de la sección
+  // Check if device is mobile
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Observe visibility only on desktop
+  useEffect(() => {
+    if (isMobile) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Si la sección es visible, actualiza el estado
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Desconecta el observador una vez que la animación se ha activado
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.1, // Porcentaje de la sección visible para activar
+        threshold: 0.1,
       }
     );
 
@@ -39,13 +56,12 @@ const OfertasSlider = () => {
       observer.observe(sectionRef.current);
     }
 
-    // Limpia el observador al desmontar el componente
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [isMobile]);
 
   // Inicializa Swiper
   useEffect(() => {

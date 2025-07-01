@@ -9,13 +9,11 @@ import SliderNoticias from '../../components/SliderNoticias/SliderNoticias';
 const Homecontenido = () => {
   return (
     <>
-      <main>
-        <HeroSlider />
-        <Separator />
-        <SliderNoticias />
-        <SliderLogos />
-        <OfertasGames />
-      </main>
+      <HeroSlider />
+      <Separator />
+      <SliderNoticias />
+      <SliderLogos />
+      <OfertasGames />
     </>
   );
 };

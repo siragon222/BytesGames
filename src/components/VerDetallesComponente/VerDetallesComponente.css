@@ -64,4 +64,34 @@
   .regalos-cards-container {
     align-items: center; /* Center items when stacked vertically */
   }
+}
+
+.recomendados-container {
+  width: 100%;
+  padding: 2rem;
+}
+
+.recomendados-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.recomendados-wrapper h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+/* En móviles, el título va arriba */
+@media (max-width: 768px) {
+  .recomendados-wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .recomendados-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
 } 

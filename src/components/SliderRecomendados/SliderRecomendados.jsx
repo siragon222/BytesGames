@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '../Card'; // Import the Card component
 import './SliderRecomendados.css'; // Import the CSS file
 import Swiper from 'swiper'; // Import Swiper
@@ -7,6 +8,7 @@ import { games } from '../../WebLinks/DataBaseGames/GameDatabase'; // Import the
 
 const SliderRecomendados = ({ selectedGame }) => {
   const [filteredGames, setFilteredGames] = React.useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!selectedGame || !selectedGame.genre) {
@@ -43,6 +45,8 @@ const SliderRecomendados = ({ selectedGame }) => {
       slidesPerView: 3,
       spaceBetween: 25,
       loop: true,
+      speed: 1000,
+      effect: 'slide',
       centerSlide: 'true',
       fade: 'true',
       grabCursor: 'true',
@@ -74,8 +78,18 @@ const SliderRecomendados = ({ selectedGame }) => {
     // Guarda la instancia de Swiper en la referencia
     swiperRef.current = swiper;
 
-    // Limpia la instancia de Swiper al desmontar el componente
-    return () => swiper.destroy();
+    // Configura un intervalo para cambiar los slides automáticamente
+    const autoplayInterval = setInterval(() => {
+      if (swiperRef.current) {
+        swiperRef.current.slideNext();
+      }
+    }, 2000); // Cambia el slide cada 2 segundos
+
+    // Limpia el intervalo y la instancia de Swiper al desmontar el componente
+    return () => {
+      clearInterval(autoplayInterval);
+      swiper.destroy();
+    };
   }, [filteredGames]); // Reinicializa Swiper cuando cambia la lista de juegos filtrados
 
   // Manejadores para los botones
@@ -89,6 +103,12 @@ const SliderRecomendados = ({ selectedGame }) => {
     if (swiperRef.current) {
       swiperRef.current.slidePrev();
     }
+  };
+
+  const handleCardClick = (title) => {
+    const formattedTitle = title.replace(/\s+/g, '-');
+    navigate(`/detalles?q=${formattedTitle}`);
+    window.location.reload();
   };
 
   return (
@@ -106,7 +126,7 @@ const SliderRecomendados = ({ selectedGame }) => {
                   nuevo={game.nuevo}
                   PlystationPlus={game.PlystationPlus}
                   stock={game.stock}
-                  onButtonClick={() => console.log(`View details for ${game.title}`)}
+                  onButtonClick={() => handleCardClick(game.title)}
                 />
               </div>
             ))}

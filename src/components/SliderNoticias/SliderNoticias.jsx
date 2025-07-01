@@ -23,6 +23,8 @@ const SliderNoticias = () => {
       slidesPerView: 3,
       spaceBetween: 25,
       loop: true,
+      speed: 1000,
+      effect: 'slide',
       centerSlide: 'true',
       fade: 'true',
       grabCursor: 'true',
@@ -54,8 +56,18 @@ const SliderNoticias = () => {
     // Guarda la instancia de Swiper en la referencia
     swiperRef.current = swiper;
 
-    // Limpia la instancia de Swiper al desmontar el componente
-    return () => swiper.destroy();
+    // Configura un intervalo para cambiar los slides automáticamente
+    const autoplayInterval = setInterval(() => {
+      if (swiperRef.current) {
+        swiperRef.current.slideNext();
+      }
+    }, 2000); // Cambia el slide cada 2 segundos
+
+    // Limpia el intervalo y la instancia de Swiper al desmontar el componente
+    return () => {
+      clearInterval(autoplayInterval);
+      swiper.destroy();
+    };
   }, [filteredGames]); // Reinicializa Swiper cuando cambia la lista de juegos filtrados
 
   // Manejadores para los botones

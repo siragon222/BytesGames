@@ -241,9 +241,29 @@ body {
 }
 
 @media (max-width: 768px) {
-  .ofertas-slider-background,
+  .ofertas-slider-background {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    visibility: visible !important;
+  }
+  
   .ofertas-slider-background.animate-visible {
-    animation: none; /* Deshabilita la animación en móvil */
-    opacity: 1; /* Asegura que esté visible en móvil sin animación */
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .slider-background {
+    height: 50vh;
+  }
+  .slide-content {
+    margin: 10px;
+  }
+  .card {
+    padding: 10px;
+  }
+  .swiper-navBtn {
+    display: none;
   }
 }

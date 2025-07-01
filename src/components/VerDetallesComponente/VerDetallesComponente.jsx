@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import GaleriaFotos from '../GaleriaFotos/GaleriaFotos';
 import PortadaComponente from '../PortadaComponente/PortadaComponente';
 import DescripcionComponente from '../DescripcionComponente/DescripcionComponente';
@@ -14,6 +14,7 @@ import './VerDetallesComponente.css';
 
 const VerDetallesComponente = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const gameName = searchParams.get('q');
   const { selectedGame, setSelectedGame } = useContext(GameContext);
   const [selectedConsole, setSelectedConsole] = useState(null);
@@ -90,6 +91,12 @@ const VerDetallesComponente = () => {
     }).filter(Boolean);
   };
 
+  const handleCardClick = (title) => {
+    const formattedTitle = title.replace(/\s+/g, '-');
+    navigate(`/detalles?q=${formattedTitle}`);
+    window.location.reload();
+  };
+
   if (!selectedGame) {
     return <div>No se ha seleccionado ningún juego.</div>;
   }
@@ -126,6 +133,7 @@ const VerDetallesComponente = () => {
                         image={giftGame.image}
                         title={giftGame.title}
                         isHorizontal={isCardHorizontal}
+                        onButtonClick={() => handleCardClick(giftGame.title)}
                       />
                     );
                   })}
@@ -147,6 +155,7 @@ const VerDetallesComponente = () => {
                       name={dlc.title}
                       content={dlc.descripcionContenidoDlc}
                       price={dlc.price}
+                      onButtonClick={() => handleCardClick(dlc.title)}
                     />
                   ))}
                 </>
@@ -158,7 +167,12 @@ const VerDetallesComponente = () => {
           <SeleccionaComponente game={selectedGame} onConsoleSelect={handleConsoleChange} />
         </div>
       </div>
-      <SliderRecomendados selectedGame={selectedGame} />
+      <div className="recomendados-container">
+        <div className="recomendados-wrapper">
+          <SliderRecomendados selectedGame={selectedGame} />
+          <h2>Juegos Similares</h2>
+        </div>
+      </div>
     </div>
   );
 };

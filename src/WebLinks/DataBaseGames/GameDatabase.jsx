@@ -30,8 +30,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -82,8 +82,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -133,8 +133,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     "licensePrices": {
       PlayStation: {},
@@ -184,9 +184,9 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS3: {Ocultar: "si"},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     "licensePrices": {
       PlayStation: {},
@@ -302,7 +302,7 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS5: {}
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -362,8 +362,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -434,8 +434,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -495,8 +495,8 @@ export const games = [
     discountDate: "",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4: "5, 5, 5",
-    JuegosdeRegaloPs5: "FIFA 17, 5, Tom Clancys Ghost Recons Widlands",
+    JuegosdeRegaloPs4: "11, 5, Tom Clancys Ghost Recons Widlands",
+    JuegosdeRegaloPs5: "11, 5, Tom Clancys Ghost Recons Widlands",
     genre: "Lucha, Acción, RPG, MMO",
     pegiRating: "PEGI 12",
     developer: "Dimps",
@@ -506,8 +506,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: { Ocultar: "si"},
+      PS5: { Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -577,7 +577,7 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS5: {}
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -635,9 +635,9 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS3: {Ocultar: "si"},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -714,9 +714,9 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS3: {Ocultar: "si"},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1083,8 +1083,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1156,9 +1156,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1228,7 +1227,7 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
+      PS3: {Ocultar: "si"},
     },
     licensePrices: {
       PlayStation: {},
@@ -1594,8 +1593,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1665,8 +1664,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1736,8 +1735,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1807,8 +1806,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1878,9 +1877,9 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS3: {Ocultar: "si"},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},
@@ -1957,9 +1956,8 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS3: {},
-      PS4: {},
-      PS5: {}
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
     },
     licensePrices: {
       PlayStation: {},

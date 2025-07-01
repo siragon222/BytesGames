@@ -1,12 +1,14 @@
 .fondo-solido {
     top: -40px;
-    height: 500px; /* Asegura que el fondo ocupe toda la altura de la ventana */
+    min-height: 500px; /* Changed from height to min-height to ensure it covers all content */
+    height: 100%; /* Added to make sure it takes full height */
     width: 100%;
     background-color: rgb(255, 255, 255); /* Fondo blanco por defecto */
     position: relative; /* Permite superponer los pseudoelementos */
     display: flex; /* Añadido: convierte el fondo en un flexbox */
     justify-content: center; /* Añadido: centra el contenido horizontalmente */
     align-items: center; /* Añadido: centra el contenido verticalmente */
+    margin-bottom: -40px; /* Added to compensate for the top offset */
 }
 
 .fondo-solido::before {

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef, useEffect } from 'react';
 import './SeleccionaDLC.css'; // Updated import for DLC-specific CSS
 import PlayStationIcon from '../../../assets/playstation.svg';
 import XboxIcon from '../../../assets/xbox.svg';
@@ -18,6 +18,13 @@ const SeleccionaDLC = ({ game }) => {
   const [selectedLicense, setSelectedLicense] = useState('');
   const { selectedCurrency } = useContext(CurrencyContext);
   const [hasOfferEnded, setHasOfferEnded] = useState(false);
+
+  // Refs for scrolling
+  const playStationConsoleRef = useRef(null);
+  const xboxConsoleRef = useRef(null);
+  const pcLauncherRef = useRef(null);
+  const licenseSectionRef = useRef(null);
+  const editionSectionRef = useRef(null);
 
   const dlcDiscount = game.discount ? parseFloat(game.discount.replace("%", "")) / 100 : 0;
   const dlcDiscountDate = game.discountDate;
@@ -145,6 +152,24 @@ const SeleccionaDLC = ({ game }) => {
     window.open(whatsappUrl, '_blank');
   };
 
+  useEffect(() => {
+    if (selectedPlatform === 'PlayStation' && playStationConsoleRef.current) {
+      playStationConsoleRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (selectedPlatform === 'Xbox' && xboxConsoleRef.current) {
+      xboxConsoleRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (selectedPlatform === 'PC' && pcLauncherRef.current) {
+      pcLauncherRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [selectedPlatform]);
+
+  useEffect(() => {
+    if ((selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && licenseSectionRef.current) {
+      licenseSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if ((selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && editionSectionRef.current) {
+      editionSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [selectedPlayStationConsole, selectedXboxConsole, selectedPcLauncher]);
+
   return (
     <div className="selecciona-componente">
       <h1 className="game-title">{game ? game.title : 'Cargando...'}</h1>
@@ -212,7 +237,7 @@ const SeleccionaDLC = ({ game }) => {
       )}
 
       {selectedPlatform === 'PlayStation' && (
-        <div className="playstation-console-buttons">
+        <div className="playstation-console-buttons" ref={playStationConsoleRef}>
           <h3 className="section-title">Selecciona tu Consola PlayStation</h3>
           {game && ['PS3', 'PS4', 'PS5'].filter(consoleType => game.editions[consoleType]).map((consoleType) => (
             <button
@@ -227,7 +252,7 @@ const SeleccionaDLC = ({ game }) => {
       )}
 
       {selectedPlatform === 'Xbox' && (
-        <div className="xbox-console-buttons">
+        <div className="xbox-console-buttons" ref={xboxConsoleRef}>
           <h3 className="section-title">Selecciona tu Consola Xbox</h3>
           {game && ['Xbox 360', 'Xbox One', 'Xbox Series X'].filter(consoleType => game.editions[consoleType]).map((consoleType) => (
             <button
@@ -242,7 +267,7 @@ const SeleccionaDLC = ({ game }) => {
       )}
 
       {selectedPlatform === 'PC' && (
-        <div className="pc-launcher-buttons">
+        <div className="pc-launcher-buttons" ref={pcLauncherRef}>
           <h3 className="section-title">Selecciona tu Launcher de PC</h3>
           {game && ['Steam', 'Origin', 'Epic Games'].filter(launcher => game.editions.PC && game.editions.PC[launcher]).map((launcher) => (
             <button
@@ -258,7 +283,7 @@ const SeleccionaDLC = ({ game }) => {
 
       {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && 
         (currentPlatformKey && game.editions[currentPlatformKey] && game.editions[currentPlatformKey].Ocultar !== "si") && (
-        <div className="edition-section">
+        <div className="edition-section" ref={editionSectionRef}>
           <h3 className="section-title">Selecciona tu edición</h3>
           <div className="license-buttons">
             {Object.entries(editionPrices || {}).map(([edition, details]) => {
@@ -289,7 +314,7 @@ const SeleccionaDLC = ({ game }) => {
       )}
 
       {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && game.licensePrices.Ocultar !== 'si' && (
-        <div className="license-section">
+        <div className="license-section" ref={licenseSectionRef}>
           <h3 className="section-title">Selecciona tu licencia</h3>
           <div className="license-buttons">
             {platformLicenses.map((license) => {

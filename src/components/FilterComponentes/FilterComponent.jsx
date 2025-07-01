@@ -33,7 +33,7 @@ const FilterComponent = ({ onFilterChange }) => {
   const handleConsolesChange = (e) => {
     const value = e.target.value;
     setConsoles(prev => {
-      const newConsoles = prev.includes(value) ? prev.filter(c => c !== value) : [...prev, value];
+      const newConsoles = prev.includes(value) ? [] : [value];
       onFilterChange({ consoles: newConsoles, genres, sortBy, priceRange });
       return newConsoles;
     });
@@ -42,7 +42,7 @@ const FilterComponent = ({ onFilterChange }) => {
   const handleGenresChange = (e) => {
     const value = e.target.value;
     setGenres(prev => {
-      const newGenres = prev.includes(value) ? prev.filter(g => g !== value) : [...prev, value];
+      const newGenres = prev.includes(value) ? [] : [value];
       onFilterChange({ consoles, genres: newGenres, sortBy, priceRange });
       return newGenres;
     });
@@ -51,7 +51,7 @@ const FilterComponent = ({ onFilterChange }) => {
   const handleSortChange = (e) => {
     const value = e.target.value;
     setSortBy(prev => {
-      const newSortBy = prev.includes(value) ? prev.filter(s => s !== value) : [...prev, value];
+      const newSortBy = prev.includes(value) ? [] : [value];
       onFilterChange({ consoles, genres, sortBy: newSortBy, priceRange });
       return newSortBy;
     });

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import './GaleriaFotos.css'; // Asegúrate de crear este archivo para los estilos
 
 const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
@@ -97,48 +98,51 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
       </div>
 
       {(isFullScreen || isShowingVideo) && (
-        <div className="fullscreen-overlay">
-          {showRotateMessage && (
-            <div className="rotate-message">
-              Por favor, gira tu teléfono para una mejor vista.
-            </div>
-          )}
-          <button className="close-btn" onClick={handleCloseFullScreen}>
-            X
-          </button>
-          {isFullScreen && (
-            <>
-              <img
-                ref={fullscreenImageRef}
-                src={fotos[currentIndex]}
-                alt={`Fullscreen ${currentIndex}`}
-                className="fullscreen-image"
-              />
-              <button className="prev-btn" onClick={handlePrev}>
-                &#10094;
-              </button>
-              <button className="next-btn" onClick={handleNext}>
-                &#10095;
-              </button>
-              <button className="fullscreen-btn" onClick={handleFullScreen}>
-                &#x2922;
-              </button>
-            </>
-          )}
-          {isShowingVideo && youtubeVideoId && (
-            <div className="video-responsive">
-              <iframe
-                width="853"
-                height="480"
-                src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded YouTube video"
-              ></iframe>
-            </div>
-          )}
-        </div>
+        ReactDOM.createPortal(
+          <div className="fullscreen-overlay">
+            {showRotateMessage && (
+              <div className="rotate-message">
+                Por favor, gira tu teléfono para una mejor vista.
+              </div>
+            )}
+            <button className="close-btn" onClick={handleCloseFullScreen}>
+              X
+            </button>
+            {isFullScreen && (
+              <>
+                <img
+                  ref={fullscreenImageRef}
+                  src={fotos[currentIndex]}
+                  alt={`Fullscreen ${currentIndex}`}
+                  className="fullscreen-image"
+                />
+                <button className="prev-btn" onClick={handlePrev}>
+                  &#10094;
+                </button>
+                <button className="next-btn" onClick={handleNext}>
+                  &#10095;
+                </button>
+                <button className="fullscreen-btn" onClick={handleFullScreen}>
+                  &#x2922;
+                </button>
+              </>
+            )}
+            {isShowingVideo && youtubeVideoId && (
+              <div className="video-responsive">
+                <iframe
+                  width="853"
+                  height="480"
+                  src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embedded YouTube video"
+                ></iframe>
+              </div>
+            )}
+          </div>,
+          document.body
+        )
       )}
     </div>
   );

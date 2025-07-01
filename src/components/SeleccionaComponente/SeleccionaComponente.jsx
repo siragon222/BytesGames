@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import './SeleccionaComponente.css'; // Importar el archivo CSS para estilos
 import PlayStationIcon from '../../assets/playstation.svg';
 import XboxIcon from '../../assets/xbox.svg';
@@ -18,6 +18,13 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
   const [selectedEdition, setSelectedEdition] = useState('');
   const [selectedLicense, setSelectedLicense] = useState('');
   const { selectedCurrency } = useContext(CurrencyContext);
+
+  // Refs for scrolling
+  const playStationConsoleRef = useRef(null);
+  const xboxConsoleRef = useRef(null);
+  const pcLauncherRef = useRef(null);
+  const licenseSectionRef = useRef(null);
+  const buttonRef = useRef(null); // New ref for the button
 
   // Add new state for tracking offer end
   const [hasOfferEnded, setHasOfferEnded] = useState(false);
@@ -42,6 +49,28 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
     // No discount applies
     return { original: originalPrice, discounted: originalPrice, hasDiscount: false };
   };
+
+  useEffect(() => {
+    if (selectedPlatform === 'PlayStation' && playStationConsoleRef.current) {
+      playStationConsoleRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (selectedPlatform === 'Xbox' && xboxConsoleRef.current) {
+      xboxConsoleRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (selectedPlatform === 'PC' && pcLauncherRef.current) {
+      pcLauncherRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [selectedPlatform]);
+
+  useEffect(() => {
+    if ((selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && licenseSectionRef.current) {
+      licenseSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [selectedPlayStationConsole, selectedXboxConsole, selectedPcLauncher]);
+
+  useEffect(() => {
+    if ((selectedLicense || selectedEdition) && buttonRef.current) {
+      buttonRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [selectedLicense, selectedEdition]);
 
   const handlePlatformSelect = (platform) => {
     setSelectedPlatform(platform);
@@ -231,7 +260,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       )}
 
       {selectedPlatform === 'PlayStation' && (
-        <div className="playstation-console-buttons">
+        <div className="playstation-console-buttons" ref={playStationConsoleRef}>
           <h3 className="section-title">Selecciona tu Consola PlayStation</h3>
           {game && ['PS3', 'PS4', 'PS5'].filter(consoleType => game.editions[consoleType]).map((consoleType) => (
             <button
@@ -246,7 +275,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       )}
 
       {selectedPlatform === 'Xbox' && (
-        <div className="xbox-console-buttons">
+        <div className="xbox-console-buttons" ref={xboxConsoleRef}>
           <h3 className="section-title">Selecciona tu Consola Xbox</h3>
           {game && ['Xbox 360', 'xbox One', 'xbox Series X'].filter(consoleType => game.editions[consoleType]).map((consoleType) => (
             <button
@@ -261,7 +290,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       )}
 
       {selectedPlatform === 'PC' && (
-        <div className="pc-launcher-buttons">
+        <div className="pc-launcher-buttons" ref={pcLauncherRef}>
           <h3 className="section-title">Selecciona tu Launcher de PC</h3>
           {game && ['Steam', 'Origin', 'Epic Games'].filter(launcher => game.editions.PC && game.editions.PC[launcher]).map((launcher) => (
             <button
@@ -276,7 +305,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       )}
 
       {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && (
-        <div className="license-section">
+        <div className="license-section" ref={licenseSectionRef}>
           <h3 className="section-title">Selecciona tu licencia</h3>
           <div className="license-buttons">
             {platformLicenses.map((license) => {
@@ -362,7 +391,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
       )}
 
       {(selectedLicense || selectedEdition) && (
-        <button className="hace-compra-button" onClick={handleWhatsAppClick}>
+        <button className="hace-compra-button" onClick={handleWhatsAppClick} ref={buttonRef}>
           <img src={BuyIcon} alt="Buy" className="button-icon" />
           Hacer Compra
         </button>

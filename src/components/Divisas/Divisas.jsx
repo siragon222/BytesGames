@@ -112,6 +112,10 @@ const Divisas = () => {
     };
   }, []);
 
+  const handleCloseFullScreen = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="divisas-container" ref={dropdownRef}>
       <button className="currency-button" onClick={toggleDropdown}>
@@ -120,12 +124,20 @@ const Divisas = () => {
         <span className="dropdown-arrow">{isOpen ? '▲' : '▼'}</span>
       </button>
       <ul className={`${isMobile ? "currency-modal" : "currency-dropdown"} ${isOpen ? "active" : ""}`}>
-        {currencyOptions.map((option) => (
-          <li key={option.code} onClick={() => handleCurrencySelect(option)}>
-            <span className="currency-flag">{option.flag}</span>
-            {option.name}
-          </li>
-        ))}
+        {isMobile && (
+          <div className="modal-header">
+            <h2>Selecciona Divisa</h2>
+            <button className="close-modal-button" onClick={handleCloseFullScreen}>X</button>
+          </div>
+        )}
+        <div className="currency-options-wrapper">
+          {currencyOptions.map((option) => (
+            <li key={option.code} onClick={() => handleCurrencySelect(option)}>
+              <span className="currency-flag">{option.flag}</span>
+              {option.name}
+            </li>
+          ))}
+        </div>
       </ul>
     </div>
   );
