@@ -119,16 +119,14 @@ const Divisas = () => {
         {selectedCurrency.symbol}
         <span className="dropdown-arrow">{isOpen ? '▲' : '▼'}</span>
       </button>
-      {isOpen && (
-        <ul className={isMobile ? "currency-modal" : "currency-dropdown"}>
-          {currencyOptions.map((option) => (
-            <li key={option.code} onClick={() => handleCurrencySelect(option)}>
-              <span className="currency-flag">{option.flag}</span>
-              {option.name}
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className={`${isMobile ? "currency-modal" : "currency-dropdown"} ${isOpen ? "active" : ""}`}>
+        {currencyOptions.map((option) => (
+          <li key={option.code} onClick={() => handleCurrencySelect(option)}>
+            <span className="currency-flag">{option.flag}</span>
+            {option.name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

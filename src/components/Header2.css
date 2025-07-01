@@ -203,7 +203,9 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #ff0000e8;
+    background: linear-gradient(to top, rgb(29, 28, 28), rgb(0, 0, 0)); /* Gradient background */
+    border-bottom-left-radius: 20px; /* Radius for bottom-left corner */
+    border-bottom-right-radius: 20px; /* Radius for bottom-right corner */
     padding: 1rem;
     align-items: center;
     text-align: center;
@@ -214,7 +216,6 @@
     overflow: hidden;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
     opacity: 0;
-    backdrop-filter: blur(10px);
   }
 
   .nav-links.active {

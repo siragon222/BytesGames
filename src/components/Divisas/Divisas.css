@@ -48,22 +48,31 @@
 
   .divisas-container {
     min-width: 0; /* Allow currency container to shrink */
-    padding-right: 12px;
+    padding-right: 20px;
   }
 }
 
 .currency-dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: #333;
-  border: 1px solid #444;
+  right: 0; /* Align to the right */
+  background: linear-gradient(to bottom, rgba(40, 40, 40, 0.95), rgba(20, 20, 20, 0.95)); /* Darker, subtle gradient */
+  border: 1px solid rgba(68, 68, 68, 0.8); /* Softer border */
   list-style: none;
   padding: 0;
   margin: 0;
   z-index: 1000;
-  border-radius: 4px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; /* Increased border radius */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Slightly enhanced shadow */
+  backdrop-filter: blur(10px); /* Apply blur to dropdown as well */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.currency-dropdown.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .currency-dropdown li {
@@ -84,17 +93,19 @@
 
 .currency-modal {
   position: fixed;
-  bottom: 0;
+  top: 70px; /* Adjust position from the top */
   left: 0;
   width: 100%;
   max-height: calc(100vh - 70px); /* Leave space for header */
-  background-color: #1a1a1a; /* Darker background */
+  background: linear-gradient(to top, rgb(29, 28, 28), rgb(0, 0, 0)); /* Gradient background */
+  backdrop-filter: blur(10px); /* Gaussian blur to the background */
   padding: 15px 0;
-
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Shadow from bottom */
-  transform: translateY(100%); /* Start off-screen */
-  transition: transform 0.3s ease-out; /* Smooth transition */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.466); /* Shadow from bottom */
+  transform: translateY(-8px); /* Start slightly above its final position */
+  transition: transform 0.9s ease-out, opacity 0.3s ease-out, visibility 0.5s ease-out; /* Combined transitions including visibility */
   z-index: 9999; /* Changed to be above all components, including header */
+  border-bottom-left-radius: 20px; /* Radius for bottom-left corner */
+  border-bottom-right-radius: 20px; /* Radius for bottom-right corner */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,10 +114,17 @@
   margin: 0;
   box-sizing: border-box;
   overflow-y: hidden; /* No scrollbar */
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Hide element completely when not active */
+  pointer-events: none; /* Disable interaction when not active */
 }
 
 .currency-modal.active {
-  transform: translateY(0); /* Slide into view */
+  transform: translateY(0); /* Slide into view from top */
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make element visible */
+  pointer-events: auto; /* Enable interaction when active */
+  transition: transform 0.3s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out; /* Combined transitions including visibility */
 }
 
 .modal-header {
@@ -136,18 +154,12 @@
   align-items: center;
   gap: 8px;
   color: #fff;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, opacity 0.4s ease-out, transform 0.4s ease-out; /* Keep existing transitions */
   font-size: 1.1em;
-  width: 90%; /* Give some side margin */
-  justify-content: flex-start;
+  justify-content: center; /* Centered content */
   border-bottom: none; /* Remove separator */
   border-radius: 8px; /* Rounded corners for list items */
   margin-bottom: -10px; /* Spacing between items */
-}
-
-.currency-modal li:hover {
-  background-color: #d90429;
-  transform: none; /* No transform on hover */
 }
 
 /* Hide previous close button styles */
