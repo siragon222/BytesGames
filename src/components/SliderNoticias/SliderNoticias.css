@@ -38,10 +38,9 @@ body {
 
 .slide-content {
   margin: 20px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 25px;
   min-height: 350px;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .card {

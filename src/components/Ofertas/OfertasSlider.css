@@ -270,9 +270,8 @@ body {
 
 .ofertas-slide-content {
   margin: 20px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 25px;
-  mask-image: linear-gradient(to right, transparent, rgb(255, 0, 0) 10%, rgb(255, 0, 0) 90%, transparent);
 }
 
 .ofertas-card {
