@@ -46,7 +46,6 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
       className={`game-card ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={handleClick}
     >
       {nuevo === 'si' && <div className="new-label">Nuevo</div>}
       {discount && <div className="discount-label">{discount}</div>}
@@ -94,6 +93,7 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
       </div>
       <button 
         className="card-button"
+        onClick={handleClick}
       >
         VER DETALLES
       </button>
