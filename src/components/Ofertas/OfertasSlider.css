@@ -267,3 +267,17 @@ body {
     display: none;
   }
 }
+
+.ofertas-slide-content {
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 25px;
+  mask-image: linear-gradient(to right, transparent, rgb(255, 0, 0) 10%, rgb(255, 0, 0) 90%, transparent);
+}
+
+.ofertas-card {
+  border-radius: 25px;
+  background-color: #FFF;
+  height: auto;
+  padding: 10px;
+}
