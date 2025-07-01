@@ -42,6 +42,7 @@ body {
   border-radius: 25px;
   min-height: 350px;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  padding: 40px 0;
 }
 
 .card {

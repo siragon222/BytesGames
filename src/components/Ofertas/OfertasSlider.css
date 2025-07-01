@@ -273,6 +273,7 @@ body {
   overflow: hidden;
   border-radius: 25px;
   mask-image: linear-gradient(to right, transparent, rgb(255, 0, 0) 10%, rgb(255, 0, 0) 90%, transparent);
+  padding: 8px 0;
 }
 
 .ofertas-card {
