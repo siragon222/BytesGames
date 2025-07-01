@@ -158,11 +158,11 @@
 
 @media screen and (max-width: 768px) {
   .slide-content {
-    margin: 10px 10px 5px 10px;
+    margin: 10px 0px 0px 0px;
     min-height: auto;
   }
   .card {
-    padding: 10px;
+    padding: 0px;
   }
   .swiper-navBtn {
     display: none;
@@ -171,7 +171,3 @@
     padding-bottom: 0;
   }
 }
-
-.swiper-backface-hidden {
-  overflow: visible;
-} 

@@ -25,7 +25,7 @@ body {
 }
 
 .slide-container {
-  max-width: 200px;
+  max-width: 100%;
   width: 100%;
   padding: 20px 0;
   margin: 0 auto;
@@ -255,12 +255,9 @@ body {
   }
 
   .ofertas-slide-container {
-    max-width: 90% !important;
+    max-width: 100% !important;
     width: 100% !important;
-  }
-
-  .ofertas-slide-content {
-    margin: 10px 10px 5px 10px;
+  
   }
 
   .slider-background {
@@ -278,10 +275,10 @@ body {
 }
 
 .ofertas-slide-content {
-  margin: 20px;
+
   overflow: hidden;
   border-radius: 25px;
-  mask-image: linear-gradient(to right, transparent, rgb(255, 0, 0) 10%, rgb(255, 0, 0) 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, rgba(255, 0, 0, 0.938) 5%, rgba(255, 0, 0, 0.952) 95%, transparent);
   padding: 8px 0;
 }
 
@@ -290,4 +287,5 @@ body {
   background-color: #FFF;
   height: auto;
   padding: 10px;
+  width: 100%;
 }
