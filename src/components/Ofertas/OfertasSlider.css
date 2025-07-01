@@ -32,9 +32,10 @@ body {
 }
 
 .slide-content {
-  margin: 0px;
+  margin: 10px 10px 5px 10px;
   overflow: hidden;
   border-radius: 25px;
+  min-height: auto;
 }
 
 .card {
@@ -183,7 +184,8 @@ body {
     height: 50vh;
   }
   .slide-content {
-    margin: 10px;
+    margin: 10px 10px 5px 10px;
+    min-height: auto;
   }
   .card {
     padding: 10px;
@@ -258,7 +260,8 @@ body {
     height: 50vh;
   }
   .slide-content {
-    margin: 10px;
+    margin: 10px 10px 5px 10px;
+    min-height: auto;
   }
   .card {
     padding: 10px;
@@ -269,9 +272,10 @@ body {
 }
 
 .ofertas-slide-content {
-  margin: 20px;
+  margin: 10px 10px 5px 10px;
   overflow: visible;
   border-radius: 25px;
+  min-height: auto;
 }
 
 .ofertas-card {
