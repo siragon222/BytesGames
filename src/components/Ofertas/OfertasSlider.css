@@ -254,6 +254,15 @@ body {
     animation: none !important;
   }
 
+  .ofertas-slide-container {
+    max-width: 90% !important;
+    width: 100% !important;
+  }
+
+  .ofertas-slide-content {
+    margin: 10px 10px 5px 10px;
+  }
+
   .slider-background {
     height: 50vh;
   }
