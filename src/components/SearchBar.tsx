@@ -13,6 +13,7 @@ const SearchBar: React.FC = () => {
   const handleClick = () => {
     if (isExpanded) {
       setSearchText(''); // Clear search text when closing
+      navigate('/ResultSearch'); // Navigate to clear the URL parameter
     }
     setIsExpanded(!isExpanded);
   };

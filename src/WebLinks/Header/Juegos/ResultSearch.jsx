@@ -37,7 +37,7 @@ const ResultSearch = () => {
 
   // Filtrar los juegos basados en el término de búsqueda y los filtros aplicados
   const filteredGames = games.filter(game => {
-    const matchesSearchTerm =
+    const matchesSearchTerm = searchTerm === '' ||
       game.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       game.platforms.toLowerCase().includes(searchTerm.toLowerCase()) ||
       game.genre.toLowerCase().includes(searchTerm.toLowerCase());
