@@ -254,25 +254,6 @@ body {
     animation: none !important;
   }
 
-  .ofertas-slide-container {
-    max-width: 90% !important;
-    padding-bottom: 0;
-  }
-
-  .ofertas-slide-content {
-    margin: 10px 10px 5px 10px;
-    min-height: auto;
-  }
-
-  .ofertas-card {
-    padding: 10px;
-  }
-
-  .swiper-navBtn {
-    display: none;
-  }
-
-  /* Original classes, kept for other contexts if they apply */
   .slider-background {
     height: 50vh;
   }
@@ -282,7 +263,9 @@ body {
   .card {
     padding: 10px;
   }
-  /* End original classes */
+  .swiper-navBtn {
+    display: none;
+  }
 }
 
 .ofertas-slide-content {
