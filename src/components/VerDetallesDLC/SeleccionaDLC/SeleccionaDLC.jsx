@@ -359,6 +359,7 @@ const SeleccionaDLC = ({ game }) => {
       )}
 
       <div className="game-details">
+        <p><span className="detail-title">Idioma:</span> <span className="detail-info">{game.Lenguaje || 'N/A'}</span></p>
         <p><span className="detail-title">Puntuación:</span> <span className="detail-info">{game.pegiRating || 'N/A'}</span></p>
         <p><span className="detail-title">Desarrollador:</span> <span className="detail-info">{game.developer || 'N/A'}</span></p>
         <p><span className="detail-title">Distribuidor:</span> <span className="detail-info">{game.publisher || 'N/A'}</span></p>

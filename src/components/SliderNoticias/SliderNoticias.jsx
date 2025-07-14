@@ -100,6 +100,7 @@ const SliderNoticias = () => {
                   nuevo={game.nuevo}
                   PlystationPlus={game.PlystationPlus}
                   stock={game.stock}
+                  language={game.Lenguaje}
                   onButtonClick={() => console.log(`View details for ${game.title}`)}
                 />
               </div>

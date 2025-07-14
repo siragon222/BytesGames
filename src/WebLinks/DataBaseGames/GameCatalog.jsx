@@ -64,6 +64,7 @@ const GameCatalog = ({ games }) => {
                 nuevo={game.nuevo}
                 PlystationPlus={game.PlystationPlus}
                 stock={game.stock}
+                language={game.Lenguaje} /* Pass the language prop */
                 onButtonClick={() => console.log(`Ver detalles del juego con ID: ${game.id}`)}
               />
             ))}

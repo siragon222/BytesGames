@@ -7,7 +7,7 @@ export const games = [
     id: 1,
     image: "https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp",
     title: "Assassin\'s Creed Valhalla",
-    Lenguaje: "",
+    Lenguaje: "Ingles",
     platforms: "PS4, PS5",
     price: "$16",
     stock: "si",
@@ -59,7 +59,7 @@ export const games = [
     id: 2,
     image: "https://i.ibb.co/1YdWHbnM/Yarny-cover.webp",
     title: "Unravel",
-    Lenguaje: "",
+    Lenguaje: "Español",
     platforms: "PS4, PS5",
     price: "$16",
     stock: "si",
@@ -110,7 +110,7 @@ export const games = [
     id: 3,
     image: "https://i.ibb.co/VpQ1sb6p/Astro-Bot-Rescue-Mission-cover.webp",
     title: "Astro Bot Rescue Mission",
-    Lenguaje: "",
+    Lenguaje: "Español",
     platforms: "PS4, PS5",
     price: "$9.50",
     stock: "si",
@@ -161,7 +161,7 @@ export const games = [
     id: 4,
     image: "https://i.ibb.co/2pKfqbF/Batman-Arkham-Collection-cover.webp",
     title: "Batman Arkham Collection",
-    Lenguaje: "",
+    Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
     price: "$19",
     stock: "si",
@@ -216,7 +216,7 @@ export const games = [
     id: 5,
     image: "https://i.ibb.co/v65K6XwF/Battlefield-4-cover.webp",
     title: "Battlefield 4",
-    Lenguaje: "",
+    Lenguaje: "Español",
     platforms: "PS3, PS4, PS5",
     price: "$5",
     stock: "si",
@@ -2318,6 +2318,7 @@ const GameDatabase = () => {
           genre={game.genre}
           stock={game.stock}
           onButtonClick={() => handleClick(game.id)}
+          language={game.Lenguaje}
         />
       ))}
     </div>

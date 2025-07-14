@@ -1,15 +1,15 @@
 .hero-section {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 70%), var(--bg-image);
-    background-size: 2000px 660px;
-    background-position: center -5%;
+    background-image: linear-gradient(to right, var(--overlay-color) 30%, rgba(0, 0, 0, 0) 70%), var(--bg-image);
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     padding-left: 10%;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     color: #ffffff; 
   }
   
@@ -19,10 +19,23 @@
   }
   
   .hero-description {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
     margin-bottom: 2rem;
   }
   
+  .hero-text-content {
+    max-width: 30%; /* Adjust as needed for PC view */
+    margin-right: auto; /* Aligns content to the left */
+    text-align: left; /* Ensure text inside is left-aligned */
+  }
+
+  .hero-svg {
+    padding-top: 1rem;/* Add padding top to the SVG */
+    max-width: 450px; /* Adjust SVG width for PC */
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
   .hero-button {
     padding: 10px 20px;
     font-size: clamp(1rem, 2vw, 1.2rem);
@@ -35,17 +48,37 @@
   
   @media (max-width: 768px) {
     .hero-section {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 35%), var(--bg-image);
-      background-size: 2000px 660px;
-      background-position: 81% -5%;
+      background-image: linear-gradient(to bottom, var(--overlay-color) 15%, rgba(0, 0, 0, 0) 35%), var(--bg-image);
+      background-size: cover;
+      background-position: var(--bg-position-mobile);
       justify-content: flex-start;
       align-items: center;
       padding-left: 0;
-      padding-top: 16px;
+      padding-top: 0; /* Changed from 16px to remove space at the top */
       text-align: center;
+    }
+
+    .hero-text-content {
+      max-width: 90%; /* Adjust as needed for mobile view */
+      margin: 0 auto; /* Center the text content */
+      text-align: center; /* Center text for mobile */
+    }
+
+    .hero-svg {
+      max-width: 250px; /* Adjust SVG width for mobile */
+      height: auto;
+      margin-bottom: 0; /* Removed to reduce space to title */
     }
   
     .hero-title {
       margin-top: 16px;
+    }
+
+    .hero-description {
+      margin-bottom: 0; /* Removed to reduce space to button */
+    }
+
+    .hero-button {
+      margin-top: 0.5rem; /* Reduced to bring button closer to description */
     }
   } 

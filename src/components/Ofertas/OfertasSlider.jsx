@@ -144,6 +144,7 @@ const OfertasSlider = () => {
                   nuevo={game.nuevo}
                   PlystationPlus={game.PlystationPlus}
                   stock={game.stock}
+                  language={game.Lenguaje} /* Pass the language prop */
                   onButtonClick={() => console.log(`View details for ${game.title}`)}
                 />
               </div>

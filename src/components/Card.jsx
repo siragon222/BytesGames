@@ -11,6 +11,7 @@ import PS4 from '../assets/ConsolaCards/PS4_Clasi.svg';
 import PS3 from '../assets/ConsolaCards/PS3_clasi.svg';
 import XBOX from '../assets/ConsolaCards/XBOX_Clasif.svg';
 import PlaystationPlusLogo from '../assets/playstation-plus-logo.svg';
+import IdiomaIngles from '../assets/idioma-ingles.svg';
 
 // Mapeo de plataformas a SVG
 const platformIcons = {
@@ -21,7 +22,7 @@ const platformIcons = {
   'Xbox': XBOX,
 };
 
-const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationPlus, stock, onButtonClick }) => {
+const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationPlus, stock, onButtonClick, language }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate(); // Hook para la navegación
   const { setSelectedGame } = useContext(GameContext); // Obtener setSelectedGame del contexto
@@ -43,60 +44,67 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
 
   return (
     <div 
-      className={`game-card ${isHovered ? 'hovered' : ''}`}
+      className="game-card-wrapper"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {nuevo === 'si' && <div className="new-label">Nuevo</div>}
       {discount && <div className="discount-label">{discount}</div>}
-      <div className="image-container">
-        <img src={image} alt={title} />
-        {PlystationPlus === 'si' && (
-          <div className="square-overlay">
-            <img src={PlaystationPlusLogo} alt="Playstation Plus" className="plus-logo" />
-          </div>
-        )}
-        {stock === 'no' && (
-          <div className="middle-square-overlay">AGOTADO</div>
-        )}
-      </div>
-      <div className="card-details">
-        <h3>{title}</h3>
-        <p className="card-price-section">
-          <span className="platform-icons">
-            {platformList.map((platform, index) => (
-              <img 
-                key={index} 
-                src={platformIcons[platform.trim()]} 
-                alt={platform} 
-                className="platform-icon"
-              />
-            ))}
-          </span>
-          <span className="price-text">
-            {discountValue > 0 ? (
-              <>
-                <span className="original-price" style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: 'medium', color: '#888' }}>
-                  {selectedCurrency.symbol}{(originalPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                </span>
-                <span className="discounted-price">
-                  {selectedCurrency.symbol}{(discountedPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                </span>
-              </>
-            ) : (
-              <>
-                {selectedCurrency.symbol}{(originalPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-              </>
-            )}
-          </span>
-        </p>
-      </div>
-      <button 
-        className="card-button"
-        onClick={handleClick}
+      {language && language.includes('Ingles') && (
+        <div className="ing-label">ING <img src={IdiomaIngles} alt="ING icon" className="ing-icon" /></div>
+      )}
+      <div 
+        className={`game-card ${isHovered ? 'hovered' : ''}`}
       >
-        VER DETALLES
-      </button>
+        <div className="image-container">
+          <img src={image} alt={title} />
+          {PlystationPlus === 'si' && (
+            <div className="square-overlay">
+              <img src={PlaystationPlusLogo} alt="Playstation Plus" className="plus-logo" />
+            </div>
+          )}
+          {stock === 'no' && (
+            <div className="middle-square-overlay">AGOTADO</div>
+          )}
+        </div>
+        <div className="card-details">
+          <h3>{title}</h3>
+          <p className="card-price-section">
+            <span className="platform-icons">
+              {platformList.map((platform, index) => (
+                <img 
+                  key={index} 
+                  src={platformIcons[platform.trim()]} 
+                  alt={platform} 
+                  className="platform-icon"
+                />
+              ))}
+            </span>
+            <span className="price-text">
+              {discountValue > 0 ? (
+                <>
+                  <span className="original-price" style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: 'medium', color: '#888' }}>
+                    {selectedCurrency.symbol}{(originalPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                  </span>
+                  <span className="discounted-price">
+                    {selectedCurrency.symbol}{(discountedPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                  </span>
+                </>
+              ) : (
+                <>
+                  {selectedCurrency.symbol}{(originalPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                </>
+              )}
+            </span>
+          </p>
+        </div>
+        <button 
+          className="card-button"
+          onClick={handleClick}
+        >
+          VER DETALLES
+        </button>
+      </div>
     </div>
   );
 };
