@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroSection.css';
 
-const HeroSection = ({ title, description, buttonText, backgroundImage, backgroundPositionMobile, svgImage, svgWidth, svgHeight, overlayColor, titleColor, descriptionColor }) => {
+const HeroSection = ({ title, description, buttonText, backgroundImage, backgroundPositionMobile, svgImage, svgWidth, svgHeight, overlayColor, titleColor, descriptionColor, onButtonClick }) => {
   return (
     <section 
       className="hero-section"
@@ -16,7 +16,7 @@ const HeroSection = ({ title, description, buttonText, backgroundImage, backgrou
         <h1 className="hero-title" style={{ color: titleColor }}>{title}</h1>
         <p className="hero-description" style={{ color: descriptionColor }}>{description}</p>
       </div>
-      <button className="hero-button">
+      <button className="hero-button" onClick={onButtonClick}>
         {buttonText}
       </button>
     </section>

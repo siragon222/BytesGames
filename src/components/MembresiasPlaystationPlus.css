@@ -1,0 +1,26 @@
+.membresias-playstation-plus-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin: 40px 0 30px 0;
+  color: #ffffff; /* Or any other suitable color */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .membresias-playstation-plus-container {
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 30px 0 20px 0;
+  }
+} 

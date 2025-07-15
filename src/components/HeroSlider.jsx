@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import HeroSection from './HeroSection';
 import heroImage1 from '../assets/hero-image-1.jpg';
 import heroImage2 from '../assets/hero-image-2.jpg';
@@ -37,6 +38,7 @@ const slides = [
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fade, setFade] = useState(true);
+  const navigate = useNavigate();
 
   const nextSlide = () => {
     setFade(false);
@@ -78,6 +80,7 @@ const HeroSlider = () => {
             overlayColor={slide.overlayColor} // Pass overlayColor to HeroSection
             titleColor={slide.titleColor} // Pass titleColor to HeroSection
             descriptionColor={slide.descriptionColor} // Pass descriptionColor to HeroSection
+            onButtonClick={slide.id === 2 ? () => navigate('/playstation-plus') : undefined} // Pass navigation function only for slide 2
           />
         </div>
       ))}

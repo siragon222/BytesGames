@@ -1,0 +1,74 @@
+.ventajas-plus-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ventaja-card {
+  background-color: #ffffff; /* Changed to white */
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+  color: #333; /* Changed text color to dark grey */
+  text-align: center;
+  flex: 1 1 calc(33.333% - 20px); /* Adjusted to distribute space more evenly for 3 columns with 20px gap */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensure image corners are clipped by card border-radius */
+}
+
+.ventaja-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.ventaja-card-image {
+  width: 100%;
+  height: 280px; /* This height will determine how much of the image is shown when using object-fit: cover */
+  object-fit: cover; /* Ensures the image covers the entire area, eliminating background space */
+  object-position: top; /* Prioritizes the top part of the image */
+  margin-bottom: 5px;
+  border-top-left-radius: 12px; 
+  border-top-right-radius: 12px; 
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ventaja-card-content-wrapper {
+  padding: 0 20px 20px 20px; /* Top, Right, Bottom, Left */
+}
+
+.ventaja-card-title {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #000000; /* Changed title color to black */
+  font-weight: bold;
+}
+
+.card-divider {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ff0000, transparent); /* Changed to red */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 -1px 2px rgba(255, 255, 255, 0.05);
+  margin: 10px 0;
+}
+
+.ventaja-card-description {
+  font-size: 1em;
+  color: #333; /* Changed description color to dark grey */
+}
+
+@media (max-width: 768px) {
+  .ventaja-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .ventaja-card {
+    flex: 1 1 100%; /* One card per row on mobile */
+  }
+} 
