@@ -2294,6 +2294,857 @@ export const games = [
     ],
     portadaUrl: "https://i.ibb.co/8n3mg7ZB/EA-Sports-FC-24-portada-6-11zon-4-11zon.webp"
   },
+  {
+    id: 34,
+    image: "https://i.ibb.co/chmK4rr7/Bloodborne-cover.webp",
+    title: "Bloodborne",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$27",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "si",
+    discount: "50%",
+    discountDate: "2025-07-25",
+    ListadaDlcPs4: "Todos los DLCs",
+    ListadaDlcPs5: "Todos los DLCs",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "RPG",
+    pegiRating: "PEGI 16",
+    developer: "FromSoftware",
+    publisher: "Sony Computer Entertainment",
+    descripcionContenido: "Sumérgete en el espeluznante mundo gótico de Yharnam, una ciudad asolada por una extraña enfermedad. Como cazador, te embarcarás en una búsqueda para desentrañar los oscuros secretos de la ciudad y enfrentarte a criaturas horripilantes. Bloodborne es un desafiante RPG de acción conocido por su combate exigente, su atmósfera opresiva y su intrincada narrativa lovecraftiana, donde cada esquina esconde un peligro y cada victoria se siente ganada con sudor y sangre.",
+    releaseDate: "24 de marzo de 2015",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS4: {
+        Principal: {
+          price: 25,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 12,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 27,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Secundaria: {
+          price: 12,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 35,
+    image: "https://i.ibb.co/Jjf4pQkZ/borderlands-3-cover.webp",
+    title: "Borderlands 3",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$20",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "si",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter",
+    pegiRating: "PEGI 18",
+    developer: "Gearbox Software",
+    publisher: "2K Games",
+    descripcionContenido: "Prepárate para el caos intergaláctico en este looter-shooter cooperativo. Únete a uno de los cuatro Buscacámaras, cada uno con habilidades y árboles de destrezas únicos, y embárcate en una misión para detener a los gemelos Calypso, líderes de una secta despiadada que buscan apoderarse del poder de las Cámaras. Con miles de millones de armas disponibles y nuevos mundos para explorar más allá de Pandora, Borderlands 3 ofrece una aventura llena de humor, acción frenética y botín ilimitado.",
+    releaseDate: "13 de septiembre de 2019",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 19,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 36,
+    image: "https://i.ibb.co/5hqtDfwM/burnout-paradise-cover.webp",
+    title: "Burnout Paradise Remastered",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$10",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "The Walking Dead 1 (Inglés)",
+    JuegosdeRegaloPs5: "The Walking Dead 1 (Inglés)",
+    genre: "Carreras",
+    pegiRating: "PEGI 7",
+    developer: "Criterion Games",
+    publisher: "Electronic Arts",
+    descripcionContenido: "Experimenta la máxima adrenalina en un mundo abierto diseñado para la destrucción. Burnout Paradise Remastered te permite recorrer las calles de Paradise City, participar en carreras de alta velocidad, realizar acrobacias espectaculares y chocar contra tus rivales en gloriosas colisiones. Esta versión remasterizada incluye todo el contenido descargable original y mejoras técnicas para ofrecer gráficos impresionantes y una jugabilidad fluida.",
+    releaseDate: "16 de marzo de 2018",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 9,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 10,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 37,
+    image: "https://i.ibb.co/20QhnZ6B/call-of-duty-black-ops-3-cover.webp",
+    title: "Call of Duty: Black Ops 3",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$20",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "30%",
+    discountDate: "2025-07-29",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter",
+    pegiRating: "PEGI 18",
+    developer: "Treyarch",
+    publisher: "Activision",
+    descripcionContenido: "Adéntrate en un futuro oscuro y retorcido en este shooter en primera persona. En 2065, la biotecnología ha dado lugar a una nueva generación de soldados de élite, los Black Ops, que están siempre conectados. La campaña te sumerge en un viaje psicológico con giros inesperados, mientras que el multijugador ofrece una experiencia completa y adictiva. Además, el aclamado modo Zombies regresa con su propia progresión basada en XP, añadiendo profundidad y rejugabilidad.",
+    releaseDate: "6 de noviembre de 2015",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      }
+    },
+    fotos: [
+      "https://i.ibb.co/kCTPN9G/Call-Of-Duty-Black-Ops-3-5-5-11zon-3-11zon.webp",
+"https://i.ibb.co/KpVNSVbZ/Call-Of-Duty-Black-Ops-3-1-1-11zon-5-11zon.webp",
+"https://i.ibb.co/211kk3Lp/Call-Of-Duty-Black-Ops-3-2-2-11zon-6-11zon.webp",
+"https://i.ibb.co/BHZwd0vz/Call-Of-Duty-Black-Ops-3-3-3-11zon-1-11zon.webp",
+"https://i.ibb.co/hF3SbbbD/Call-Of-Duty-Black-Ops-3-4-4-11zon-2-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/fdnxpmv2/Call-Of-Duty-Black-Ops-3-portada-6-11zon-4-11zon.webp"
+  },
+  {
+    id: 38,
+    image: "https://i.ibb.co/wZHdXQwF/call-of-duty-infinite-warfare-cover.webp",
+    title: "Call of Duty: Infinite Warfare",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$14",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter",
+    pegiRating: "PEGI 18",
+    developer: "Infinity Ward",
+    publisher: "Activision",
+    descripcionContenido: "Lucha por la supervivencia de la humanidad en una guerra que se extiende por todo el sistema solar. En esta entrega, la campaña sigue al Capitán Nick Reyes, quien debe liderar a su equipo en combates tanto en la Tierra como en el espacio, incluyendo escenarios de gravedad cero. El juego combina la acción característica de Call of Duty con una narrativa de ciencia ficción militar y ofrece modos de juego innovadores, incluyendo un multijugador futurista y un modo Zombies con elementos clásicos y nuevas características.",
+    releaseDate: "4 de noviembre de 2016",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 14,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 14,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      "https://i.ibb.co/cPSV0cz/Call-of-Duty-Infinite-Warfare-2-2-11zon-6-11zon.webp",
+"https://i.ibb.co/DHpqMs9t/Call-of-Duty-Infinite-Warfare-1-1-11zon-5-11zon.webp",
+"https://i.ibb.co/HLJPSg4j/Call-of-Duty-Infinite-Warfare-3-3-11zon-1-11zon.webp",
+"https://i.ibb.co/qP48T7w/Call-of-Duty-Infinite-Warfare-4-4-11zon-2-11zon.webp",
+"https://i.ibb.co/Sw6Mgr9H/Call-of-Duty-Infinite-Warfare-5-5-11zon-3-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/XkS9PBff/Call-of-Duty-Infinite-Warfare-portada-6-11zon-4-11zon.webp"
+  },
+  {
+    id: 39,
+    image: "https://i.ibb.co/v6JC27Rj/call-of-duty-vanguard-cover.webp",
+    title: "Call of Duty: Vanguard",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$8",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter",
+    pegiRating: "PEGI 18",
+    developer: "Sledgehammer Games",
+    publisher: "Activision",
+    descripcionContenido: "Lucha por la supervivencia de la humanidad en una guerra que se extiende por todo el sistema solar. En esta entrega, la campaña sigue al Capitán Nick Reyes, quien debe liderar a su equipo en combates tanto en la Tierra como en el espacio, incluyendo escenarios de gravedad cero. El juego combina la acción característica de Call of Duty con una narrativa de ciencia ficción militar y ofrece modos de juego innovadores, incluyendo un multijugador futurista y un modo Zombies con elementos clásicos y nuevas características.",
+    releaseDate: "5 de noviembre de 2021",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 8,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 8,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 40,
+    image: "https://i.ibb.co/xt1QCWNY/Card-Hacia-La-Victoria-cover.webp",
+    title: "Cars 3: Driven to Win",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$20",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Carreras",
+    pegiRating: "PEGI 3",
+    developer: "Avalanche Software",
+    publisher: "Warner Bros. Interactive Entertainment",
+    descripcionContenido: "Basado en la película de Disney-Pixar Cars 3, este juego de carreras te invita a poner a prueba tus habilidades al volante. Practica y mejora tus técnicas de manejo como el derrape y el turbo en seis emocionantes modos de juego. Desafía a amigos y familiares en carreras de combate para demostrar quién es el campeón definitivo, avanzando en tu carrera para convertirte en un corredor digno del Salón de la Fama.",
+    releaseDate: "13 de junio de 2017",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 41,
+    image: "https://i.ibb.co/d4by6PXK/crash-bandicoot-4-cover.webp",
+    title: "Crash Bandicoot 4: It's About Time",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$30",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Plataformas",
+    pegiRating: "PEGI 7",
+    developer: "Toys for Bob",
+    publisher: "Activision",
+    descripcionContenido: "Únete a Crash y Coco en una nueva aventura interdimensional para salvar el multiverso. Cuando Neo Cortex y N. Tropy escapan de prisión y lanzan un asalto en múltiples universos, nuestros héroes deben reunir las cuatro Máscaras Cuánticas, guardianas del tiempo y el espacio. Estas máscaras otorgan a Crash y Coco poderes para alterar las reglas de la realidad, permitiéndoles superar obstáculos de formas nuevas y emocionantes.",
+    releaseDate: "2 de octubre de 2020",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 30,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 15,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 30,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 15,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 42,
+    image: "https://i.ibb.co/q3qjR4fZ/crash-bandicoot-trilogy-cover.webp",
+    title: "Crash Bandicoot N. Sane Trilogy",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$20",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Plataformas",
+    pegiRating: "PEGI 7",
+    developer: "Vicarious Visions",
+    publisher: "Activision",
+    descripcionContenido: "Revive las icónicas aventuras de Crash Bandicoot en esta colección remasterizada. Juega a los tres títulos originales: Crash Bandicoot, Crash Bandicoot 2: Cortex Strikes Back y Crash Bandicoot 3: Warped. Controla a Crash o, por primera vez, a su hermana Coco, mientras saltas, giras y conduces a través de niveles locos para frustrar los malvados planes del Dr. Neo Cortex. Disfruta de gráficos y audio actualizados que traen de vuelta la nostalgia de estos clásicos de PlayStation.",
+    releaseDate: "30 de junio de 2017",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 43,
+    image: "https://i.ibb.co/TBGzDDnP/crash-team-racing-cover.webp",
+    title: "Crash Team Racing Nitro-Fueled",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$20",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Carreras",
+    pegiRating: "PEGI 3",
+    developer: "Beenox",
+    publisher: "Activision",
+    descripcionContenido: "Experimenta la emoción de las carreras de karts con Crash Team Racing Nitro-Fueled, una fantástica remasterización del clásico de 1999. Desarrollado por Beenox, este juego combina la nostalgia del original con gráficos renovados, mecánicas de juego mejoradas y contenido adicional, incluyendo nuevas pistas y personajes. Elige entre una amplia gama de personajes del universo de Crash, compite en carreras llenas de potenciadores y descubre rutas secretas en pistas desafiantes, ya sea en el Modo Aventura para un jugador o en el multijugador local y en línea.",
+    releaseDate: "21 de junio de 2019",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 20,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 44,
+    image: "https://i.ibb.co/y2SC4yF/dmc-devil-may-cry-cover.webp",
+    title: "DmC: Devil May Cry",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$15",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "30%",
+    discountDate: "2025-07-29",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Acción",
+    pegiRating: "PEGI 16",
+    developer: "Ninja Theory",
+    publisher: "Capcom",
+    descripcionContenido: "En DmC: Devil May Cry, asume el papel de Dante, un joven con poderes sobrenaturales que se encuentra bajo el asedio de Limbo City, una ciudad aparentemente sensible y habitada por demonios. A medida que Dante recupera sus recuerdos, debe enfrentarse a los demonios que controlan el Limbo, incluyendo al rey demonio Mundus, quien destruyó y separó a su familia. El juego se centra en el combate rápido y la acción intensa, mientras Dante lucha contra las fuerzas demoníacas y descubre la verdad sobre su pasado.",
+    releaseDate: "15 de enero de 2013",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 15,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 15,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  {
+    id: 45,
+    image: "https://i.ibb.co/JSH9MRg/doom-cover.webp",
+    title: "DOOM",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$15",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "si",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter",
+    pegiRating: "PEGI 18",
+    developer: "id Software",
+    publisher: "Bethesda Softworks",
+    descripcionContenido: "Prepárate para una experiencia de disparos en primera persona brutal y desafiante. En DOOM, te conviertes en un marine espacial anónimo que debe luchar contra hordas demoníacas desatadas por la Union Aerospace Corporation en una instalación colonizada en Marte. El juego se destaca por su acción implacable, su combate visceral y su enfoque en la eliminación de demonios con un arsenal de armas devastadoras, mientras exploras un entorno invadido por las fuerzas del infierno.",
+    releaseDate: "13 de mayo de 2016",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 15,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 15,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [],
+    portadaUrl: ""
+  },
+  
+
   // Agrega más juegos según sea necesario
 ];
 

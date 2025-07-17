@@ -41,7 +41,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
     }
 
     // If the offer has not ended, apply discount if conditions are met
-    if (gameDiscount > 0 && itemDiscountAllowed === 'yes' && new Date() < new Date(gameDiscountDate)) {
+    if (gameDiscount > 0 && itemDiscountAllowed === 'si' && new Date() < new Date(gameDiscountDate)) {
       const discounted = originalPrice * (1 - gameDiscount);
       return { original: originalPrice, discounted: discounted, hasDiscount: true };
     }
