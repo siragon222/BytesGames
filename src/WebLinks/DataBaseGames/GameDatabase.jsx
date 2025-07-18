@@ -3225,8 +3225,14 @@ export const games = [
             }
         }
     },
-    "fotos": [],
-    "portadaUrl": ""
+    "fotos": [
+     "https://i.ibb.co/xSjvr8mr/sniper-elite-5-5.webp",
+ "https://i.ibb.co/dYzL0c1/sniper-elite-5-4.webp",
+ "https://i.ibb.co/BHr8rWy6/sniper-elite-5-3.webp",
+ "https://i.ibb.co/NdpwH63Y/sniper-elite-5-2.webp",
+ "https://i.ibb.co/XZ50mdmp/sniper-elite-5-1.webp"
+    ],
+    "portadaUrl": "https://i.ibb.co/XrghdFtQ/portada.webp",
 },
   
 
