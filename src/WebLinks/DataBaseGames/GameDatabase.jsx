@@ -7,7 +7,6 @@ export const games = [
     id: 1,
     image: "https://i.ibb.co/cSWh5KnS/assassins-creed-valhalla-cover.webp",
     title: "Assassin\'s Creed Valhalla",
-    Lenguaje: "Ingles",
     platforms: "PS4, PS5",
     price: "$16",
     stock: "si",
@@ -27,6 +26,10 @@ export const games = [
     publisher: "Ubisoft",
     descripcionContenido: 'Tiene lugar en el siglo IX (comenzando  en 873 d.C.) llevándote por Europa mientras mueves tu clan desde una Noruega gravemente sobrepoblada y devastada por la guerra a Inglaterra, tierra verde de paz, prosperidad y campos fértiles para cultivar. Reino Unido puede tener la reputación de ser un lugar frío y lluvioso, pero en comparación con la desolación casi ártica, no es un sustituto tan malo. Es un juego de aventuras y acción de mundo abierto.',
     releaseDate: "10 de noviembre de 2020",
+    languages: [
+      { name: 'English', image: 'idioma-ingles.svg', description: 'Audio & Text' },
+      { name: 'Spanish', image: 'venezuela.svg', description: 'Audio & Text' },
+    ],
     editions: {
       Ocultar: "si",
       PlayStation: {},
@@ -2785,8 +2788,14 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos:[
+      "https://i.ibb.co/LdQYBBZ3/Card-3-Motivado-para-Ganar-5-5-11zon-5-11zon.webp",
+"https://i.ibb.co/GSCFmMc/Card-3-Motivado-para-Ganar-1-1-11zon-1-11zon.webp",
+"https://i.ibb.co/d4wQxMs5/Card-3-Motivado-para-Ganar-2-2-11zon-2-11zon.webp",
+"https://i.ibb.co/MkMfBKD3/Card-3-Motivado-para-Ganar-3-3-11zon-3-11zon.webp",
+"https://i.ibb.co/kg4CM8f8/Card-3-Motivado-para-Ganar-4-4-11zon-4-11zon.webp"
+    ],
+    portadaUrl:"https://i.ibb.co/Jw2ZxWPr/Card-3-Motivado-para-Ganar-portada-6-11zon-6-11zon.webp"
   },
   {
     id: 41,
@@ -2927,8 +2936,14 @@ export const games = [
         }
       }
     },
-    fotos: [],
-    portadaUrl: ""
+    fotos: [
+      "https://i.ibb.co/xtYyNmbS/Crash-Bandicoot-Trilogy-4-4-11zon-1-11zon.webp",
+"https://i.ibb.co/n8QBrYx7/Crash-Bandicoot-Trilogy-3-3-11zon-6-11zon.webp",
+"https://i.ibb.co/prXyc3jN/Crash-Bandicoot-Trilogy-5-5-11zon-2-11zon.webp",
+"https://i.ibb.co/fzk7x8T5/Crash-Bandicoot-Trilogy-portada-6-11zon-3-11zon.webp",
+"https://i.ibb.co/6c2yJGHC/Crash-Bandicoot-Trilogy-2-2-11zon-5-11zon.webp"
+    ],
+    portadaUrl: "https://i.ibb.co/DfHDPCtF/Crash-Bandicoot-Trilogy-1-1-11zon-4-11zon.webp"
   },
   {
     id: 43,
@@ -3143,6 +3158,76 @@ export const games = [
     fotos: [],
     portadaUrl: ""
   },
+  {
+    id: 46,
+    image: "https://i.ibb.co/JyNf9F5/Sniper-Elite-5-cover.jpg",
+    title: "Sniper Elite 5",
+    Lenguaje: "Español, ingles",
+    platforms: "PS4, PS5",
+    price: "$15",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    LenguajePs3: "Español, ingles",
+    LenguajePs4: "Español, ingles",
+    LenguajePs5: "Español, ingles",
+    ListadaDlcPs4: "Crosse DLC, Season Pass",
+    ListadaDlcPs5: "Crosse DLC, Season Pass",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs4List: "1, 14",
+    JuegosdeRegaloPs5: "",
+    JuegosdeRegaloPs5List: "1, 9",
+    genre: "Shooter, Sigilo",
+    pegiRating: "PEGI 16",
+    developer: "Rebellion Developments",
+    publisher: "Rebellion Developments",
+    descripcionContenido: "Sniper Elite 5 es la última entrega de la aclamada serie de disparos tácticos. Ponte en la piel del francotirador de élite Karl Fairburne y lucha para descubrir y desmantelar el proyecto secreto nazi Kraken en la Francia de 1944. Experimenta una balística de francotirador inigualable, un combate táctico inmersivo y las icónicas cámaras de muerte X-Ray. Con un sistema de personalización de armas profundo y opciones de juego cooperativo y PvP, Sniper Elite 5 ofrece una experiencia de sigilo y disparos sin igual.",
+    releaseDate: "26 de mayo de 2022",
+    editions: {
+        Ocultar: "si",
+        PlayStation: {},
+        PS4: {
+            Ocultar: "si"
+        },
+        PS5: {
+            Ocultar: "si"
+        }
+    },
+    licensePrices: {
+        PlayStation: {},
+        PS3: {},
+        PS4: {
+            Principal: {
+                price: 14,
+                description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+                discount: "no"
+            }
+        },
+        PS5: {
+            Principal: {
+                price: 15,
+                description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+                discount: "no"
+            },
+            Alquiler: {
+                price: 5,
+                description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+                discount: "no"
+            },
+            Secundaria: {
+                price: 7,
+                description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+                discount: "no"
+            }
+        }
+    },
+    "fotos": [],
+    "portadaUrl": ""
+},
   
 
   // Agrega más juegos según sea necesario

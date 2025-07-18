@@ -18,6 +18,8 @@ const VerDetallesComponente = () => {
   const gameName = searchParams.get('q');
   const { selectedGame, setSelectedGame } = useContext(GameContext);
   const [selectedConsole, setSelectedConsole] = useState(null);
+  const [selectedGiftGameForDisplay, setSelectedGiftGameForDisplay] = useState(null); // New state to hold the selected gift game for display
+  const giftCardRef = React.useRef(null); // Create a ref for the gift card
 
   React.useEffect(() => {
     if (gameName) {
@@ -30,11 +32,25 @@ const VerDetallesComponente = () => {
       } else if (dlc) {
         setSelectedGame(dlc);
       }
+      setSelectedGiftGameForDisplay(null); // Reset selected gift game when gameName changes
     }
   }, [gameName, setSelectedGame]);
 
+  // Scroll to the gift card when selectedGiftGameForDisplay changes and the ref is available
+  React.useEffect(() => {
+    if (selectedGiftGameForDisplay && giftCardRef.current) {
+      giftCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [selectedGiftGameForDisplay]);
+
   const handleConsoleChange = (console) => {
     setSelectedConsole(console);
+    setSelectedGiftGameForDisplay(null); // Reset selected gift game display when console changes
+  };
+
+  const handleGiftGameSelect = (giftGame) => {
+    setSelectedGiftGameForDisplay(giftGame); // Set the selected gift game object
+    // Removed scroll logic from here
   };
 
   const getConsoleSpecificDLCs = () => {
@@ -118,6 +134,20 @@ const VerDetallesComponente = () => {
         <div className="contenedor-izquierda">
           <GaleriaFotos fotos={fotos} />
           <DescripcionComponente descripcion={selectedGame.descripcionContenido} />
+          
+          {selectedGiftGameForDisplay && (
+            <div ref={giftCardRef} className="selected-gift-card-wrapper"> {/* Attach ref here */}
+              <Regalos_Card
+                key={selectedGiftGameForDisplay.id}
+                id={selectedGiftGameForDisplay.id}
+                image={selectedGiftGameForDisplay.image}
+                title={selectedGiftGameForDisplay.title}
+                isHorizontal={true} // Assuming always horizontal when selected
+                onButtonClick={() => handleCardClick(selectedGiftGameForDisplay.title)}
+              />
+            </div>
+          )}
+
           {selectedGame.type === 'game' && (
             <div>
               {getConsoleSpecificGifts().length > 0 && (
@@ -164,7 +194,11 @@ const VerDetallesComponente = () => {
           )}
         </div>
         <div className="contenedor-derecha">
-          <SeleccionaComponente game={selectedGame} onConsoleSelect={handleConsoleChange} />
+          <SeleccionaComponente
+            game={selectedGame}
+            onConsoleSelect={handleConsoleChange}
+            onGiftGameSelect={handleGiftGameSelect} // Pass the new handler
+          />
         </div>
       </div>
       <div className="recomendados-container">

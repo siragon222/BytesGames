@@ -1,0 +1,67 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Opaque background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.modal-content {
+  background-color: #1f1f1f; /* Dark background similar to SeleccionaComponente */
+  background-image: linear-gradient(
+    to bottom right, 
+    rgb(0, 0, 0), /* Color inicial (rojo semitransparente) */
+    rgb(255, 0, 0)  /* Color final (azul semitransparente) */
+  ); /* Gradient similar to SeleccionaComponente */
+  padding: 30px;
+  border-radius: 12px; /* Matching SeleccionaComponente border-radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 90%; /* Responsive width for smaller screens */
+  width: 400px; /* Max width for larger screens */
+  animation: fadeIn 0.3s ease-out; /* Simple fade-in effect */
+  border: 1px solid #1f1f1f; /* Matching SeleccionaComponente border */
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #fff; /* White text for contrast */
+}
+
+.modal-content button {
+  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); /* Blends with component's background */
+  color: white;
+  padding: 12px 25px; /* Slightly adjusted padding */
+  border: 2px solid #ff0000; /* Red border matching platform buttons */
+  border-radius: 12px; /* Matching SeleccionaComponente border-radius */
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button:hover {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(255, 0, 0, 0.7)); /* Reverse gradient on hover */
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger but still subtle shadow on hover */
+}
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+} 

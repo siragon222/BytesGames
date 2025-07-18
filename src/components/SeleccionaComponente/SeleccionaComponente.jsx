@@ -9,8 +9,10 @@ import BuyIcon from '../../assets/buy.svg'; // Import the buy SVG
 import { CurrencyContext } from '../../context/CurrencyContext';
 import Countdown from '../Countdown'; // Import the new Countdown component
 import { useNavigate } from 'react-router-dom';
+import { games } from '../../WebLinks/DataBaseGames/GameDatabase';
+import ModalAlert from '../ModalAlert/ModalAlert'; // Import the new ModalAlert component
 
-const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game como prop y add onConsoleSelect prop
+const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { // Recibir game como prop y add onConsoleSelect prop
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [selectedPlayStationConsole, setSelectedPlayStationConsole] = useState(null); // New state for specific PlayStation consoles
   const [selectedXboxConsole, setSelectedXboxConsole] = useState(null); // New state for specific Xbox consoles
@@ -18,6 +20,21 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
   const [selectedEdition, setSelectedEdition] = useState('');
   const [selectedLicense, setSelectedLicense] = useState('');
   const { selectedCurrency } = useContext(CurrencyContext);
+  const [selectedGiftGame, setSelectedGiftGame] = useState(null); // Nuevo estado para el juego de regalo seleccionado
+  const [showGiftAlert, setShowGiftAlert] = useState(false); // New state to control modal visibility
+  const [selectedLanguage, setSelectedLanguage] = useState(null); // New state for selected language
+
+  // Reset selected gift game when the game prop changes
+  React.useEffect(() => {
+    setSelectedGiftGame(null);
+    setSelectedLanguage(null); // Reset selected language when game changes
+  }, [game]);
+
+  // Reset selected gift game when the selected console changes
+  React.useEffect(() => {
+    setSelectedGiftGame(null);
+    setSelectedLanguage(null); // Reset selected language when console changes
+  }, [selectedPlayStationConsole, selectedXboxConsole, selectedPcLauncher]);
 
   // Refs for scrolling
   const playStationConsoleRef = useRef(null);
@@ -112,6 +129,15 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
     setSelectedEdition(''); // Ensure only one is selected
   };
 
+  const handleGiftGameSelect = (event) => {
+    const giftId = event.target.value;
+    setSelectedGiftGame(giftId);
+    const giftGame = games.find(g => g.id.toString() === giftId); // Find the full game object
+    if (onGiftGameSelect) {
+      onGiftGameSelect(giftGame); // Pass the entire game object
+    }
+  };
+
   // Precios y descripciones de ediciones por plataforma (usar los datos del juego)
   const currentPlatformKey = selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher;
 
@@ -137,11 +163,65 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
 
   const navigate = useNavigate();
 
+  const handleLanguageSelect = (language) => {
+    setSelectedLanguage(language);
+  };
+
+  // Helper to get languages for the selected console
+  const getConsoleLanguages = () => {
+    if (!game) return [];
+    let languageList = '';
+
+    if (selectedPlayStationConsole === "PS3") {
+      languageList = game.LenguajePs3 || '';
+    } else if (selectedPlayStationConsole === "PS4") {
+      languageList = game.LenguajePs4 || '';
+    } else if (selectedPlayStationConsole === "PS5") {
+      languageList = game.LenguajePs5 || '';
+    } else if (selectedXboxConsole === "Xbox 360") {
+      languageList = game.LenguajeXbox360 || '';
+    } else if (selectedXboxConsole === "Xbox One") {
+      languageList = game.LenguajeXboxOne || '';
+    } else if (selectedXboxConsole === "Xbox Series X") {
+      languageList = game.LenguajeXboxSeriesX || '';
+    } else if (selectedPcLauncher) {
+      languageList = game.LenguajePC || ''; // Assuming a generic PC language field
+    }
+
+    return languageList.split(',').map(lang => lang.trim()).filter(Boolean);
+  };
+
   const whatsappNumber = '+584140757350';
   
   const handleWhatsAppClick = () => {
+    // Check if the current game has gift options for the selected PlayStation console
+    const hasGiftOptions = 
+      (selectedPlayStationConsole === "PS4" && game.JuegosdeRegaloPs4List) ||
+      (selectedPlayStationConsole === "PS5" && game.JuegosdeRegaloPs5List);
+
+    // If gift options exist and no gift game is selected, show the custom alert
+    if (hasGiftOptions && !selectedGiftGame) {
+      setShowGiftAlert(true); // Show the modal
+      return; // Stop the function here if no gift is selected
+    }
+
+    // Proceed with WhatsApp message generation if all conditions are met
     let whatsappMessage = `Hola! Estoy interesado en hacer una compra del juego:\n`;
     whatsappMessage += `Artículo: ${game.title}\n`;
+
+    // Add selected gift game to the message if it exists
+    if (selectedGiftGame) {
+      const giftGame = games.find(g => g.id.toString() === selectedGiftGame);
+      if (giftGame) {
+        whatsappMessage += `Juego de Regalo Seleccionado: ${giftGame.title}\n`;
+      }
+    }
+
+    // Add selected language to the message if it exists
+    if (selectedLanguage) {
+      whatsappMessage += `Idioma Seleccionado: ${selectedLanguage}\n`;
+    }
+
     let itemPrice = 0;
     let itemName = '';
     let platformAndConsole = '';
@@ -390,11 +470,73 @@ const SeleccionaComponente = ({ game, onConsoleSelect }) => { // Recibir game co
         </div>
       )}
 
+      {/* Language Selection Buttons */}
+      {getConsoleLanguages().length > 1 && ( // Only show if more than one language is available
+        <div className="language-selection-section">
+          <h3 className="section-title">Selecciona tu Idioma:</h3>
+          <div className="language-buttons">
+            {getConsoleLanguages().map((lang) => (
+              <button
+                key={lang}
+                className={`language-button ${selectedLanguage === lang ? 'active' : ''}`}
+                onClick={() => handleLanguageSelect(lang)}
+              >
+                {lang}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {(selectedLicense || selectedEdition) && (
         <button className="hace-compra-button" onClick={handleWhatsAppClick} ref={buttonRef}>
           <img src={BuyIcon} alt="Buy" className="button-icon" />
           Hacer Compra
         </button>
+      )}
+
+      {/* Nuevo Dropdown para juegos de regalo */}
+      {((selectedPlayStationConsole === "PS4" && game.JuegosdeRegaloPs4List) || (selectedPlayStationConsole === "PS5" && game.JuegosdeRegaloPs5List)) && (
+        <div className="gift-game-selection">
+          <label>Selecciona tu regalo:</label>
+          <div className="gift-game-options">
+            {(selectedPlayStationConsole === "PS4" ? game.JuegosdeRegaloPs4List : game.JuegosdeRegaloPs5List)
+              .split(',')
+              .map(idOrTitle => {
+                const trimmedIdOrTitle = idOrTitle.trim();
+                const foundGame = games.find(g =>
+                  g.id.toString() === trimmedIdOrTitle || g.title === trimmedIdOrTitle
+                );
+                return foundGame ? (
+                  <div key={foundGame.id} className="gift-game-option">
+                    <input
+                      type="radio"
+                      id={`gift-${foundGame.id}`}
+                      name="giftGame"
+                      value={foundGame.id}
+                      checked={selectedGiftGame === foundGame.id.toString()}
+                      onChange={handleGiftGameSelect}
+                      className="circular-checkbox"
+                    />
+                    <label htmlFor={`gift-${foundGame.id}`}>{foundGame.title}</label>
+                  </div>
+                ) : null;
+              })}
+          </div>
+          {/* {selectedGiftGame && (
+            <div className="selected-gift-game-info">
+              Juego de regalo seleccionado: {games.find(g => g.id.toString() === selectedGiftGame)?.title}
+            </div>
+          )} */}
+        </div>
+      )}
+
+      {/* Modal Alert for gift selection */}
+      {showGiftAlert && (
+        <ModalAlert
+          message="¡Por favor, selecciona un juego de regalo para completar tu compra!"
+          onClose={() => setShowGiftAlert(false)}
+        />
       )}
 
       <div className="game-details">

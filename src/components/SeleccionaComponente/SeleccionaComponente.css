@@ -1,3 +1,10 @@
+:root {
+  --font-size-title: clamp(28px, 5vw, 40px); /* Adjusted for better visibility and responsiveness */
+  --font-size-subtitle: clamp(18px, 4vw, 20px); /* Responsive subtitle font size */
+  --font-size-normal: clamp(14px, 3vw, 16px); /* Responsive normal font size */
+  --font-size-small: clamp(12px, 2.5vw, 14px); /* Responsive small font size */
+}
+
 .selecciona-componente {
   padding: 20px;
   border: 1px solid #1f1f1f;
@@ -16,10 +23,20 @@
   );
 }
 
+.game-title {
+  font-size: var(--font-size-title);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.selecciona-componente > .section-title {
+  font-size: var(--font-size-subtitle); /* Specific rule for 'Selecciona tu Plataforma' title */
+}
+
 .section-title {
   color: #fdd5d5;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: var(--font-size-title); /* Adjusted to use title font size */
   font-weight: bold;
 }
 
@@ -56,7 +73,7 @@
 
 .platform-button span {
   color: #fff;
-  font-size: 14px;
+  font-size: var(--font-size-small); /* Adjusted from 14px to use small variable */
 }
 
 .platform-button:hover {
@@ -76,14 +93,14 @@
   background-color: #1f1f1f;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--font-size-normal); /* Adjusted from 16px to use normal variable */
   margin-top: 10px;
 }
 
 .edition-description {
   margin-top: 15px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: var(--font-size-normal); /* Adjusted from 16px to use normal variable */
 }
 
 .license-buttons {
@@ -91,6 +108,10 @@
   flex-direction: column;
   gap: 8px;
   margin-top: 15px;
+}
+
+.license-section .section-title {
+  font-size: var(--font-size-subtitle); /* Set license section title to title font size for consistency */
 }
 
 .license-button {
@@ -101,7 +122,7 @@
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 16px;
+  font-size: var(--font-size-normal); /* Adjusted from 16px to use normal variable */
   flex: 1 1 auto;
   min-width: 120px;
   margin: 2px;
@@ -123,7 +144,7 @@
 .license-description {
   margin-top: 15px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: var(--font-size-normal); /* Adjusted from 16px to use normal variable */
 }
 
 .playstation-console-buttons {
@@ -133,6 +154,10 @@
   margin-top: 20px;
   margin-bottom: 30px;
   flex-wrap: wrap; /* Allow buttons to wrap to the next line if space is limited */
+}
+
+.playstation-console-buttons .section-title {
+  font-size: var(--font-size-subtitle);
 }
 
 .playstation-console-buttons .platform-button {
@@ -150,6 +175,10 @@
   flex-wrap: wrap; /* Allow buttons to wrap to the next line if space is limited */
 }
 
+.xbox-console-buttons .section-title {
+  font-size: var(--font-size-subtitle);
+}
+
 .xbox-console-buttons .platform-button {
   flex: 1; /* Allow buttons to grow and shrink */
   min-width: 80px; /* Minimum width to prevent them from becoming too small */
@@ -163,6 +192,10 @@
   margin-top: 20px;
   margin-bottom: 30px;
   flex-wrap: wrap; /* Allow buttons to wrap to the next line if space is limited */
+}
+
+.pc-launcher-buttons .section-title {
+  font-size: var(--font-size-title);
 }
 
 .pc-launcher-buttons .platform-button {
@@ -182,15 +215,19 @@
 
 .game-details p {
   margin: 10px 0;
-  font-size: 14px;
+  font-size: var(--font-size-small); /* Adjusted from 14px to use small variable */
   color: #fff;
 }
 
 .game-details h3 {
   color: #ff0000;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: var(--font-size-subtitle); /* Adjusted from 20px to use subtitle variable */
   font-weight: bold;
+}
+
+.edition-section .section-title {
+  font-size: var(--font-size-title);
 }
 
 .divider {
@@ -202,7 +239,7 @@
 }
 
 .price-text {
-  font-size: 1.3em;
+  font-size: 1.3em; /* Keep as em relative to parent for price emphasis */
   font-weight: bold;
 }
 
@@ -272,14 +309,21 @@
 }
 
 .out-of-stock-message {
-  color: #ffffff; /* Red color */
-  font-size: 20px;
+  color: #ffffff;
+  font-size: var(--font-size-subtitle); /* Adjusted from 20px to use subtitle variable */
   font-weight: bold;
   margin-top: 20px;
   text-align: center;
 }
 
 @media (max-width: 768px) {
+  :root {
+    --font-size-title: clamp(24px, 6vw, 32px);
+    --font-size-subtitle: clamp(16px, 4.5vw, 18px);
+    --font-size-normal: clamp(12px, 3.5vw, 14px);
+    --font-size-small: clamp(10px, 2.8vw, 12px);
+  }
+
   .playstation-plus-button {
     /* max-width: 90%; This is no longer needed as max-width is now 100% */
     height: auto;
@@ -293,7 +337,7 @@
 
 .license-description-in-button,
 .edition-description-in-button {
-  font-size: 0.8em;
+  font-size: var(--font-size-small); /* Adjusted from 0.8em to use small variable */
   color: #c0c0c0;
   margin-top: 5px;
   text-align: center;
@@ -306,7 +350,7 @@
   padding: 18px 35px;
   border: 2px solid #ff0000; /* Red border matching platform buttons */
   border-radius: 12px;
-  font-size: 19px;
+  font-size: var(--font-size-normal); /* Adjusted from 19px to use normal variable */
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -337,3 +381,131 @@
 
 /* Removing @keyframes pulse-button for now */
 /* @keyframes pulse-button { ... } */
+
+.gift-game-selection {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #222;
+  color: #eee;
+}
+
+.gift-game-selection label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: var(--font-size-normal); /* Adjusted from 1.1em to use normal variable */
+}
+
+.gift-game-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gift-game-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.circular-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #fff; /* White border */
+  border-radius: 50%;
+  width: 20px; /* Slightly larger for better visibility */
+  height: 20px; /* Slightly larger for better visibility */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out; /* Smooth transition for effects */
+}
+
+.circular-checkbox:checked {
+  background-color: #ff0000; /* Red for checked */
+  border-color: #ff0000;
+  transform: scale(1.1); /* Slightly scale up when checked */
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6); /* Red glow effect */
+}
+
+.circular-checkbox:checked::before {
+  content: '\2713'; /* Checkmark character */
+  display: block;
+  color: white;
+  font-size: var(--font-size-small); /* Adjusted to use small font size variable */
+  font-weight: bold;
+}
+
+.circular-checkbox:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* White glow on hover */
+}
+
+.gift-game-option label {
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.selected-gift-game-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  font-style: italic;
+  color: #fff;
+}
+
+.language-selection-section {
+  margin-top: 15px; /* Adjusted to reduce space at the top */
+  padding: 20px 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #222;
+  color: #eee;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Added to vertically center content if space allows */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.language-selection-section .section-title {
+  color: #fff; /* Changed to white */
+  margin-bottom: 10px; /* Matching the gift section label's margin-bottom */
+  font-size: var(--font-size-normal); /* Reverted to normal font size as requested */
+}
+
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.language-button {
+  background: none;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #fff;
+  font-size: var(--font-size-normal); /* Adjusted to use normal font size variable */
+}
+
+.language-button.active {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+.language-button:hover {
+  background-color: #ff4500;
+  border-color: #ff4500;
+}
