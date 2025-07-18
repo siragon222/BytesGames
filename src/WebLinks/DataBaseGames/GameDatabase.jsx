@@ -3160,7 +3160,7 @@ export const games = [
   },
   {
     id: 46,
-    image: "https://i.ibb.co/JyNf9F5/Sniper-Elite-5-cover.jpg",
+    image: "https://i.ibb.co/7JJK5ZcB/sniper-elite-5-cover.webp",
     title: "Sniper Elite 5",
     Lenguaje: "Español, ingles",
     platforms: "PS4, PS5",
