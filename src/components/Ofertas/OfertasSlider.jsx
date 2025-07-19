@@ -7,11 +7,15 @@ import 'swiper/swiper-bundle.css'; // Import Swiper styles
 import { games } from '../../WebLinks/DataBaseGames/GameDatabase'; // Import the games list
 
 const OfertasSlider = () => {
-  // Define las IDs de las cards que deseas mostrar (puedes cambiarlas según tu elección)
-  const selectedIds = [1, 3, 5, 7, 9, 11]; // Ejemplo de IDs seleccionadas
+  // Filtra la lista de juegos basándote en que el campo discount NO esté vacío
+  const gamesWithDiscount = games.filter(game => game.discount !== "");
 
-  // Filtra la lista de juegos basándote en las IDs seleccionadas
-  const filteredGames = games.filter(game => selectedIds.includes(game.id));
+  // Parsea el descuento a un número y ordena de mayor a menor, luego toma los primeros 8
+  const filteredGames = gamesWithDiscount.sort((a, b) => {
+    const discountA = parseFloat(a.discount.replace("%", ""));
+    const discountB = parseFloat(b.discount.replace("%", ""));
+    return discountB - discountA; // Sort in descending order
+  }).slice(0, 8);
 
   // Referencias para los botones y Swiper
   const swiperRef = useRef(null);

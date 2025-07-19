@@ -62,12 +62,15 @@ const SliderRecomendados = ({ selectedGame }) => {
       breakpoints: {
         0: {
           slidesPerView: 1,
+          spaceBetween: 50,
         },
         520: {
           slidesPerView: 2,
+          spaceBetween: 50,
         },
         950: {
           slidesPerView: 3,
+          spaceBetween: 50,
         },
         1200: {
           slidesPerView: 4,
