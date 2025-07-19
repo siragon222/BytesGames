@@ -556,7 +556,7 @@ export const games = [
   },
   {
     id: 10,
-    image: ImageData["Dragon Ball: Sparking! Zero cover"],
+    image: ImageData["Dragon Ball Sparking! Zero cover"],
     title: "Dragon Ball: Sparking! Zero",
     Lenguaje: "Español",
     platforms: "PS5",
@@ -604,13 +604,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Dragon Ball: Sparking! Zero 1"],
-      ImageData["Dragon Ball: Sparking! Zero 2"],
-      ImageData["Dragon Ball: Sparking! Zero 3"],
-      ImageData["Dragon Ball: Sparking! Zero 4"],
-      ImageData["Dragon Ball: Sparking! Zero 5"]
+      ImageData["Dragon Ball Sparking! Zero 1"],
+      ImageData["Dragon Ball Sparking! Zero 2"],
+      ImageData["Dragon Ball Sparking! Zero 3"],
+      ImageData["Dragon Ball Sparking! Zero 4"],
+      ImageData["Dragon Ball Sparking! Zero 5"]
     ],
-    portadaUrl: ImageData["Dragon Ball: Sparking! Zero Portada"]
+    portadaUrl: ImageData["Dragon Ball Sparking! Zero Portada"]
   },
   {
     id: 11,
