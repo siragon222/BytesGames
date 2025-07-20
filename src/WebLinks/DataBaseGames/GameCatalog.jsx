@@ -16,9 +16,25 @@ const GameCatalog = ({ games }) => {
 
   // Calcular los juegos a mostrar cuando cambia la página o la lista de juegos
   useEffect(() => {
+    // Sort games by releaseDate in descending order (most recent first)
+    const sortedGames = [...games].sort((a, b) => {
+      const parseDate = (dateString) => {
+        const parts = dateString.replace(' de ', ' ').replace(' de ', ' ').split(' ');
+        const monthNames = {
+          enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+          julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre: 10, diciembre: 11
+        };
+        const day = parseInt(parts[0], 10);
+        const month = monthNames[parts[1].toLowerCase()];
+        const year = parseInt(parts[2], 10);
+        return new Date(year, month, day);
+      };
+      return parseDate(b.releaseDate) - parseDate(a.releaseDate);
+    });
+
     const indexOfLastGame = currentPage * gamesPerPage;
     const indexOfFirstGame = indexOfLastGame - gamesPerPage;
-    setCurrentGames(games.slice(indexOfFirstGame, indexOfLastGame));
+    setCurrentGames(sortedGames.slice(indexOfFirstGame, indexOfLastGame));
   }, [currentPage, games, gamesPerPage]);
 
   // Cambiar de página

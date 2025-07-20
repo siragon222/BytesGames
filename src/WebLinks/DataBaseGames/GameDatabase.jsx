@@ -8,6 +8,7 @@ export const games = [
     id: 1,
     image: ImageData["Assassin's Creed Valhalla cover"],
     title: "Assassin's Creed Valhalla",
+    Lenguaje: "Español",
     platforms: "PS4, PS5",
     price: "$16",
     stock: "si",
@@ -288,7 +289,7 @@ export const games = [
     platforms: "PS5",
     price: "$52",
     stock: "si",
-    nuevo: "no",
+    nuevo: "si",
     Oculto: "no",
     type: "game",
     PlystationPlus: "no",
@@ -562,7 +563,7 @@ export const games = [
     platforms: "PS5",
     price: "$55",
     stock: "si",
-    nuevo: "no",
+    nuevo: "si",
     Oculto: "no",
     type: "game",
     PlystationPlus: "no",
@@ -2454,8 +2455,8 @@ export const games = [
     discountDate: "",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4: "The Walking Dead 1 (Inglés)",
-    JuegosdeRegaloPs5: "The Walking Dead 1 (Inglés)",
+    JuegosdeRegaloPs4: "79",
+    JuegosdeRegaloPs5: "79",
     genre: "Carreras",
     pegiRating: "PEGI 7",
     developer: "Criterion Games",
@@ -3208,7 +3209,7 @@ export const games = [
     id: 46,
     image: ImageData["Sniper Elite 5 cover"],
     title: "Sniper Elite 5",
-    Lenguaje: "Español, ingles",
+    Lenguaje: "Español",
     platforms: "PS4, PS5",
     price: "$15",
     stock: "si",
@@ -3218,15 +3219,15 @@ export const games = [
     PlystationPlus: "no",
     discount: "",
     discountDate: "",
-    LenguajePs3: "Español, ingles",
-    LenguajePs4: "Español, ingles",
-    LenguajePs5: "Español, ingles",
+    LenguajePs3: "",
+    LenguajePs4: "",
+    LenguajePs5: "",
     ListadaDlcPs4: "Crosse DLC, Season Pass",
     ListadaDlcPs5: "Crosse DLC, Season Pass",
     JuegosdeRegaloPs4: "",
-    JuegosdeRegaloPs4List: "1, 14",
+    JuegosdeRegaloPs4List: "35, 0",
     JuegosdeRegaloPs5: "",
-    JuegosdeRegaloPs5List: "1, 9",
+    JuegosdeRegaloPs5List: "35, 0",
     genre: "Shooter, Sigilo",
     pegiRating: "PEGI 16",
     developer: "Rebellion Developments",
@@ -3365,7 +3366,7 @@ export const games = [
     platforms: "PS4, PS5",
     price: "$38",
     stock: "si",
-    nuevo: "no",
+    nuevo: "si",
     Oculto: "no",
     type: "game",
     PlystationPlus: "no",
@@ -4140,7 +4141,7 @@ export const games = [
     platforms: "PS4, PS5",
     price: "$25",
     stock: "si",
-    nuevo: "no",
+    nuevo: "si",
     Oculto: "no",
     type: "game",
     PlystationPlus: "no",
@@ -4462,6 +4463,7 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
+      PS3: {Ocultar: "si"},
       PS4: {Ocultar: "si"},
       PS5: {Ocultar: "si"}
     },
@@ -5069,6 +5071,7 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
+      PS3: {Ocultar: "si"},
       PS4: {Ocultar: "si"},
       PS5: {Ocultar: "si"}
     },
@@ -5621,7 +5624,7 @@ export const games = [
     platforms: "PS5",
     price: "$30",
     stock: "si",
-    nuevo: "no",
+    nuevo: "si",
     Oculto: "no",
     type: "game",
     PlystationPlus: "no",
@@ -5663,6 +5666,83 @@ export const games = [
       ImageData["Just Dance 2025 Edition 5"]
     ],
     portadaUrl: ImageData["Just Dance 2025 Edition Portada"]
+  },
+  {
+    id: 79,
+    image: ImageData["The Walking Dead Season One cover"],
+    title: "The Walking Dead: Season One (ING)",
+    Lenguaje: "Ingles",
+    platforms: "PS4, PS5",
+    price: "$10",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "36",
+    JuegosdeRegaloPs5: "36",
+    genre: "Aventura, Horror, Acción",
+    pegiRating: "PEGI 18",
+    developer: "Telltale Games",
+    publisher: "Telltale Games",
+    descripcionContenido: "The Walking Dead: Season One es una aventura gráfica dividida en cinco partes y ambientada en el mismo universo que la galardonada serie de cómics de Robert Kirkman. [10] Juega como Lee Everett, un criminal convicto al que se le ha dado una segunda oportunidad en un mundo devastado por los muertos vivientes. [21] Con cadáveres que vuelven a la vida y supervivientes que no se detienen ante nada para mantenerse a salvo, proteger a una niña huérfana llamada Clementine puede ser su redención en un mundo que se ha convertido en el infierno. [3, 4] Las decisiones y acciones que tomes afectarán a cómo se desarrolla tu historia a lo largo de toda la serie. [7]",
+    releaseDate: "24 de abril de 2012",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: { Ocultar: "si" },
+      PS5: { Ocultar: "si" }
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 9,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 10,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["The Walking Dead Season One 1"],
+      ImageData["The Walking Dead Season One 2"],
+      ImageData["The Walking Dead Season One 3"],
+      ImageData["The Walking Dead Season One 4"],
+      ImageData["The Walking Dead Season One 5"]
+    ],
+    portadaUrl: ImageData["The Walking Dead Season One Portada"]
   },
  
 ];

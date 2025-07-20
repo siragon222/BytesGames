@@ -48,14 +48,14 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {nuevo === 'si' && <div className="new-label">Nuevo</div>}
-      {discount && <div className="discount-label">{discount}</div>}
       {language && language.includes('Ingles') && (
         <div className="ing-label">ING <img src={IdiomaIngles} alt="ING icon" className="ing-icon" /></div>
       )}
       <div 
         className={`game-card ${isHovered ? 'hovered' : ''}`}
       >
+        {nuevo === 'si' && <div className="new-label">Nuevo</div>}
+        {discount && <div className="discount-label">{discount}</div>}
         <div className="image-container">
           <img src={image} alt={title} />
           {PlystationPlus === 'si' && (
