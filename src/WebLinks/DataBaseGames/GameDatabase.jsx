@@ -1782,7 +1782,7 @@ export const games = [
   },
   {
     id: 27,
-    image: ImageData["Resident Evil 7: Biohazard cover"],
+    image: ImageData["Resident Evil 7 Biohazard cover"],
     title: "Resident Evil 7: Biohazard",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -1843,13 +1843,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Resident Evil 7: Biohazard 1"],
-      ImageData["Resident Evil 7: Biohazard 2"],
-      ImageData["Resident Evil 7: Biohazard 3"],
-      ImageData["Resident Evil 7: Biohazard 4"],
-      ImageData["Resident Evil 7: Biohazard 5"]
+      ImageData["Resident Evil 7 Biohazard 1"],
+      ImageData["Resident Evil 7 Biohazard 2"],
+      ImageData["Resident Evil 7 Biohazard 3"],
+      ImageData["Resident Evil 7 Biohazard 4"],
+      ImageData["Resident Evil 7 Biohazard 5"]
     ],
-    portadaUrl: ImageData["Resident Evil 7: Biohazard Portada"]
+    portadaUrl: ImageData["Resident Evil 7 Biohazard Portada"]
   },
   {
     id: 28,
