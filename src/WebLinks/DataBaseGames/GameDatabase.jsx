@@ -4967,7 +4967,7 @@ export const games = [
   },
   {
     id: 69,
-    image: ImageData["Slender: The Arrival cover"],
+    image: ImageData["Slender The Arrival cover"],
     title: "Slender: The Arrival",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -5034,13 +5034,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Slender: The Arrival 1"],
-      ImageData["Slender: The Arrival 2"],
-      ImageData["Slender: The Arrival 3"],
-      ImageData["Slender: The Arrival 4"],
-      ImageData["Slender: The Arrival 5"]
+      ImageData["Slender The Arrival 1"],
+      ImageData["Slender The Arrival 2"],
+      ImageData["Slender The Arrival 3"],
+      ImageData["Slender The Arrival 4"],
+      ImageData["Slender The Arrival 5"]
     ],
-    portadaUrl: ImageData["Slender: The Arrival Portada"]
+    portadaUrl: ImageData["Slender The Arrival Portada"]
   },
   {
     id: 70,
@@ -5199,7 +5199,7 @@ export const games = [
   },
   {
     id: 72,
-    image: ImageData["Uncharted: The Nathan Drake Collection cover"],
+    image: ImageData["Uncharted The Nathan Drake Collection cover"],
     title: "Uncharted: The Nathan Drake Collection",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -5266,17 +5266,17 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Uncharted: The Nathan Drake Collection 1"],
-      ImageData["Uncharted: The Nathan Drake Collection 2"],
-      ImageData["Uncharted: The Nathan Drake Collection 3"],
-      ImageData["Uncharted: The Nathan Drake Collection 4"],
-      ImageData["Uncharted: The Nathan Drake Collection 5"]
+      ImageData["Uncharted The Nathan Drake Collection 1"],
+      ImageData["Uncharted The Nathan Drake Collection 2"],
+      ImageData["Uncharted The Nathan Drake Collection 3"],
+      ImageData["Uncharted The Nathan Drake Collection 4"],
+      ImageData["Uncharted The Nathan Drake Collection 5"]
     ],
-    portadaUrl: ImageData["Uncharted: The Nathan Drake Collection Portada"]
+    portadaUrl: ImageData["Uncharted The Nathan Drake Collection Portada"]
   },
   {
     id: 73,
-    image: ImageData["The Walking Dead: The Telltale Definitive Series cover"],
+    image: ImageData["The Walking Dead The Telltale Definitive Series cover"],
     title: "The Walking Dead: The Telltale Definitive Series",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -5343,17 +5343,17 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["The Walking Dead: The Telltale Definitive Series 1"],
-      ImageData["The Walking Dead: The Telltale Definitive Series 2"],
-      ImageData["The Walking Dead: The Telltale Definitive Series 3"],
-      ImageData["The Walking Dead: The Telltale Definitive Series 4"],
-      ImageData["The Walking Dead: The Telltale Definitive Series 5"]
+      ImageData["The Walking Dead The Telltale Definitive Series 1"],
+      ImageData["The Walking Dead The Telltale Definitive Series 2"],
+      ImageData["The Walking Dead The Telltale Definitive Series 3"],
+      ImageData["The Walking Dead The Telltale Definitive Series 4"],
+      ImageData["The Walking Dead The Telltale Definitive Series 5"]
     ],
-    portadaUrl: ImageData["The Walking Dead: The Telltale Definitive Series Portada"]
+    portadaUrl: ImageData["The Walking Dead The Telltale Definitive Series Portada"]
   },
   {
     id: 74,
-    image: ImageData["The Walking Dead: A New Frontier cover"],
+    image: ImageData["The Walking Dead A New Frontier cover"],
     title: "The Walking Dead: A New Frontier",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -5420,13 +5420,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["The Walking Dead: A New Frontier 1"],
-      ImageData["The Walking Dead: A New Frontier 2"],
-      ImageData["The Walking Dead: A New Frontier 3"],
-      ImageData["The Walking Dead: A New Frontier 4"],
-      ImageData["The Walking Dead: A New Frontier 5"]
+      ImageData["The Walking Dead A New Frontier 1"],
+      ImageData["The Walking Dead A New Frontier 2"],
+      ImageData["The Walking Dead A New Frontier 3"],
+      ImageData["The Walking Dead A New Frontier 4"],
+      ImageData["The Walking Dead A New Frontier 5"]
     ],
-    portadaUrl: ImageData["The Walking Dead: A New Frontier Portada"]
+    portadaUrl: ImageData["The Walking Dead A New Frontier Portada"]
   },
   {
     id: 75,
