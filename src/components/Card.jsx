@@ -38,8 +38,8 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
 
   // Función para manejar el clic en el botón
   const handleClick = () => {
-    const gameName = title.toLowerCase().replace(/\s+/g, '-'); // Convertir el título a un formato de URL
-    navigate(`/ver-detalles?q=${gameName}`); // Navegar a la URL con el nombre del juego
+    const encodedGameName = encodeURIComponent(title.replace(/\s+/g, '-')); // Codificar el título para la URL
+    navigate(`/ver-detalles?q=${encodedGameName}`); // Navegar a la URL con el nombre del juego
   };
 
   return (

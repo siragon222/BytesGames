@@ -132,7 +132,10 @@ const OfertasSlider = () => {
 
   return (
     <div className={`ofertas-slider-background ${isVisible ? 'animate-visible' : ''}`} ref={sectionRef}>
-      <h2 className="slider-title">Últimas Ofertas</h2>
+      <h2 className="slider-title">
+        <span className="ultimas-text">Últimas</span>
+        <strong>Ofertas</strong>
+      </h2>
       <div className="slide-container ofertas-slide-container swiper">
         <div className="ofertas-slide-content">
           <div className="card-wrapper swiper-wrapper">

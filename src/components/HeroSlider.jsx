@@ -10,22 +10,24 @@ import playstationPlusLogo from '../assets/playstation-plus.svg'; // Import the 
 const slides = [
   {
     id: 1,
-    title: 'Tu destino final para la diversión gamer',
-    description: 'Explora nuestro catálogo de videojuegos y encuentra las mejores ofertas.',
-    buttonText: 'Explorar Catálogo',
+    title: 'Legacy of Kain 1 & 2',
+    description: 'Forja tu propio camino en el gótico y devastado mundo de Nosgoth. En Blood Omen, asume el papel de Kain, un noble asesinado y resucitado como vampiro.',
+    buttonText: 'OPTENLO YA',
     backgroundImage: heroImage1,
-    backgroundPositionMobile: 'center center', // Example: adjust as needed
-    overlayColor: 'rgba(0, 0, 0, 1)', // Black overlay
+    backgroundPositionMobile: '80% -50%', // Example: adjust as needed, using previous mobile position
+    svgWidth: '350px', // Define width for the SVG
+    svgHeight: 'auto', // Define height for the SVG
+    overlayColor: 'rgba(4, 30, 27, 0.9)', // Slightly transparent black overlay
     titleColor: '#ffffff', // White color for title
     descriptionColor: '#ffffff', // White color for description
   },
-  {
+    {
     id: 2,
     title: 'Únete Ahora',
-    description: 'Descubre un universo de experiencias nuevas con los tres planes de suscripción de PlayStation Plus, que incluyen acceso a pruebas de juegos y a cientos de juegos del catálogo de juegos y del catálogo de clásicos',
+    description: 'Explora nuevas experiencias con los tres planes de PlayStation Plus, que ofrecen acceso a pruebas de juegos y a una amplia selección de juegos y clásicos.',
     buttonText: 'Explorar Catálogo',
     backgroundImage: heroImage2,
-    backgroundPositionMobile: '83% -10%', // Example: adjust as needed, using previous mobile position
+    backgroundPositionMobile: '80% -10%', // Example: adjust as needed, using previous mobile position
     svgImage: playstationPlusLogo, // Pass the SVG to this slide
     svgWidth: '350px', // Define width for the SVG
     svgHeight: 'auto', // Define height for the SVG
@@ -33,6 +35,8 @@ const slides = [
     titleColor: '#000000', // Black color for title
     descriptionColor: '#333333', // Dark grey for description
   },
+
+  
 ];
 
 const HeroSlider = () => {

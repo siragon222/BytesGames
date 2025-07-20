@@ -7,7 +7,8 @@ const Regalos_Card = ({ id, image, title, isHorizontal }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/ver-detalles?q=${title.replace(/ /g, '-')}`);
+    const encodedTitle = encodeURIComponent(title.replace(/ /g, '-'));
+    navigate(`/ver-detalles?q=${encodedTitle}`);
   };
 
   return (

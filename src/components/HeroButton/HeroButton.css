@@ -1,0 +1,56 @@
+.hero-button {
+  padding: 12px 25px; /* Reduced padding */
+  font-size: clamp(1rem, 2vw, 1.3rem); /* Reduced font size */
+  background: linear-gradient(45deg, #ff0000, #cc0000); /* Gradient background */
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* All properties for smoother transition */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px; /* Slightly more letter spacing */
+  position: relative; /* For potential pseudo-elements or subtle effects */
+  overflow: hidden; /* Ensures inner elements don't overflow */
+}
+
+.hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%; /* Start off-screen to the left */
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* White transparent shine */
+  transform: skewX(-20deg); /* Angle the shine */
+  transition: left 0.7s ease-in-out; /* Slower transition for the shine */
+  z-index: 1; /* Ensure it's above the button background */
+}
+
+.hero-button:hover::before {
+  left: 125%; /* End off-screen to the right, creating a shine effect */
+}
+
+.hero-button:hover {
+  background: linear-gradient(45deg, #ff4500, #e63900); /* Darker gradient on hover */
+  transform: translateY(-3px); /* More pronounced lift effect */
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.hero-button:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+  background: linear-gradient(45deg, #cc0000, #ff0000); /* Slightly revert gradient on active */
+}
+
+.hero-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.5), 0 6px 15px rgba(0, 0, 0, 0.4); /* Custom focus ring */
+}
+
+@media (max-width: 768px) {
+  .hero-button {
+    margin-top: 0.5rem; /* Reduced to bring button closer to description */
+  }
+} 

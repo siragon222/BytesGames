@@ -5,12 +5,28 @@ import Swiper from 'swiper'; // Import Swiper
 import 'swiper/swiper-bundle.css'; // Import Swiper styles
 import { games } from '../../WebLinks/DataBaseGames/GameDatabase'; // Import the games list
 
-const SliderNoticias = () => {
-  // Define las IDs de las cards que deseas mostrar (puedes cambiarlas según tu elección)
-  const selectedIds = [1, 3, 5, 7, 9, 11]; // Ejemplo de IDs seleccionadas
+// Helper function to parse Spanish date strings
+const parseSpanishDate = (dateString) => {
+  const months = {
+    "enero": 0, "febrero": 1, "marzo": 2, "abril": 3, "mayo": 4, "junio": 5,
+    "julio": 6, "agosto": 7, "septiembre": 8, "octubre": 9, "noviembre": 10, "diciembre": 11
+  };
+  const parts = dateString.replace(/de /g, '').split(' ');
+  const day = parseInt(parts[0]);
+  const month = months[parts[1].toLowerCase()];
+  const year = parseInt(parts[2]);
+  return new Date(year, month, day);
+};
 
-  // Filtra la lista de juegos basándote en las IDs seleccionadas
-  const filteredGames = games.filter(game => selectedIds.includes(game.id));
+const SliderNoticias = () => {
+  // Filtra y ordena la lista de juegos por fecha de lanzamiento (más reciente primero) y selecciona los 12 primeros
+  const filteredGames = [...games]
+    .sort((a, b) => {
+      const dateA = parseSpanishDate(a.releaseDate);
+      const dateB = parseSpanishDate(b.releaseDate);
+      return dateB - dateA; // Sort in descending order (newest first)
+    })
+    .slice(0, 12);
 
   // Referencias para los botones y Swiper
   const swiperRef = useRef(null);
@@ -88,7 +104,11 @@ const SliderNoticias = () => {
 
   return (
     <div className="slider-background">
-      <h2 className="slider-title">Últimas Recomendaciones</h2>
+      <h2 className="slider-title">
+        <span className="ultimas-text">Últimas</span>
+        <br /> 
+        <strong>Recomendaciones</strong>
+      </h2>
       <div className="slide-container swiper">
         <div className="slide-content">
           <div className="card-wrapper swiper-wrapper">

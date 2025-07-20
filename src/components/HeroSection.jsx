@@ -1,5 +1,6 @@
 import React from 'react';
 import './HeroSection.css';
+import HeroButton from './HeroButton/HeroButton'; // Import the new HeroButton component
 
 const HeroSection = ({ title, description, buttonText, backgroundImage, backgroundPositionMobile, svgImage, svgWidth, svgHeight, overlayColor, titleColor, descriptionColor, onButtonClick }) => {
   return (
@@ -16,9 +17,7 @@ const HeroSection = ({ title, description, buttonText, backgroundImage, backgrou
         <h1 className="hero-title" style={{ color: titleColor }}>{title}</h1>
         <p className="hero-description" style={{ color: descriptionColor }}>{description}</p>
       </div>
-      <button className="hero-button" onClick={onButtonClick}>
-        {buttonText}
-      </button>
+      <HeroButton buttonText={buttonText} onClick={onButtonClick} /> {/* Use the new HeroButton component */}
     </section>
   );
 };

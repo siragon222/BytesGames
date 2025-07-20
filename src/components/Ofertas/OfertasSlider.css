@@ -171,11 +171,25 @@ body {
 
 .slider-title {
   text-align: center;
-  font-size: 1.5rem;
   color: #FFF;
   margin-bottom: 0px;
   margin-top: 30px;
   width: 100%;
+  display: flex; /* Enable flexbox for horizontal alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: baseline; /* Align items to the baseline */
+  gap: 10px; /* Add some space between the two words */
+}
+
+.slider-title strong {
+  display: inline; /* Changed to inline */
+  font-size: 2.5rem; /* Keep Ofertas at this size */
+  margin-top: 0px; /* Reset margin */
+}
+
+.ultimas-text {
+  font-weight: 300; /* Delgado */
+  font-size: 2rem; /* Set Últimas to the size of Últimas in Recomendaciones */
 }
 
 @media screen and (max-width: 768px) {
@@ -190,6 +204,21 @@ body {
   }
   .swiper-navBtn {
     display: none;
+  }
+  .slider-title {
+    font-size: 2rem;
+    margin-bottom: 0px;
+    flex-direction: row; /* Ensure row direction on mobile */
+    gap: 5px; /* Adjust gap for mobile */
+  }
+
+  .slider-title strong {
+    font-size: 2rem;
+    margin-top: 0px; /* Reset margin for mobile */
+  }
+
+  .ultimas-text {
+    font-size: 1.5rem;
   }
 }
 
