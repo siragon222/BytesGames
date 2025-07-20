@@ -4135,7 +4135,7 @@ export const games = [
   },
   {
     id: 58,
-    image: ImageData["Legacy of Kain 1 & 2 cover"],
+    image: ImageData["Legacy of Kain 1 & 2 Portada.webp"],
     title: "Legacy of Kain 1 & 2",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
