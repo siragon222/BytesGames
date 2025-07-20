@@ -4155,7 +4155,7 @@ export const games = [
     pegiRating: "PEGI 18",
     developer: "Crystal Dynamics",
     publisher: "Square Enix",
-    descripcionContenido: "Injustice 2 es la secuela del exitoso juego de lucha, que continúa la historia épica del universo de DC. Batman y sus aliados trabajan para reconstruir la sociedad mientras luchan contra los remanentes del régimen de Superman. Sin embargo, surge una nueva amenaza que pone en peligro la existencia de la Tierra. El juego introduce el sistema de equipo, que permite a los jugadores personalizar la apariencia y el estilo de lucha de sus personajes con un equipo poderoso obtenido a lo largo del juego. Con un roster masivo y un combate refinado, Injustice 2 ofrece una experiencia de lucha profunda y cinemática.",
+    descripcionContenido: "Sumérgete en un reino gótico de intriga y venganza con Legacy of Kain 1 & 2. Desvela una historia profunda de vampiros y destinos entrelazados, dominando poderes sobrenaturales en un mundo oscuro y cautivador. Prepárate para una aventura que desafiará tu percepción de la justicia y el poder.",
     releaseDate: "10 de diciembre de 2024",
     editions: {
       Ocultar: "si",
