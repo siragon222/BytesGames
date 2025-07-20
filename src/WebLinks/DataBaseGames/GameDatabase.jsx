@@ -2517,7 +2517,7 @@ export const games = [
   },
   {
     id: 37,
-    image: ImageData["Call of Duty: Black Ops 3 cover"],
+    image: ImageData["Call of Duty Black Ops 3 cover"],
     title: "Call of Duty: Black Ops 3",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -2584,17 +2584,17 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Call of Duty: Black Ops 3 1"],
-      ImageData["Call of Duty: Black Ops 3 2"],
-      ImageData["Call of Duty: Black Ops 3 3"],
-      ImageData["Call of Duty: Black Ops 3 4"],
-      ImageData["Call of Duty: Black Ops 3 5"]
+      ImageData["Call of Duty Black Ops 3 1"],
+      ImageData["Call of Duty Black Ops 3 2"],
+      ImageData["Call of Duty Black Ops 3 3"],
+      ImageData["Call of Duty Black Ops 3 4"],
+      ImageData["Call of Duty Black Ops 3 5"]
     ],
-    portadaUrl: ImageData["Call of Duty: Black Ops 3 Portada"]
+    portadaUrl: ImageData["Call of Duty Black Ops 3 Portada"]
   },
   {
     id: 38,
-    image: ImageData["Call of Duty: Infinite Warfare cover"],
+    image: ImageData["Call of Duty Infinite Warfare cover"],
     title: "Call of Duty: Infinite Warfare",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -2656,17 +2656,17 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Call of Duty: Infinite Warfare 1"],
-      ImageData["Call of Duty: Infinite Warfare 2"],
-      ImageData["Call of Duty: Infinite Warfare 3"],
-      ImageData["Call of Duty: Infinite Warfare 4"],
-      ImageData["Call of Duty: Infinite Warfare 5"]
+      ImageData["Call of Duty Infinite Warfare 1"],
+      ImageData["Call of Duty Infinite Warfare 2"],
+      ImageData["Call of Duty Infinite Warfare 3"],
+      ImageData["Call of Duty Infinite Warfare 4"],
+      ImageData["Call of Duty Infinite Warfare 5"]
     ],
-    portadaUrl: ImageData["Call of Duty: Infinite Warfare Portada"]
+    portadaUrl: ImageData["Call of Duty Infinite Warfare Portada"]
   },
   {
     id: 39,
-    image: ImageData["Call of Duty: Vanguard cover"],
+    image: ImageData["Call of Duty Vanguard cover"],
     title: "Call of Duty: Vanguard",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -2733,17 +2733,17 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Call of Duty: Vanguard 1"],
-      ImageData["Call of Duty: Vanguard 2"],
-      ImageData["Call of Duty: Vanguard 3"],
-      ImageData["Call of Duty: Vanguard 4"],
-      ImageData["Call of Duty: Vanguard 5"]
+      ImageData["Call of Duty Vanguard 1"],
+      ImageData["Call of Duty Vanguard 2"],
+      ImageData["Call of Duty Vanguard 3"],
+      ImageData["Call of Duty Vanguard 4"],
+      ImageData["Call of Duty Vanguard 5"]
     ],
-    portadaUrl: ImageData["Call of Duty: Vanguard Portada"]
+    portadaUrl: ImageData["Call of Duty Vanguard Portada"]
   },
   {
     id: 40,
-    image: ImageData["Cars 3: Driven to Win cover"],
+    image: ImageData["Cars 3 Driven to Win cover"],
     title: "Cars 3: Driven to Win",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -2811,17 +2811,17 @@ export const games = [
       }
     },
     fotos:[
-      ImageData["Cars 3: Driven to Win 1"],
-      ImageData["Cars 3: Driven to Win 2"],
-      ImageData["Cars 3: Driven to Win 3"],
-      ImageData["Cars 3: Driven to Win 4"],
-      ImageData["Cars 3: Driven to Win 5"]
+      ImageData["Cars 3 Driven to Win 1"],
+      ImageData["Cars 3 Driven to Win 2"],
+      ImageData["Cars 3 Driven to Win 3"],
+      ImageData["Cars 3 Driven to Win 4"],
+      ImageData["Cars 3 Driven to Win 5"]
     ],
-    portadaUrl: ImageData["Cars 3: Driven to Win Portada"]
+    portadaUrl: ImageData["Cars 3 Driven to Win Portada"]
   },
   {
     id: 41,
-    image: ImageData["Crash Bandicoot 4: It's About Time cover"],
+    image: ImageData["Crash Bandicoot 4 It's About Time cover"],
     title: "Crash Bandicoot 4: It's About Time",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -2888,13 +2888,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Crash Bandicoot 4: It's About Time 1"],
-      ImageData["Crash Bandicoot 4: It's About Time 2"],
-      ImageData["Crash Bandicoot 4: It's About Time 3"],
-      ImageData["Crash Bandicoot 4: It's About Time 4"],
-      ImageData["Crash Bandicoot 4: It's About Time 5"]
+      ImageData["Crash Bandicoot 4 It's About Time 1"],
+      ImageData["Crash Bandicoot 4 It's About Time 2"],
+      ImageData["Crash Bandicoot 4 It's About Time 3"],
+      ImageData["Crash Bandicoot 4 It's About Time 4"],
+      ImageData["Crash Bandicoot 4 It's About Time 5"]
     ],
-    portadaUrl: ImageData["Crash Bandicoot 4: It's About Time Portada"]
+    portadaUrl: ImageData["Crash Bandicoot 4 It's About Time Portada"]
   },
   {
     id: 42,
@@ -3052,7 +3052,7 @@ export const games = [
   },
   {
     id: 44,
-    image: ImageData["DmC: Devil May Cry cover"],
+    image: ImageData["DmC Devil May Cry cover"],
     title: "DmC: Devil May Cry",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -3119,13 +3119,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["DmC: Devil May Cry 1"],
-      ImageData["DmC: Devil May Cry 2"],
-      ImageData["DmC: Devil May Cry 3"],
-      ImageData["DmC: Devil May Cry 4"],
-      ImageData["DmC: Devil May Cry 5"]
+      ImageData["DmC Devil May Cry 1"],
+      ImageData["DmC Devil May Cry 2"],
+      ImageData["DmC Devil May Cry 3"],
+      ImageData["DmC Devil May Cry 4"],
+      ImageData["DmC Devil May Cry 5"]
     ],
-    portadaUrl: ImageData["DmC: Devil May Cry Portada"]
+    portadaUrl: ImageData["DmC Devil May Cry Portada"]
   },
   {
     id: 45,
@@ -3980,7 +3980,7 @@ export const games = [
   },
   {
     id: 56,
-    image: ImageData["Injustice: Gods Among Us cover"],
+    image: ImageData["Injustice Gods Among Us cover"],
     title: "Injustice: Gods Among Us",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -4047,13 +4047,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Injustice: Gods Among Us 1"],
-      ImageData["Injustice: Gods Among Us 2"],
-      ImageData["Injustice: Gods Among Us 3"],
-      ImageData["Injustice: Gods Among Us 4"],
-      ImageData["Injustice: Gods Among Us 5"]
+      ImageData["Injustice Gods Among Us 1"],
+      ImageData["Injustice Gods Among Us 2"],
+      ImageData["Injustice Gods Among Us 3"],
+      ImageData["Injustice Gods Among Us 4"],
+      ImageData["Injustice Gods Among Us 5"]
     ],
-    portadaUrl: ImageData["Injustice: Gods Among Us Portada"]
+    portadaUrl: ImageData["Injustice Gods Among Us Portada"]
   },
   {
     id: 57,
@@ -4288,7 +4288,7 @@ export const games = [
   },
   {
     id: 60,
-    image: ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 cover"],
+    image: ImageData["Naruto Shippuden Ultimate Ninja Storm 4 cover"],
     title: "Naruto Shippuden: Ultimate Ninja Storm 4",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -4355,17 +4355,17 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 1"],
-      ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 2"],
-      ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 3"],
-      ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 4"],
-      ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 5"]
+      ImageData["Naruto Shippuden Ultimate Ninja Storm 4 1"],
+      ImageData["Naruto Shippuden Ultimate Ninja Storm 4 2"],
+      ImageData["Naruto Shippuden Ultimate Ninja Storm 4 3"],
+      ImageData["Naruto Shippuden Ultimate Ninja Storm 4 4"],
+      ImageData["Naruto Shippuden Ultimate Ninja Storm 4 5"]
     ],
-    portadaUrl: ImageData["Naruto Shippuden: Ultimate Ninja Storm 4 Portada"]
+    portadaUrl: ImageData["Naruto Shippuden Ultimate Ninja Storm 4 Portada"]
   },
   {
     id: 61,
-    image: ImageData["Need for Speed: Hot Pursuit Remastered cover"],
+    image: ImageData["Need for Speed Hot Pursuit Remastered cover"],
     title: "Need for Speed: Hot Pursuit Remastered",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -4427,13 +4427,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Need for Speed: Hot Pursuit Remastered 1"],
-      ImageData["Need for Speed: Hot Pursuit Remastered 2"],
-      ImageData["Need for Speed: Hot Pursuit Remastered 3"],
-      ImageData["Need for Speed: Hot Pursuit Remastered 4"],
-      ImageData["Need for Speed: Hot Pursuit Remastered 5"]
+      ImageData["Need for Speed Hot Pursuit Remastered 1"],
+      ImageData["Need for Speed Hot Pursuit Remastered 2"],
+      ImageData["Need for Speed Hot Pursuit Remastered 3"],
+      ImageData["Need for Speed Hot Pursuit Remastered 4"],
+      ImageData["Need for Speed Hot Pursuit Remastered 5"]
     ],
-    portadaUrl: ImageData["Need for Speed: Hot Pursuit Remastered Portada"]
+    portadaUrl: ImageData["Need for Speed Hot Pursuit Remastered Portada"]
   },
   {
     id: 62,
