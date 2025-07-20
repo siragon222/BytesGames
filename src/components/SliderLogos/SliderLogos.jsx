@@ -1,15 +1,24 @@
 import React from 'react';
 import './SliderLogos.css'; // Importa el archivo CSS
 
+// Importa las imágenes directamente
+import GeforceNowLogo from './Imagenes_LogoSlider/Geforce-Now.svg';
+import UbisoftLogo from './Imagenes_LogoSlider/Ubisoft-Logo.svg';
+import ElectronicArtsLogo from './Imagenes_LogoSlider/Electronic-Arts.svg';
+import PlaystationLogo from './Imagenes_LogoSlider/Playstation-Logo.svg';
+import EpicGamesLogo from './Imagenes_LogoSlider/Epic-Games.svg';
+import XboxLiveLogo from './Imagenes_LogoSlider/Xbox-Live-Logo.svg';
+import SteamLogo from './Imagenes_LogoSlider/Steam-Logo.svg';
+
 const SliderLogos = () => {
   const logos = [
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Geforce-Now.svg", alt: "Geforce Now" },
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Ubisoft-Logo.svg", alt: "Ubisoft" },
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Electronic-Arts.svg", alt: "Electronic Arts" },
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Playstation-Logo.svg", alt: "Playstation" },
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Epic-Games.svg", alt: "Epic Games" },
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Xbox-Live-Logo.svg", alt: "Xbox Live" },
-    { src: "/src/components/SliderLogos/Imagenes_LogoSlider/Steam-Logo.svg", alt: "Steam" },
+    { src: GeforceNowLogo, alt: "Geforce Now" },
+    { src: UbisoftLogo, alt: "Ubisoft" },
+    { src: ElectronicArtsLogo, alt: "Electronic Arts" },
+    { src: PlaystationLogo, alt: "Playstation" },
+    { src: EpicGamesLogo, alt: "Epic Games" },
+    { src: XboxLiveLogo, alt: "Xbox Live" },
+    { src: SteamLogo, alt: "Steam" },
   ];
 
   return (

@@ -24,10 +24,10 @@ const VerDetallesComponente = () => {
   React.useEffect(() => {
     if (gameName) {
       const decodedGameName = decodeURIComponent(gameName);
-      // No necesitamos formattedGameName que convierte los guiones en espacios
-      // en su lugar, normalizamos el título del juego de la base de datos para la comparación
-      const game = games.find(g => g.title.toLowerCase().replace(/\s+/g, '-') === decodedGameName.toLowerCase());
-      const dlc = dlcGames.find(d => d.title.toLowerCase().replace(/\s+/g, '-') === decodedGameName.toLowerCase());
+      const normalizedDecodedGameName = decodedGameName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '-');
+
+      const game = games.find(g => g.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '-') === normalizedDecodedGameName);
+      const dlc = dlcGames.find(d => d.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '-') === normalizedDecodedGameName);
 
       if (game) {
         setSelectedGame(game);

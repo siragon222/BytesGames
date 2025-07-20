@@ -183,17 +183,30 @@ body {
   color: #000000;
   margin-bottom: 0px; /* Reduced margin to bring closer to content */
   width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Añade un espacio entre las palabras */
 }
 
 .slider-title strong {
-  display: block;
+  display: inline;
   font-size: 2.5rem; /* Keep Recomendaciones at this size */
-  margin-top: -20px; /* Further reduced space */
+  margin-top: 0px; /* Further reduced space */
 }
 
 .ultimas-text {
   font-weight: 300; /* Delgado */
   font-size: 2rem; /* A bit smaller than Recomendaciones */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .slider-title {
+    flex-direction: column; /* Apila los elementos verticalmente en móvil */
+    gap: 0px; /* Elimina el espacio entre los elementos en móvil */
+    text-align: center; /* Centra el texto en móvil */
+  }
 }
 
 @media screen and (max-width: 768px) {

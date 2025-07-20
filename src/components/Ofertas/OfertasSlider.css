@@ -208,8 +208,8 @@ body {
   .slider-title {
     font-size: 2rem;
     margin-bottom: 0px;
-    flex-direction: row; /* Ensure row direction on mobile */
-    gap: 5px; /* Adjust gap for mobile */
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 0px; /* Remove gap for mobile */
   }
 
   .slider-title strong {

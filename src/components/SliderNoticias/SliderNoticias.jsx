@@ -106,7 +106,7 @@ const SliderNoticias = () => {
     <div className="slider-background">
       <h2 className="slider-title">
         <span className="ultimas-text">Últimas</span>
-        <br /> 
+        
         <strong>Recomendaciones</strong>
       </h2>
       <div className="slide-container swiper">

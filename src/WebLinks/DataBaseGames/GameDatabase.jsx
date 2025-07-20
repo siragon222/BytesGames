@@ -3144,8 +3144,8 @@ export const games = [
     discountDate: "",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4: "",
-    JuegosdeRegaloPs5: "",
+    JuegosdeRegaloPs4: "57",
+    JuegosdeRegaloPs5: "57",
     genre: "Shooter",
     pegiRating: "PEGI 18",
     developer: "id Software",
@@ -4072,8 +4072,8 @@ export const games = [
     discountDate: "2025-07-29",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4: "",
-    JuegosdeRegaloPs5: "",
+    JuegosdeRegaloPs4: "45",
+    JuegosdeRegaloPs5: "45",
     genre: "Lucha, Acción, RPG",
     pegiRating: "PEGI 16",
     developer: "NetherRealm Studios",
@@ -4133,7 +4133,7 @@ export const games = [
     ],
     portadaUrl: ImageData["Injustice 2 Portada"]
   },
-  {
+ {
     id: 58,
     image: ImageData["Legacy of Kain 1 & 2 cover"],
     title: "Legacy of Kain 1 & 2",
@@ -4155,7 +4155,7 @@ export const games = [
     pegiRating: "PEGI 18",
     developer: "Crystal Dynamics",
     publisher: "Square Enix",
-    descripcionContenido: "Legacy of Kain es una aclamada saga de acción y aventura con una rica narrativa gótica y fantástica. Sumérgete en el oscuro mundo de Nosgoth y sigue las complejas historias entrelazadas del noble vampiro Kain y su atormentado lugarteniente, Raziel. Esta colección te permite experimentar los orígenes de una de las sagas más complejas de los videojuegos, llena de traición, destino y viajes en el tiempo. Explora vastos entornos, resuelve intrincados puzzles y domina un sistema de combate visceral mientras desentrañas un conflicto ancestral entre vampiros y seres divinos.",
+    descripcionContenido: "Injustice 2 es la secuela del exitoso juego de lucha, que continúa la historia épica del universo de DC. Batman y sus aliados trabajan para reconstruir la sociedad mientras luchan contra los remanentes del régimen de Superman. Sin embargo, surge una nueva amenaza que pone en peligro la existencia de la Tierra. El juego introduce el sistema de equipo, que permite a los jugadores personalizar la apariencia y el estilo de lucha de sus personajes con un equipo poderoso obtenido a lo largo del juego. Con un roster masivo y un combate refinado, Injustice 2 ofrece una experiencia de lucha profunda y cinemática.",
     releaseDate: "10 de diciembre de 2024",
     editions: {
       Ocultar: "si",
@@ -4191,12 +4191,12 @@ export const games = [
         },
         Alquiler: {
           price: 5,
-          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\\\">VER MÁS DETALLES.</a>",
           discount: "no"
         },
         Secundaria: {
           price: 13,
-          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\\\">VER MÁS DETALLES.</a>",
           discount: "si"
         }
       }
@@ -4208,7 +4208,7 @@ export const games = [
       ImageData["Legacy of Kain 1 & 2 4"],
       ImageData["Legacy of Kain 1 & 2 5"]
     ],
-    portadaUrl: ImageData["Legacy of Kain 1 & 2 Portad.webp"],
+    portadaUrl: ImageData["Legacy of Kain 1 & 2 Portada"] // Corrected line
   },
   {
     id: 59,
