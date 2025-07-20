@@ -4965,6 +4965,705 @@ export const games = [
     ],
     portadaUrl: ImageData["Shadow of the Colossus Portada"]
   },
+  {
+    id: 69,
+    image: ImageData["Slender: The Arrival cover"],
+    title: "Slender: The Arrival",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$9",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Horror, Supervivencia, Indies",
+    pegiRating: "PEGI 12",
+    developer: "Blue Isle Studios",
+    publisher: "Blue Isle Studios",
+    descripcionContenido: "Slender: The Arrival es la adaptación oficial del fenómeno de internet, Slender Man. El juego te sumerge en una oscura y atmosférica historia llena de terror y paranoia. Estás solo y nadie vendrá a ayudarte. Tu objetivo es sobrevivir a una de las leyendas más aterradoras de la cultura popular. Armado solo con una linterna, debes explorar entornos abandonados y reunir pistas mientras eres acechado por la enigmática figura de Slender Man. La tensión aumenta a medida que avanzas, creando una experiencia de terror psicológico que te mantendrá al borde de tu asiento.",
+    releaseDate: "28 de octubre de 2013",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 7.5,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 4.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 9,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 4.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Slender: The Arrival 1"],
+      ImageData["Slender: The Arrival 2"],
+      ImageData["Slender: The Arrival 3"],
+      ImageData["Slender: The Arrival 4"],
+      ImageData["Slender: The Arrival 5"]
+    ],
+    portadaUrl: ImageData["Slender: The Arrival Portada"]
+  },
+  {
+    id: 70,
+    image: ImageData["Sniper Elite 3 cover"],
+    title: "Sniper Elite 3",
+    Lenguaje: "Español",
+    platforms: "PS3, PS4, PS5",
+    price: "$7",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter, Acción, Estrategia",
+    pegiRating: "PEGI 16",
+    developer: "Rebellion Developments",
+    publisher: "505 Games",
+    descripcionContenido: "Sniper Elite 3 te transporta al exótico y mortal terreno del norte de África durante la Segunda Guerra Mundial. Juega como el francotirador de élite Karl Fairburne, que se infiltra tras las líneas enemigas para sabotear un programa de superarmas nazi. El juego se centra en la elección del jugador, ofreciendo mapas no lineales que permiten múltiples enfoques tácticos. Utiliza el sigilo, la planificación y tus habilidades de francotirador para cazar a tus objetivos. La famosa cámara de muerte por rayos X regresa con más detalle, mostrando los efectos devastadores de cada disparo preciso.",
+    releaseDate: "27 de junio de 2014",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {
+        Principal: {
+          price: 1,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS4: {
+        Principal: {
+          price: 6.5,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 2,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 3.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 7,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 2,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 3.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Sniper Elite 3 1"],
+      ImageData["Sniper Elite 3 2"],
+      ImageData["Sniper Elite 3 3"],
+      ImageData["Sniper Elite 3 4"],
+      ImageData["Sniper Elite 3 5"]
+    ],
+    portadaUrl: ImageData["Sniper Elite 3 Portada"]
+  },
+  {
+    id: 71,
+    image: ImageData["Tekken 7 cover"],
+    title: "Tekken 7",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$25",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "60%",
+    discountDate: "2025-07-29",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Lucha, Acción",
+    pegiRating: "PEGI 16",
+    developer: "Bandai Namco Studios",
+    publisher: "Bandai Namco Entertainment",
+    descripcionContenido: "Descubre la épica conclusión del clan Mishima y desentraña las razones detrás de cada paso de su incesante lucha. Tekken 7, impulsado por Unreal Engine 4, presenta impresionantes batallas cinemáticas narrativas y duelos intensos que se pueden disfrutar con amigos y rivales por igual a través de innovadoras mecánicas de lucha. El juego ofrece un combate 3D equilibrado y accesible, con un amplio elenco de personajes, cada uno con un profundo conjunto de movimientos. Nuevas mecánicas como los Rage Arts y Power Crushes hacen que las peleas sean más espectaculares y estratégicas que nunca.",
+    releaseDate: "02 de junio de 2017",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 25,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Alquiler: {
+          price: 3,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 25,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        },
+        Secundaria: {
+          price: 10,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "si"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Tekken 7 1"],
+      ImageData["Tekken 7 2"],
+      ImageData["Tekken 7 3"],
+      ImageData["Tekken 7 4"],
+      ImageData["Tekken 7 5"]
+    ],
+    portadaUrl: ImageData["Tekken 7 Portada"]
+  },
+  {
+    id: 72,
+    image: ImageData["Uncharted: The Nathan Drake Collection cover"],
+    title: "Uncharted: The Nathan Drake Collection",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$14",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "si",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "Todos los DLCs",
+    ListadaDlcPs5: "Todos los DLCs",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Acción, Aventura, Shooter",
+    pegiRating: "PEGI 16",
+    developer: "Bluepoint Games",
+    publisher: "Sony Computer Entertainment",
+    descripcionContenido: "Revive las legendarias aventuras de Nathan Drake en Uncharted: The Nathan Drake Collection. Esta colección incluye las campañas para un jugador de Uncharted: Drake's Fortune, Uncharted 2: Among Thieves y Uncharted 3: Drake's Deception, todas remasterizadas para PlayStation 4. Sigue a Drake en su viaje por todo el mundo, desde selvas exuberantes hasta ciudades perdidas, en busca de tesoros legendarios. Con una narrativa cinematográfica, personajes memorables y un juego que combina disparos, exploración y resolución de acertijos, esta colección es la manera perfecta de experimentar la trilogía que definió una generación.",
+    releaseDate: "07 de octubre de 2015",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 13,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 6.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 14,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 6.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Uncharted: The Nathan Drake Collection 1"],
+      ImageData["Uncharted: The Nathan Drake Collection 2"],
+      ImageData["Uncharted: The Nathan Drake Collection 3"],
+      ImageData["Uncharted: The Nathan Drake Collection 4"],
+      ImageData["Uncharted: The Nathan Drake Collection 5"]
+    ],
+    portadaUrl: ImageData["Uncharted: The Nathan Drake Collection Portada"]
+  },
+  {
+    id: 73,
+    image: ImageData["The Walking Dead: The Telltale Definitive Series cover"],
+    title: "The Walking Dead: The Telltale Definitive Series",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$25",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "Todos los DLCs",
+    ListadaDlcPs5: "Todos los DLCs",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Aventura, Horror, RPG",
+    pegiRating: "PEGI 18",
+    developer: "Skybound Games",
+    publisher: "Skybound Games",
+    descripcionContenido: "The Walking Dead: The Telltale Definitive Series contiene las 4 temporadas completas, el DLC 400 Days y The Walking Dead: Michonne, lo que supone más de 50 horas de juego en 23 episodios únicos. Vive la historia completa de la joven superviviente Clementine mientras crece de niña asustada a una superviviente capaz. Esta colección definitiva incluye mejoras gráficas, extras detrás de las cámaras y recreaciones fieles de los menús clásicos. Es la forma definitiva de experimentar el viaje de Clementine y ver cómo termina su historia en un mundo devastado por los muertos vivientes.",
+    releaseDate: "10 de septiembre de 2019",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 25,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 12.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 25,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 12.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["The Walking Dead: The Telltale Definitive Series 1"],
+      ImageData["The Walking Dead: The Telltale Definitive Series 2"],
+      ImageData["The Walking Dead: The Telltale Definitive Series 3"],
+      ImageData["The Walking Dead: The Telltale Definitive Series 4"],
+      ImageData["The Walking Dead: The Telltale Definitive Series 5"]
+    ],
+    portadaUrl: ImageData["The Walking Dead: The Telltale Definitive Series Portada"]
+  },
+  {
+    id: 74,
+    image: ImageData["The Walking Dead: A New Frontier cover"],
+    title: "The Walking Dead: A New Frontier",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$9",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Aventura, Horror, Acción",
+    pegiRating: "PEGI 18",
+    developer: "Telltale Games",
+    publisher: "Skybound Games",
+    descripcionContenido: "En The Walking Dead: A New Frontier, la sociedad comienza a reconstruirse tras el apocalipsis zombi, pero a un alto costo. Juegas como Javier, un joven decidido a encontrar a su familia, cuyo destino se entrelaza con el de Clementine, ahora una adolescente endurecida por la pérdida. En esta nueva frontera, las decisiones que tomes pueden ser las últimas. La historia se centra en la confianza y el sacrificio en un mundo donde los vivos pueden ser tan peligrosos como los muertos. Experimenta una narrativa ramificada donde tus elecciones moldean la historia.",
+    releaseDate: "20 de diciembre de 2016",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 8,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 2.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 4.2,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 9,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 2.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 4.2,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["The Walking Dead: A New Frontier 1"],
+      ImageData["The Walking Dead: A New Frontier 2"],
+      ImageData["The Walking Dead: A New Frontier 3"],
+      ImageData["The Walking Dead: A New Frontier 4"],
+      ImageData["The Walking Dead: A New Frontier 5"]
+    ],
+    portadaUrl: ImageData["The Walking Dead: A New Frontier Portada"]
+  },
+  {
+    id: 75,
+    image: ImageData["Wall World cover"],
+    title: "Wall World",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$3",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Acción, Estrategia, Indies, Arcades",
+    pegiRating: "PEGI 7",
+    developer: "Alawar",
+    publisher: "Alawar",
+    descripcionContenido: "Wall World es un roguelite de minería con elementos de defensa de torres. Explora minas generadas proceduralmente y descubre biomas fantásticos. A bordo de tu gigantesca rob araña, busca recursos y tecnologías para comprar mejoras valiosas. Lucha contra hordas de monstruos y defiende tu base mientras exploras el Muro. Personaliza tu equipo, mejora tus armas y descubre los secretos de este mundo vertical. Cada partida es una nueva aventura, desafiándote a cavar más profundo y sobrevivir más tiempo contra las amenazas que acechan.",
+    releaseDate: "05 de abril de 2023",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 3,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 0.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 1.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 3,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 0.5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 1.5,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Wall World 1"],
+      ImageData["Wall World 2"],
+      ImageData["Wall World 3"],
+      ImageData["Wall World 4"],
+      ImageData["Wall World 5"]
+    ],
+    portadaUrl: ImageData["Wall World Portada"]
+  },
+  {
+    id: 76,
+    image: ImageData["Just Dance 2023 Edition cover"],
+    title: "Just Dance 2023 Edition",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$18",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Musical, Arcades",
+    pegiRating: "PEGI 3",
+    developer: "Ubisoft Paris",
+    publisher: "Ubisoft",
+    descripcionContenido: "¡Bienvenido a una nueva era de la danza con Just Dance 2023 Edition! Por primera vez, baila al ritmo de BTS con Dynamite y otros éxitos de las listas de popularidad. Ahora con multijugador en línea, personalización, mundos inmersivos en 3D y nuevas canciones y modos durante todo el año, podrás vivir una fiesta de baile sin fin. Crea un grupo privado, invita hasta a cinco jugadores y juega como si estuvieran todos en la misma habitación. Con una nueva interfaz de usuario, la experiencia de juego es más intuitiva y personalizada que nunca.",
+    releaseDate: "22 de noviembre de 2022",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 16,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 18,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Just Dance 2023 Edition 1"],
+      ImageData["Just Dance 2023 Edition 2"],
+      ImageData["Just Dance 2023 Edition 3"],
+      ImageData["Just Dance 2023 Edition 4"],
+      ImageData["Just Dance 2023 Edition 5"]
+    ],
+    portadaUrl: ImageData["Just Dance 2023 Edition Portada"]
+  },
+  {
+    id: 77,
+    image: ImageData["Immortals of Aveum cover"],
+    title: "Immortals of Aveum",
+    Lenguaje: "Español",
+    platforms: "PS5",
+    price: "$30",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter, Acción, Fantasía, RPG",
+    pegiRating: "PEGI 16",
+    developer: "Ascendant Studios",
+    publisher: "Electronic Arts",
+    descripcionContenido: "Immortals of Aveum es un shooter de magia en primera persona para un solo jugador que cuenta la historia de Jak, quien se une a una orden de élite de magos de batalla para salvar un mundo al borde del abismo. Domina tres fuerzas de la magia, desata hechizos con una habilidad mortal y diezma legiones de enemigos. La humanidad está en una guerra sin fin por el control de la magia. Como un Inmortal, Jak es reclutado por la orden de élite para proteger Aveum y detener la Guerra Eterna. Es una experiencia visceral y cinematográfica que combina una narrativa apasionante con un combate intenso.",
+    releaseDate: "22 de agosto de 2023",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {},
+      PS5: {
+        Principal: {
+          price: 30,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Immortals of Aveum 1"],
+      ImageData["Immortals of Aveum 2"],
+      ImageData["Immortals of Aveum 3"],
+      ImageData["Immortals of Aveum 4"],
+      ImageData["Immortals of Aveum 5"]
+    ],
+    portadaUrl: ImageData["Immortals of Aveum Portada"]
+  },
+  {
+    id: 78,
+    image: ImageData["Just Dance 2025 Edition cover"],
+    title: "Just Dance 2025 Edition",
+    Lenguaje: "Español",
+    platforms: "PS5",
+    price: "$30",
+    stock: "si",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Musical, Arcades",
+    pegiRating: "PEGI 3",
+    developer: "Ubisoft Paris",
+    publisher: "Ubisoft",
+    descripcionContenido: "¡Reúne a tus amigos y familiares para soltarte con Just Dance 2025 Edition! Ya sea para celebrar, hacer ejercicio o crear momentos familiares especiales, esta edición tiene algo para todos, con 40 nuevas y emocionantes canciones. Disfruta de una amplia variedad de géneros musicales y coreografías para todos los niveles de habilidad. El juego continúa evolucionando con una plataforma de entretenimiento como servicio, trayendo actualizaciones regulares con nueva música, características y recompensas a lo largo del año. ¡La fiesta nunca termina!",
+    releaseDate: "15 de octubre de 2024",
+    editions: {
+      Ocultar: "si",
+      PlayStation: {},
+      PS4: {Ocultar: "si"},
+      PS5: {Ocultar: "si"}
+    },
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {},
+      PS5: {
+        Principal: {
+          price: 30,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Just Dance 2025 Edition 1"],
+      ImageData["Just Dance 2025 Edition 2"],
+      ImageData["Just Dance 2025 Edition 3"],
+      ImageData["Just Dance 2025 Edition 4"],
+      ImageData["Just Dance 2025 Edition 5"]
+    ],
+    portadaUrl: ImageData["Just Dance 2025 Edition Portada"]
+  },
  
 ];
 
