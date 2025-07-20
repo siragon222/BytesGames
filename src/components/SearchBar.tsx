@@ -11,16 +11,19 @@ const SearchBar: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null); // Crear una referencia para el input
 
   const handleClick = () => {
-    if (isExpanded) {
-      // Si estamos expandidos y no hay texto, y no estamos en la página de resultados, simplemente cerramos.
-      if (searchText === '' && location.pathname !== '/ResultSearch') {
-        setSearchText('');
-      } else {
-        setSearchText(''); // Clear search text when closing
-        navigate('/ResultSearch'); // Navigate to clear the URL parameter
+    if (isExpanded) { // If search bar is currently expanded (X button is visible)
+      if (searchText === '') { // If there's no text in the search bar
+        // Simply close the search bar without navigating
+        setIsExpanded(false);
+      } else { // If there is text in the search bar
+        setSearchText(''); // Clear search text
+        // Navigate to ResultSearch to clear the 'q' parameter in the URL.
+        navigate('/ResultSearch');
+        setIsExpanded(false); // Close the search bar after clearing and navigating
       }
+    } else { // If search bar is currently collapsed (Search icon is visible)
+      setIsExpanded(true); // Expand the search bar
     }
-    setIsExpanded(!isExpanded);
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,11 +38,17 @@ const SearchBar: React.FC = () => {
 
   // Efecto para restablecer la barra de búsqueda cuando la ruta no es /ResultSearch
   useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const qParam = queryParams.get('q');
+
     if (location.pathname !== '/ResultSearch') {
       setIsExpanded(false);
       setSearchText('');
+    } else if (location.pathname === '/ResultSearch' && !qParam) {
+      // If on ResultSearch page but no 'q' param, ensure searchText is cleared
+      setSearchText('');
     }
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
 
   // Efecto para enfocar el input cuando se expande
   useEffect(() => {

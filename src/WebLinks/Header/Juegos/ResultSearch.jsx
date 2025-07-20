@@ -24,12 +24,31 @@ const ResultSearch = () => {
     }));
   }, [selectedCurrency]);
 
-  // Obtener el término de búsqueda de la URL
+  // Obtener el término de búsqueda de la URL y los filtros
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const term = queryParams.get('q') || '';
+    const sortByParam = queryParams.get('sortBy');
+
     setSearchTerm(term);
-  }, [location.search]);
+
+    setFilters(prevFilters => {
+      let newSortBy = prevFilters.sortBy;
+      if (sortByParam) {
+        newSortBy = sortByParam.split(','); // Assuming multiple sort options can be comma-separated
+      } else if (prevFilters.sortBy.includes('conDescuento') && !sortByParam) {
+        // If 'conDescuento' was previously active but no sortBy param is now present, deactivate it
+        newSortBy = prevFilters.sortBy.filter(item => item !== 'conDescuento');
+      } else {
+        newSortBy = []; // Reset sortBy if no parameter is present
+      }
+
+      return {
+        ...prevFilters,
+        sortBy: newSortBy,
+      };
+    });
+  }, [location.search, selectedCurrency]); // Add selectedCurrency as dependency for priceRange update
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
@@ -82,6 +101,9 @@ const ResultSearch = () => {
       }
       if (sortOption === 'pegiAdultos') {
         return ['PEGI 16', 'PEGI 18'].includes(game.pegiRating);
+      }
+      if (sortOption === 'conDescuento') {
+        return game.discount !== ''; // Filter if discount is not empty
       }
       return true;
     });

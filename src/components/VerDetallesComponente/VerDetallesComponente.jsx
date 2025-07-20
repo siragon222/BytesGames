@@ -205,8 +205,8 @@ const VerDetallesComponente = () => {
       </div>
       <div className="recomendados-container">
         <div className="recomendados-wrapper">
-          <SliderRecomendados selectedGame={selectedGame} />
           <h2>Juegos Similares</h2>
+          <SliderRecomendados selectedGame={selectedGame} />
         </div>
       </div>
     </div>

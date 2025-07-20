@@ -68,12 +68,13 @@
 
 .recomendados-container {
   width: 100%;
-  padding: 2rem;
+  padding: 0.5rem; /* Further reduced padding */
 }
 
 .recomendados-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem; /* Add a gap between the h2 and SliderRecomendados */
 }
 
 .recomendados-wrapper h2 {
@@ -81,7 +82,7 @@
   color: #ffffff;
   font-size: 2rem;
   font-weight: bold;
-  margin-top: 2rem;
+  margin: 0; /* Reset margins to let gap handle spacing */
 }
 
 /* En móviles, el título va arriba */

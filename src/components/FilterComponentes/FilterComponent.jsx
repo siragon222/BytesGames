@@ -202,6 +202,15 @@ const FilterComponent = ({ onFilterChange }) => {
                 />
                 PEGI Para Adultos
               </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="conDescuento"
+                  checked={sortBy.includes('conDescuento')}
+                  onChange={handleSortChange}
+                />
+                Con Descuento
+              </label>
             </div>
           </div>
 

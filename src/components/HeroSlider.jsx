@@ -17,7 +17,7 @@ const slides = [
     id: 1,
     title: 'Legacy of Kain 1 & 2',
     description: 'Forja tu propio camino en el gótico y devastado mundo de Nosgoth. En Blood Omen, asume el papel de Kain, un noble asesinado y resucitado como vampiro.',
-    buttonText: 'OBTENLO YA',
+    buttonText: '¡OBTENLO YA!',
     backgroundImage: heroImage1,
     backgroundPositionMobile: '80% -50%', // Example: adjust as needed, using previous mobile position
     svgWidth: '350px', // Define width for the SVG

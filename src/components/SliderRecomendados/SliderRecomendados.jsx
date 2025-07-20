@@ -11,6 +11,10 @@ const SliderRecomendados = ({ selectedGame }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when selectedGame changes
+  }, [selectedGame]);
+
+  useEffect(() => {
     if (!selectedGame || !selectedGame.genre) {
       setFilteredGames([]);
       return;
@@ -111,7 +115,6 @@ const SliderRecomendados = ({ selectedGame }) => {
   const handleCardClick = (title) => {
     const formattedTitle = title.replace(/\s+/g, '-');
     navigate(`/detalles?q=${formattedTitle}`);
-    window.location.reload();
   };
 
   return (

@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding: 10px; /* Added padding around the pagination */
 }
 
 .pagination button {
@@ -29,11 +30,14 @@
   border: 2px solid #ff0000; /* Borde rojo */
   border-radius: 8px; /* Bordes redondeados */
   padding: 10px 15px; /* Espaciado interno */
-  margin: 0 5px; /* Margen entre botones */
+  margin: 5px; /* Added vertical margin for spacing on all sides */
   color: #fff; /* Texto blanco */
   cursor: pointer; /* Cursor de puntero */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
   font-size: 16px; /* Tamaño de fuente */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .pagination button:hover {
@@ -51,8 +55,8 @@
 @media (max-width: 768px) {
   .game-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem;
-    padding: 0.1rem;
+    gap: 1.5rem; /* Increased gap for more spacing */
+    padding: 0.5rem; /* Adjusted padding */
   }
 
   .pagination {

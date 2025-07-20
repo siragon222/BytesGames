@@ -5,6 +5,8 @@ import './OfertasGames.css'; // Import the OfertasGames CSS file
 import Swiper from 'swiper'; // Import Swiper
 import 'swiper/swiper-bundle.css'; // Import Swiper styles
 import { games } from '../../WebLinks/DataBaseGames/GameDatabase'; // Import the games list
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import HeroButton from '../HeroButton/HeroButton'; // Import HeroButton
 
 const OfertasSlider = () => {
   // Filtra la lista de juegos basándote en que el campo discount NO esté vacío
@@ -24,6 +26,7 @@ const OfertasSlider = () => {
   const sectionRef = useRef(null); // Ref for the section to observe
   const [isVisible, setIsVisible] = useState(false); // State to control animation, set to false initially for scroll trigger
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   // Check if device is mobile
   useEffect(() => {
@@ -130,6 +133,10 @@ const OfertasSlider = () => {
     }
   };
 
+  const handleMasOfertasClick = () => {
+    navigate('/ResultSearch?sortBy=conDescuento');
+  };
+
   return (
     <div className={`ofertas-slider-background ${isVisible ? 'animate-visible' : ''}`} ref={sectionRef}>
       <h2 className="slider-title">
@@ -170,6 +177,9 @@ const OfertasSlider = () => {
           ref={prevButtonRef}
         ></div>
         <div className="ofertas-swiper-pagination"></div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+        <HeroButton buttonText="MAS OFERTAS" onClick={handleMasOfertasClick} />
       </div>
     </div>
   );

@@ -39,6 +39,48 @@ const GameCatalog = ({ games }) => {
 
   // Cambiar de página
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const totalPages = Math.ceil(games.length / gamesPerPage);
+
+  // Calculate the range of pages to display
+  const getVisiblePageNumbers = () => {
+    const maxPagesToShow = 5;
+    let startPage, endPage;
+
+    if (totalPages <= maxPagesToShow) {
+      // Less than maxPagesToShow total pages so show all
+      startPage = 1;
+      endPage = totalPages;
+    } else {
+      // More than maxPagesToShow total pages so calculate start and end pages
+      const maxPagesBeforeCurrentPage = Math.floor(maxPagesToShow / 2);
+      const maxPagesAfterCurrentPage = Math.ceil(maxPagesToShow / 2) - 1;
+      if (currentPage <= maxPagesBeforeCurrentPage) {
+        // Current page near the start
+        startPage = 1;
+        endPage = maxPagesToShow;
+      } else if (currentPage + maxPagesAfterCurrentPage >= totalPages) {
+        // Current page near the end
+        startPage = totalPages - maxPagesToShow + 1;
+        endPage = totalPages;
+      } else {
+        // Current page somewhere in the middle
+        startPage = currentPage - maxPagesBeforeCurrentPage;
+        endPage = currentPage + maxPagesAfterCurrentPage;
+      }
+    }
+
+    return Array.from({ length: (endPage + 1) - startPage }, (_, i) => startPage + i);
+  };
+
+  const visiblePageNumbers = getVisiblePageNumbers();
+
+  const goToPrevPage = () => {
+    setCurrentPage(prev => Math.max(1, prev - 1));
+  };
+
+  const goToNextPage = () => {
+    setCurrentPage(prev => Math.min(totalPages, prev + 1));
+  };
 
   // Ajustar el número de juegos por pantalla según el tamaño de la pantalla
   useEffect(() => {
@@ -86,15 +128,21 @@ const GameCatalog = ({ games }) => {
             ))}
           </div>
           <div className="pagination">
-            {Array.from({ length: Math.ceil(games.length / gamesPerPage) }, (_, i) => (
+            <button onClick={goToPrevPage} disabled={currentPage === 1}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            {visiblePageNumbers.map((pageNumber) => (
               <button
-                key={i + 1}
-                onClick={() => paginate(i + 1)}
-                className={currentPage === i + 1 ? 'active' : ''}
+                key={pageNumber}
+                onClick={() => paginate(pageNumber)}
+                className={currentPage === pageNumber ? 'active' : ''}
               >
-                {i + 1}
+                {pageNumber}
               </button>
             ))}
+            <button onClick={goToNextPage} disabled={currentPage === totalPages}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
           </div>
         </>
       )}
