@@ -22,7 +22,7 @@ const platformIcons = {
   'Xbox': XBOX,
 };
 
-const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationPlus, stock, onButtonClick, language }) => {
+const Card = ({ id, image, title, platforms, discount, nuevo, PlystationPlus, stock, onButtonClick, language }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate(); // Hook para la navegación
   const { setSelectedGame } = useContext(GameContext); // Obtener setSelectedGame del contexto
@@ -32,7 +32,7 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
   const platformList = platforms.replace("Plataformas: ", "").split(', ');
 
   // Calcular el precio con descuento
-  const originalPrice = parseFloat(price.replace("$", ""));
+  const originalPrice = 0; // Price will be 0 as it's not being passed anymore
   const discountValue = discount ? parseFloat(discount.replace("%", "")) / 100 : 0;
   const discountedPrice = originalPrice * (1 - discountValue);
 
@@ -79,22 +79,6 @@ const Card = ({ id, image, title, platforms, price, discount, nuevo, PlystationP
                   className="platform-icon"
                 />
               ))}
-            </span>
-            <span className="price-text">
-              {discountValue > 0 ? (
-                <>
-                  <span className="original-price" style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: 'medium', color: '#888' }}>
-                    {selectedCurrency.symbol}{(originalPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                  </span>
-                  <span className="discounted-price">
-                    {selectedCurrency.symbol}{(discountedPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                  </span>
-                </>
-              ) : (
-                <>
-                  {selectedCurrency.symbol}{(originalPrice * selectedCurrency.factor).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                </>
-              )}
             </span>
           </p>
         </div>

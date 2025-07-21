@@ -1,12 +1,13 @@
 import React from 'react';
 import Card from '../../components/Card';
 import { useNavigate } from 'react-router-dom';
+import ImageData from '../../assets/Banco de imagenes/ImageData';
 
 // Exportar la lista de DLCs como una constante
 export const dlcGames = [
   {
     id: 1000000,
-    image: 'https://i.ibb.co/PZdQDrH6/Battlefield-4-Premium-Edition-cover.webp',
+    image: ImageData['Battlefield 4 Premium cover'],
     title: 'Battlefield 4 Premium Edition',
     Lenguaje: "",
     platforms: 'PS4, PS5',
@@ -39,15 +40,15 @@ export const dlcGames = [
     },
     // Data para Seleccionar las imagenes para el componente @GaleriaFotos
     fotos: [
-    'https://i.ibb.co/x8Dq04Lh/portada-Battlefield-4-Premium-Edition.webp',
-    'https://i.ibb.co/nKN1vrY/Battlefield-4-Premium-Edition-1-4-11zon.webp',
-    'https://i.ibb.co/b5TTgdC9/Battlefield-4-Premium-Edition-2-3-11zon.webp',
-    'https://i.ibb.co/sJX1YX7w/Battlefield-4-Premium-Edition-3-2-11zon.webp',
-    'https://i.ibb.co/5WjNWjrr/Battlefield-4-Premium-Edition-4-1-11zon.webp',
+    ImageData['Battlefield 4 Premium 1'],
+    ImageData['Battlefield 4 Premium 2'],
+    ImageData['Battlefield 4 Premium 3'],
+    ImageData['Battlefield 4 Premium 4'],
+    ImageData['Battlefield 4 Premium 5'],
     
     ],
     // Data para Seleccionar la portada para el componente @Portada Componente
-    portadaUrl: 'https://i.ibb.co/xtV2bbZt/portada-Battlefield-4-Premium-Edition-5.webp',
+    portadaUrl: ImageData['Battlefield 4 Premium Portada'],
     genre: 'Shooter - Acción - Cooperativo',
     pegiRating: 'PEGI 18',
     developer: 'DICE',
@@ -56,7 +57,7 @@ export const dlcGames = [
     },
     {
       id: 1000001,
-      image: 'https://i.ibb.co/ksMLrKMZ/Dragon-Ball-Xenoverse-Time-Travel-Edition-cover.webp',
+      image: ImageData['Dragon-Ball-Xenoverse-Time-Travel-Edition-cover'],
       title: 'Dragon Ball Xenoverse Time Travel Edition',
       Lenguaje: "",
       platforms: 'PS4, PS5',
@@ -86,15 +87,15 @@ export const dlcGames = [
       },
       // Data para Seleccionar las imagenes para el componente @GaleriaFotos
       fotos: [
-        "https://i.ibb.co/Df4BZDT8/Dragon-Ball-Xenoverse-Time-Travel-Edition-portada.webp",
-        "https://i.ibb.co/63cc4FP/Dragon-Ball-Xenoverse-3-3-11zon-3-11zon.webp",
-        "https://i.ibb.co/NccfkNf/Dragon-Ball-Xenoverse-5-5-11zon-5-11zon.webp",
-        "https://i.ibb.co/YB99GwPL/Dragon-Ball-Xenoverse-1-1-11zon-1-11zon.webp",
-        "https://i.ibb.co/bgxTbmJ6/Dragon-Ball-Xenoverse-2-2-11zon-2-11zon.webp"
+        ImageData["Dragon-Ball-Xenoverse-Time-Travel-Edition-portada"],
+        ImageData["Dragon-Ball-Xenoverse-3-3-11zon-3-11zon"],
+        ImageData["Dragon-Ball-Xenoverse-5-5-11zon-5-11zon"],
+        ImageData["Dragon-Ball-Xenoverse-1-1-11zon-1-11zon"],
+        ImageData["Dragon-Ball-Xenoverse-2-2-11zon-2-11zon"]
       
       ],
       // Data para Seleccionar la portada para el componente @Portada Componente
-      portadaUrl: 'https://i.ibb.co/Df4BZDT8/Dragon-Ball-Xenoverse-Time-Travel-Edition-portada.webp',
+      portadaUrl: ImageData['Dragon-Ball-Xenoverse-Time-Travel-Edition-portada'],
       genre: 'Lucha, Acción, RPG, MMO',
       pegiRating: 'PEGI 12',
       developer: 'Dimps',

@@ -37,15 +37,9 @@ const VerDetallesDLC = () => {
     return <div>El elemento seleccionado no es un DLC válido.</div>;
   }
 
-  const fotos = selectedGame.fotos || [
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-1.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-2.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-3.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-4.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-5.jpg?v=1737545938',
-  ];
+  const fotos = selectedGame.fotos;
 
-  const portadaUrl = selectedGame.portadaUrl || 'https://gaming-cdn.com/img/products/7173/pcover/1920x620/7173.jpg?v=1701338240';
+  const portadaUrl = selectedGame.portadaUrl;
 
   return (
     <div className="contenedor-principal">

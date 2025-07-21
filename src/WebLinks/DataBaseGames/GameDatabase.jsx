@@ -4666,8 +4666,8 @@ export const games = [
   },
   {
     id: 65,
-    image: ImageData["Overwatch 2 cover"],
-    title: "Overwatch 2",
+    image: ImageData["Overwatch cover"],
+    title: "Overwatch",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
     price: "$11",
@@ -4686,8 +4686,8 @@ export const games = [
     pegiRating: "PEGI 12",
     developer: "Blizzard Entertainment",
     publisher: "Blizzard Entertainment",
-    descripcionContenido: "Overwatch 2 es un juego de disparos en primera persona por equipos, gratuito y en constante evolución, ambientado en un futuro optimista, donde cada partida es una batalla 5v5 definitiva. Juega como un héroe que viaja en el tiempo, un DJ que arrasa en el campo de batalla o uno de los más de 30 héroes únicos, cada uno con habilidades extraordinarias. El juego presenta nuevos héroes, mapas, modos de juego y cosméticos únicos. Lidera la carga, embosca a tus enemigos o ayuda a tus aliados en un juego que enfatiza el trabajo en equipo y la estrategia.",
-    releaseDate: "04 de octubre de 2022",
+    descripcionContenido: "Overwatch es un juego de disparos por equipos que se desarrolla en un futuro cercano, donde héroes extraordinarios luchan para proteger el mundo. Elige entre una gran variedad de héroes, cada uno con habilidades únicas y roles específicos. Compite en intensas batallas 6v6 a través de diversos modos de juego y mapas icónicos. El trabajo en equipo y la estrategia son clave para la victoria en Overwatch.",
+    releaseDate: "24 de mayo de 2016",
     editions: {
       Ocultar: "si",
       PlayStation: {},
@@ -4733,13 +4733,13 @@ export const games = [
       }
     },
     fotos: [
-      ImageData["Overwatch 2 1"],
-      ImageData["Overwatch 2 2"],
-      ImageData["Overwatch 2 3"],
-      ImageData["Overwatch 2 4"],
-      ImageData["Overwatch 2 5"]
+      ImageData["Overwatch 1"],
+      ImageData["Overwatch 2"],
+      ImageData["Overwatch 3"],
+      ImageData["Overwatch 4"],
+      ImageData["Overwatch 5"]
     ],
-    portadaUrl: ImageData["Overwatch 2 Portada"]
+    portadaUrl: ImageData["Overwatch Portada"]
   },
   {
     id: 66,
