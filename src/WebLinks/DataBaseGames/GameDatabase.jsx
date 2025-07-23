@@ -4149,8 +4149,6 @@ export const games = [
     discountDate: "2025-07-29",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
-    JuegosdeRegaloPs4List:"80, 81, 82, 83, 35",
-    JuegosdeRegaloPs5List:"80, 81, 82, 83, 35",
     JuegosdeRegaloPs4: "",
     JuegosdeRegaloPs5: "",
     genre: "Acción, Aventura, Fantasía",
@@ -4170,12 +4168,12 @@ export const games = [
       PS3: {},
       PS4: {
         Principal: {
-          price: 14,
+          price: 25,
           description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "si"
         },
         Alquiler: {
-          price: 5,
+          price: 13,
           description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "no"
         },
@@ -4187,12 +4185,12 @@ export const games = [
       },
       PS5: {
         Principal: {
-          price: 15,
+          price: 25,
           description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "si"
         },
         Alquiler: {
-          price: 5,
+          price: 13,
           description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\\\">VER MÁS DETALLES.</a>",
           discount: "no"
         },
