@@ -5985,6 +5985,75 @@ export const games = [
     ],
     portadaUrl: ImageData["Mafia Definitive Edition Portada"]
   },
+{
+  id: 84,
+  image: ImageData["It Takes Two cover"],
+  title: "It Takes Two",
+  Lenguaje: "Español",
+  platforms: "PS4, PS5",
+  price: "$18",
+  stock: "si",
+  nuevo: "no",
+  Oculto: "no",
+  type: "game",
+  PlystationPlus: "no",
+  discount: "",
+  discountDate: "",
+  ListadaDlcPs4: "",
+  ListadaDlcPs5: "",
+  JuegosdeRegaloPs4List:"80, 81, 82, 83, 35",
+  JuegosdeRegaloPs5List:"80, 81, 82, 83, 35",
+  JuegosdeRegaloPs4: "",
+  JuegosdeRegaloPs5: "",
+  genre: "Cooperativo, Plataformas, Aventura, Acción",
+  pegiRating: "PEGI 12",
+  developer: "Hazelight Studios",
+  publisher: "Electronic Arts",
+  descripcionContenido: "Embárcate en la aventura más alocada de tu vida en It Takes Two. Juega como la conflictiva pareja Cody y May, dos humanos convertidos en muñecos por un hechizo mágico. Atrapados en un mundo fantástico, el gurú del amor, el Dr. Hakim, los desafía a salvar su relación rota. Supera una gran variedad de desafíos de juego alegremente disruptivos en una experiencia puramente cooperativa.",
+  releaseDate: "26 de marzo de 2021",
+  editions: {
+    Ocultar: "si",
+    PlayStation: {},
+    PS4: {Ocultar: "si"},
+    PS5: {Ocultar: "si"}
+  },
+  licensePrices: {
+    PlayStation: {},
+    PS3: {},
+    PS4: {
+      Principal: {
+        price: 14,
+        description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      },
+      Secundaria: {
+        price: 7,
+        description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      }
+    },
+    PS5: {
+      Principal: {
+        price: 15,
+        description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      },
+      Secundaria: {
+        price: 7,
+        description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      }
+    }
+  },
+  fotos: [
+    ImageData["It Takes Two 1"],
+    ImageData["It Takes Two 2"],
+    ImageData["It Takes Two 3"],
+    ImageData["It Takes Two 4"],
+    ImageData["It Takes Two 5"]
+  ],
+  portadaUrl: ImageData["It Takes Two Portada"]
+},
  
 ];
 
