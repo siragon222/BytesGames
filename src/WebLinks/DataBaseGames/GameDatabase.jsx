@@ -4170,7 +4170,7 @@ export const games = [
       PS3: {},
       PS4: {
         Principal: {
-          price: 25,
+          price: 14,
           description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "si"
         },
@@ -4180,14 +4180,14 @@ export const games = [
           discount: "no"
         },
         Secundaria: {
-          price: 13,
+          price: 7,
           description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "si"
         }
       },
       PS5: {
         Principal: {
-          price: 25,
+          price: 15,
           description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "si"
         },
@@ -4197,7 +4197,7 @@ export const games = [
           discount: "no"
         },
         Secundaria: {
-          price: 13,
+          price: 7,
           description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\\\">VER MÁS DETALLES.</a>",
           discount: "si"
         }
