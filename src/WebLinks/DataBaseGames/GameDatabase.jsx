@@ -4174,12 +4174,12 @@ export const games = [
           discount: "si"
         },
         Alquiler: {
-          price: 13,
+          price: 5,
           description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "no"
         },
         Secundaria: {
-          price: 7,
+          price: 13,
           description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
           discount: "si"
         }
@@ -4191,12 +4191,12 @@ export const games = [
           discount: "si"
         },
         Alquiler: {
-          price: 13,
+          price: 5,
           description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\\\">VER MÁS DETALLES.</a>",
           discount: "no"
         },
         Secundaria: {
-          price: 7,
+          price: 13,
           description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\\\">VER MÁS DETALLES.</a>",
           discount: "si"
         }
@@ -5644,7 +5644,6 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {Ocultar: "si"},
       PS5: {Ocultar: "si"}
     },
     licensePrices: {
