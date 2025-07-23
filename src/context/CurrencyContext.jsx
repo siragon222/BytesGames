@@ -19,7 +19,7 @@ export const CurrencyProvider = ({ children }) => {
     switch (currency.code) {
       case 'BS':
         symbol = 'Bs ';
-        factor = 143; // Placeholder: You need to set your actual conversion factor for BS
+        factor = 155; // Placeholder: You need to set your actual conversion factor for BS
         break;
       case 'COP':
         symbol = 'COP ';
@@ -27,11 +27,11 @@ export const CurrencyProvider = ({ children }) => {
         break;
       case 'CLP':
         symbol = 'CLP ';
-        factor = 1000; // Placeholder: You need to set your actual conversion factor for CLP
+        factor = 4000; // Placeholder: You need to set your actual conversion factor for CLP
         break;
       case 'PEN': // New case for Peruvian Sol
         symbol = '/S ';
-        factor = 4; // Placeholder: You need to set your actual conversion factor for PEN
+        factor = 3.8; // Placeholder: You need to set your actual conversion factor for PEN
         break;
       case 'USD':
         symbol = '$ ';

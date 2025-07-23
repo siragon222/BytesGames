@@ -58,11 +58,17 @@
   flex-direction: column;
   align-items: center;
   width: 120px;
+  animation: zoom-effect 0.4s infinite alternate; /* Apply zoom animation when not active */
 }
 
 .platform-button.active {
   background-color: #ff0000;
-  transform: scale(1.05);
+  transform: scale(1.05); /* Keep original active transform */
+  /* Remove animation when active */
+}
+
+.platform-button.sub-console-active {
+  animation: none; /* Stop animation when a sub-console is selected */
 }
 
 .platform-button img {
@@ -74,6 +80,26 @@
 .platform-button span {
   color: #fff;
   font-size: var(--font-size-small); /* Adjusted from 14px to use small variable */
+}
+
+.playstation-console-buttons .platform-button,
+.xbox-console-buttons .platform-button,
+.pc-launcher-buttons .platform-button {
+  background-color: #1f1f1f; /* Black background matching license buttons */
+  border-radius: 8px; /* Sharper corners matching license buttons */
+  padding: 10px 20px; /* Adjust padding to match license buttons */
+  /* Override flex-direction and width for console buttons to match license buttons */
+  flex-direction: row; /* Arrange content in a row */
+  justify-content: center; /* Center horizontally */
+  width: auto; /* Allow width to be determined by content */
+  min-width: 120px; /* Maintain a minimum width */
+  max-width: none; /* Remove max-width constraint */
+}
+
+.playstation-console-buttons .platform-button span,
+.xbox-console-buttons .platform-button span,
+.pc-launcher-buttons .platform-button span {
+  font-size: var(--font-size-subtitle);
 }
 
 .platform-button:hover {
@@ -136,6 +162,11 @@
   transform: scale(1.05);
 }
 
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); } /* Increased bounce height and adjusted timing */
+}
+
 .license-button:hover {
   background-color: #ff4500;
   border-color: #ff4500;
@@ -158,12 +189,17 @@
 
 .playstation-console-buttons .section-title {
   font-size: var(--font-size-subtitle);
+  margin-top: -10px;
 }
 
 .playstation-console-buttons .platform-button {
   flex: 1; /* Allow buttons to grow and shrink */
   min-width: 80px; /* Minimum width to prevent them from becoming too small */
   max-width: 120px; /* Max width to resemble previous size */
+}
+
+.playstation-console-buttons .platform-button span {
+  font-size: var(--font-size-subtitle);
 }
 
 .xbox-console-buttons {
@@ -177,12 +213,17 @@
 
 .xbox-console-buttons .section-title {
   font-size: var(--font-size-subtitle);
+  margin-top: 0px;
 }
 
 .xbox-console-buttons .platform-button {
   flex: 1; /* Allow buttons to grow and shrink */
   min-width: 80px; /* Minimum width to prevent them from becoming too small */
   max-width: 120px; /* Max width to resemble previous size */
+}
+
+.xbox-console-buttons .platform-button span {
+  font-size: var(--font-size-normal);
 }
 
 .pc-launcher-buttons {
@@ -196,12 +237,17 @@
 
 .pc-launcher-buttons .section-title {
   font-size: var(--font-size-title);
+  margin-top: 10px;
 }
 
 .pc-launcher-buttons .platform-button {
   flex: 1; /* Allow buttons to grow and shrink */
   min-width: 80px; /* Minimum width to prevent them from becoming too small */
   max-width: 120px; /* Max width to resemble previous size */
+}
+
+.pc-launcher-buttons .platform-button span {
+  font-size: var(--font-size-normal);
 }
 
 .game-details {
@@ -381,6 +427,11 @@
 
 /* Removing @keyframes pulse-button for now */
 /* @keyframes pulse-button { ... } */
+
+@keyframes zoom-effect {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); } /* Increased zoom effect */
+}
 
 .gift-game-selection {
   margin-top: 20px;

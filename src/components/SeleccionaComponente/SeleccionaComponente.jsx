@@ -24,6 +24,9 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
   const [showGiftAlert, setShowGiftAlert] = useState(false); // New state to control modal visibility
   const [selectedLanguage, setSelectedLanguage] = useState(null); // New state for selected language
 
+  // Derived state to check if any specific console is selected
+  const isSubConsoleSelected = selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher;
+
   // Reset selected gift game when the game prop changes
   React.useEffect(() => {
     setSelectedGiftGame(null);
@@ -102,6 +105,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
     setSelectedPlayStationConsole(consoleType);
     setSelectedEdition('');
     setSelectedLicense('');
+    setSelectedPlatform('PlayStation'); // Set selectedPlatform here
     onConsoleSelect(consoleType); // Notify parent of console selection
   };
 
@@ -109,6 +113,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
     setSelectedXboxConsole(consoleType);
     setSelectedEdition('');
     setSelectedLicense('');
+    setSelectedPlatform('Xbox'); // Set selectedPlatform here
     onConsoleSelect(consoleType); // Notify parent of console selection
   };
 
@@ -116,6 +121,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
     setSelectedPcLauncher(launcher);
     setSelectedEdition('');
     setSelectedLicense('');
+    setSelectedPlatform('PC'); // Set selectedPlatform here
     onConsoleSelect(launcher); // Notify parent of launcher selection
   };
 
@@ -306,9 +312,9 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
         </div>
       ) : (
         <>
-          <h2 className="section-title">Selecciona tu Plataforma</h2>
+          {/* <h2 className="section-title">Selecciona tu Plataforma</h2> */}
           <div className="platform-buttons">
-            {game.editions.PlayStation && (
+            {/* {game.editions.PlayStation && (
               <button 
                 className={`platform-button ${selectedPlatform === 'PlayStation' ? 'active' : ''}`}
                 onClick={() => handlePlatformSelect('PlayStation')}
@@ -316,10 +322,10 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
                 <img src={PlayStationIcon} alt="PlayStation" />
                 <span>PlayStation</span>
               </button>
-            )}
+            )} */}
             {game.editions.Xbox && (
               <button 
-                className={`platform-button ${selectedPlatform === 'Xbox' ? 'active' : ''}`}
+                className={`platform-button ${selectedPlatform === 'Xbox' ? 'active' : ''} ${isSubConsoleSelected ? 'sub-console-active' : ''}`}
                 onClick={() => handlePlatformSelect('Xbox')}
               >
                 <img src={XboxIcon} alt="Xbox" />
@@ -328,7 +334,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
             )}
             {game.editions.PC && (
               <button 
-                className={`platform-button ${selectedPlatform === 'PC' ? 'active' : ''}`}
+                className={`platform-button ${selectedPlatform === 'PC' ? 'active' : ''} ${isSubConsoleSelected ? 'sub-console-active' : ''}`}
                 onClick={() => handlePlatformSelect('PC')}
               >
                 <img src={PcIcon} alt="PC" />
@@ -339,13 +345,13 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
         </>
       )}
 
-      {selectedPlatform === 'PlayStation' && (
+      {game.editions.PlayStation && (
         <div className="playstation-console-buttons" ref={playStationConsoleRef}>
           <h3 className="section-title">Selecciona tu Consola PlayStation</h3>
           {game && ['PS3', 'PS4', 'PS5'].filter(consoleType => game.editions[consoleType]).map((consoleType) => (
             <button
               key={consoleType}
-              className={`platform-button ${selectedPlayStationConsole === consoleType ? 'active' : ''}`}
+              className={`platform-button ${selectedPlayStationConsole === consoleType ? 'active' : ''} ${isSubConsoleSelected ? 'sub-console-active' : ''}`}
               onClick={() => handlePlayStationConsoleSelect(consoleType)}
             >
               <span>{consoleType}</span>
@@ -360,7 +366,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
           {game && ['Xbox 360', 'xbox One', 'xbox Series X'].filter(consoleType => game.editions[consoleType]).map((consoleType) => (
             <button
               key={consoleType}
-              className={`platform-button ${selectedXboxConsole === consoleType ? 'active' : ''}`}
+              className={`platform-button ${selectedXboxConsole === consoleType ? 'active' : ''} ${isSubConsoleSelected ? 'sub-console-active' : ''}`}
               onClick={() => handleXboxConsoleSelect(consoleType)}
             >
               <span>{consoleType.replace('Xbox ', '')}</span>
@@ -375,7 +381,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
           {game && ['Steam', 'Origin', 'Epic Games'].filter(launcher => game.editions.PC && game.editions.PC[launcher]).map((launcher) => (
             <button
               key={launcher}
-              className={`platform-button ${selectedPcLauncher === launcher ? 'active' : ''}`}
+              className={`platform-button ${selectedPcLauncher === launcher ? 'active' : ''} ${isSubConsoleSelected ? 'sub-console-active' : ''}`}
               onClick={() => handlePcLauncherSelect(launcher)}
             >
               <span>{launcher}</span>
