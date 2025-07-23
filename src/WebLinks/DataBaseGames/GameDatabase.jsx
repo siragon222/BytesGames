@@ -3222,8 +3222,11 @@ export const games = [
     LenguajePs3: "",
     LenguajePs4: "",
     LenguajePs5: "",
+    
     ListadaDlcPs4: "Crosse DLC, Season Pass",
     ListadaDlcPs5: "Crosse DLC, Season Pass",
+    JuegosdeRegaloPs4List:"80, 81, 82, 83, 35",
+    JuegosdeRegaloPs5List:"80, 81, 82, 83, 35",
     JuegosdeRegaloPs4: "",
     JuegosdeRegaloPs4List: "35, 0",
     JuegosdeRegaloPs5: "",
