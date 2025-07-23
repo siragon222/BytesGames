@@ -81,7 +81,7 @@ const Divisas = () => {
   }, []);
 
   const currencyOptions = [
-    { name: 'Venezuela', code: 'BS', flag: VenezuelaFlagSVG, factor: 138, symbol: 'Bs' },
+    { name: 'Venezuela', code: 'BS', flag: VenezuelaFlagSVG, factor: 155, symbol: 'Bs' },
     { name: 'Colombia', code: 'COP', flag: ColombiaFlagSVG, factor: 4000, symbol: 'COP' }, // Example factor
     { name: 'Chile', code: 'CLP', flag: ChileFlagSVG, factor: 4000, symbol: 'CLP' }, // Example factor
     { name: 'Peru', code: 'PEN', flag: PeruFlagSVG, factor: 3.8, symbol: '/S' }, // Example factor, ensure to update with actual
