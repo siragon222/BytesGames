@@ -283,7 +283,7 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
-  font-size: 6vw; /* Make font size responsive */
+  font-size: 45px; /* Make font size responsive */
   font-weight: bold;
   color: red;
   opacity: 1;
