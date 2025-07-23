@@ -4149,6 +4149,8 @@ export const games = [
     discountDate: "2025-07-29",
     ListadaDlcPs4: "",
     ListadaDlcPs5: "",
+    JuegosdeRegaloPs4List:"80, 81, 82, 83, 35",
+    JuegosdeRegaloPs5List:"80, 81, 82, 83, 35",
     JuegosdeRegaloPs4: "",
     JuegosdeRegaloPs5: "",
     genre: "Acción, Aventura, Fantasía",
@@ -5281,7 +5283,7 @@ export const games = [
     id: 73,
     image: ImageData["The Walking Dead The Telltale Definitive Series cover"],
     title: "The Walking Dead: The Telltale Definitive Series",
-    Lenguaje: "Español",
+    Lenguaje: "español",
     platforms: "PS4, PS5",
     price: "$25",
     stock: "si",
@@ -5670,7 +5672,7 @@ export const games = [
   {
     id: 79,
     image: ImageData["The Walking Dead Season One cover"],
-    title: "The Walking Dead: Season One (ING)",
+    title: "The Walking Dead: Season One (Inglés)",
     Lenguaje: "Ingles",
     platforms: "PS4, PS5",
     price: "$10",
@@ -5743,6 +5745,246 @@ export const games = [
       ImageData["The Walking Dead Season One 5"]
     ],
     portadaUrl: ImageData["The Walking Dead Season One Portada"]
+  },
+  {
+    id: 80,
+    image: ImageData["The Witcher 3 Wild Hunt cover"],
+    title: "The Witcher 3: Wild Hunt (Inglés)",
+    Lenguaje: "Ingles",
+    platforms: "PS4, PS5",
+    price: "$15",
+    stock: "no",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "RPG, Mundo Abierto, Fantasía, Acción, Aventura",
+    pegiRating: "PEGI 18",
+    developer: "CD Projekt Red",
+    publisher: "CD Projekt",
+    descripcionContenido: "Eres Geralt de Rivia, un cazador de monstruos a sueldo. Ante ti se extiende un continente devastado por la guerra e infestado de monstruos que puedes explorar a tu antojo. Tu contrato actual es encontrar a Ciri, la Niña de la Profecía, un arma viviente que puede alterar la forma del mundo.",
+    releaseDate: "19 de mayo de 2015",
+    editions: {},
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 14,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 7,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 15,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["The Witcher 3 Wild Hunt 1"],
+      ImageData["The Witcher 3 Wild Hunt 2"],
+      ImageData["The Witcher 3 Wild Hunt 3"],
+      ImageData["The Witcher 3 Wild Hunt 4"],
+      ImageData["The Witcher 3 Wild Hunt 5"]
+    ],
+    portadaUrl: ImageData["The Witcher 3 Wild Hunt Portada"]
+  },
+  {
+    id: 81,
+    image: ImageData["Battlefield 5 cover"],
+    title: "Battlefield V",
+    Lenguaje: "Español",
+    platforms: "PS4",
+    price: "$12",
+    stock: "no",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Shooter, Acción, Cooperativo",
+    pegiRating: "PEGI 18",
+    developer: "DICE",
+    publisher: "Electronic Arts",
+    descripcionContenido: "Battlefield V te lleva a la Segunda Guerra Mundial como nunca antes la habías visto. Participa en un multijugador masivo con tu escuadrón en modos como Grandes Operaciones y Conquista. Experimenta el drama humano en el corazón del combate global en las Historias de Guerra para un jugador.",
+    releaseDate: "20 de noviembre de 2018",
+    editions: {},
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 12,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 6,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {}
+    },
+    fotos: [
+      ImageData["Battlefield 5 1"],
+      ImageData["Battlefield 5 2"],
+      ImageData["Battlefield 5 3"],
+      ImageData["Battlefield 5 4"],
+      ImageData["Battlefield 5 5"]
+    ],
+    portadaUrl: ImageData["Battlefield 5 Portada"]
+  },
+  {
+    id: 82,
+    image: ImageData["Mortal Kombat 11 cover"],
+    title: "Mortal Kombat 11",
+    Lenguaje: "Español",
+    platforms: "PS4, PS5",
+    price: "$14",
+    stock: "no",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Lucha, Acción",
+    pegiRating: "PEGI 18",
+    developer: "NetherRealm Studios",
+    publisher: "Warner Bros. Interactive Entertainment",
+    descripcionContenido: "Mortal Kombat 11 ofrece una experiencia más profunda y personalizada. Con las nuevas variantes de personajes, tendrás un control sin precedentes para personalizar a tus luchadores. El nuevo motor gráfico resalta cada detalle, desde cráneos destrozados hasta ojos arrancados, sumergiéndote en el combate como nunca antes.",
+    releaseDate: "23 de abril de 2019",
+    editions: {},
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {
+        Principal: {
+          price: 13,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 4,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 7,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      },
+      PS5: {
+        Principal: {
+          price: 14,
+          description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Alquiler: {
+          price: 5,
+          description: "Licencia Alquiler es...<a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        },
+        Secundaria: {
+          price: 8,
+          description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+          discount: "no"
+        }
+      }
+    },
+    fotos: [
+      ImageData["Mortal Kombat 11 1"],
+      ImageData["Mortal Kombat 11 2"],
+      ImageData["Mortal Kombat 11 3"],
+      ImageData["Mortal Kombat 11 4"],
+      ImageData["Mortal Kombat 11 5"]
+    ],
+    portadaUrl: ImageData["Mortal Kombat 11 Portada"]
+  },
+  {
+    id: 83,
+    image: ImageData["Mafia Definitive Edition cover"],
+    title: "Mafia: Definitive Edition",
+    Lenguaje: "Español",
+    platforms: "PS4",
+    price: "$13",
+    stock: "no",
+    nuevo: "no",
+    Oculto: "no",
+    type: "game",
+    PlystationPlus: "no",
+    discount: "",
+    discountDate: "",
+    ListadaDlcPs4: "",
+    ListadaDlcPs5: "",
+    JuegosdeRegaloPs4: "",
+    JuegosdeRegaloPs5: "",
+    genre: "Acción, Aventura, Mundo Abierto, Shooter",
+    pegiRating: "PEGI 18",
+    developer: "Hangar 13",
+    publisher: "2K Games",
+    descripcionContenido: "Rehecho desde cero, Mafia: Definitive Edition es una fiel recreación del clásico de 2002. Tras un encuentro con la mafia, el taxista Tommy Angelo se ve inmerso en el mundo del crimen organizado. Acepta trabajos para la familia Salieri y asciende en sus filas, en una ciudad de la era de la Prohibición llena de arquitectura, coches y cultura de la época.",
+    releaseDate: "25 de septiembre de 2020",
+    editions: {},
+    licensePrices: {
+      PlayStation: {},
+      PS3: {},
+      PS4: {}
+
+    },
+    fotos: [
+      ImageData["Mafia Definitive Edition 1"],
+      ImageData["Mafia Definitive Edition 2"],
+      ImageData["Mafia Definitive Edition 3"],
+      ImageData["Mafia Definitive Edition 4"],
+      ImageData["Mafia Definitive Edition 5"]
+    ],
+    portadaUrl: ImageData["Mafia Definitive Edition Portada"]
   },
  
 ];
