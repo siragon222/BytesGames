@@ -27,10 +27,16 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
   // Derived state to check if any specific console is selected
   const isSubConsoleSelected = selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher;
 
-  // Reset selected gift game when the game prop changes
+  // Reset selected gift game and other selections when the game prop changes
   React.useEffect(() => {
     setSelectedGiftGame(null);
     setSelectedLanguage(null); // Reset selected language when game changes
+    setSelectedPlatform(null); // Reset selected platform
+    setSelectedPlayStationConsole(null); // Reset selected PlayStation console
+    setSelectedXboxConsole(null); // Reset selected Xbox console
+    setSelectedPcLauncher(null); // Reset selected PC launcher
+    setSelectedEdition(''); // Reset selected edition
+    setSelectedLicense(''); // Reset selected license
   }, [game]);
 
   // Reset selected gift game when the selected console changes
