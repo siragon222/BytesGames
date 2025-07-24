@@ -3280,7 +3280,7 @@ export const games = [
       ImageData["Sniper Elitee 5 4"],
       ImageData["Sniper Elitee 5 5"]
     ],
-    portadaUrl: ImageData["Sniper Elite 5 Portada"]
+    portadaUrl: ImageData["Sniper Elitee 5 Portada"]
   },
   {
     id: 47,
