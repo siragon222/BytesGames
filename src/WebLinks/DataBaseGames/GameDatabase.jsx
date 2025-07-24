@@ -3207,7 +3207,7 @@ export const games = [
   },
   {
     id: 46,
-    image: ImageData["Sniper Elite 5 cover"],
+    image: ImageData["Sniper Elitee 5 cover"],
     title: "Sniper Elite 5",
     Lenguaje: "Español",
     platforms: "PS4, PS5",
@@ -3274,11 +3274,11 @@ export const games = [
         }
     },
     "fotos": [
-      ImageData["Sniper Elite 5 1"],
-      ImageData["Sniper Elite 5 2"],
-      ImageData["Sniper Elite 5 3"],
-      ImageData["Sniper Elite 5 4"],
-      ImageData["Sniper Elite 5 5"]
+      ImageData["Sniper Elitee 5 1"],
+      ImageData["Sniper Elitee 5 2"],
+      ImageData["Sniper Elitee 5 3"],
+      ImageData["Sniper Elitee 5 4"],
+      ImageData["Sniper Elitee 5 5"]
     ],
     portadaUrl: ImageData["Sniper Elite 5 Portada"]
   },
