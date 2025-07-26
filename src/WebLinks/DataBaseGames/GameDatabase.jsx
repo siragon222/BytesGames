@@ -3253,7 +3253,12 @@ export const games = [
                 price: 14,
                 description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
                 discount: "no"
-            }
+              },
+              Secundaria: {
+                  price: 7,
+                  description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+                  discount: "no"
+              }
         },
         PS5: {
             Principal: {
@@ -5593,7 +5598,7 @@ export const games = [
     editions: {
       Ocultar: "si",
       PlayStation: {},
-      PS4: {Ocultar: "si"},
+
       PS5: {Ocultar: "si"}
     },
     licensePrices: {
