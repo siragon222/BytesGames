@@ -452,7 +452,7 @@ const SeleccionaComponente = ({ game, onConsoleSelect, onGiftGameSelect }) => { 
       {(selectedPlayStationConsole || selectedXboxConsole || selectedPcLauncher) && 
         // Check if the current platform has Ocultar set to "si"
         (currentPlatformKey && game.editions[currentPlatformKey] && game.editions[currentPlatformKey].Ocultar !== "si") && (
-        <div className="edition-section">
+        <div className="edition-section" >
           <h3 className="section-title">Selecciona tu edición</h3>
           <div className="license-buttons">
             {Object.entries(editionPrices || {}).map(([edition, details]) => {

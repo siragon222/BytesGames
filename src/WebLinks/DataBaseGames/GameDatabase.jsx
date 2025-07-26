@@ -3469,13 +3469,12 @@ export const games = [
       Ocultar: "no",
       PlayStation: {},
       PS4: {
-        Estandar: 13,
-        Premium: 0
+        Estándar: { price: 13, description: 'Incluye el juego base para PS3.', discount: 'yes' },     
       },
       PS5: {
-        Estandar: 14,
-        Premium: 0
+        Estándar: { price: 14, description: 'Incluye el juego base para PS3.', discount: 'yes' },   
       }
+
     },
     licensePrices: {
       PlayStation: {},
@@ -6069,7 +6068,7 @@ export const games = [
   nuevo: "si",
   Oculto: "no",
   type: "game",
-  PlystationPlus: "si",
+  PlystationPlus: "",
   discount: "",
   discountDate: "",
   ListadaDlcPs4: "",
