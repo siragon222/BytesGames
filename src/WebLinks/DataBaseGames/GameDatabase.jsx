@@ -6053,6 +6053,79 @@ export const games = [
   ],
   portadaUrl: ImageData["It Takes Two Portada"]
 },
+{
+  id: 85,
+  image: ImageData["FC26 cover"],
+  title: "EA Sports FC 26",
+  Lenguaje: "Español",
+  platforms: "PS4, PS5",
+  price: "18$",
+  stock: "si",
+  nuevo: "si",
+  Oculto: "no",
+  type: "game",
+  PlystationPlus: "si",
+  discount: "",
+  discountDate: "",
+  ListadaDlcPs4: "",
+  ListadaDlcPs5: "",
+  JuegosdeRegaloPs4List: "",
+  JuegosdeRegaloPs5List: "",
+  JuegosdeRegaloPs4: "",
+  JuegosdeRegaloPs5: "",
+  genre: "Deportes, Simulación",
+  pegiRating: "PEGI 3",
+  developer: "EA Vancouver, EA Romania",
+  publisher: "Electronic Arts",
+  descripcionContenido: "EA SPORTS FC 26 promete una experiencia de fútbol más inmersiva y realista. Esta entrega introduce innovaciones significativas en la jugabilidad, como una revisión completa de la mecánica de regate, una inteligencia artificial mejorada para el posicionamiento de los jugadores y animaciones de portero más realistas. El juego incluye más de 20,000 jugadores con licencia, más de 750 clubes y selecciones nacionales, y más de 35 ligas, con derechos exclusivos de competiciones de la UEFA y la CONMEBOL.",
+  releaseDate: "26 de septiembre de 2025",
+  editions: {
+    Ocultar: "no",
+    PlayStation: {},
+    PS4: {
+      Ocultar: "si"
+    },
+    PS5: {
+      Ocultar: "si"
+    }
+  },
+  licensePrices: {
+    PlayStation: {},
+    PS3: {},
+    PS4: {
+      Principal: {
+        price: 38,
+        description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      },
+      Secundaria: {
+        price: 25,
+        description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      }
+    },
+    PS5: {
+      Principal: {
+        price: 44,
+        description: "Licencia principal es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      },
+      Secundaria: {
+        price: 25,
+        description: "Licencia Secundaria es... <a href=\"/PreguntasFrecuentes\" style=\"text-decoration: underline; font-weight: bold; font-size: 1.1em; color:#FFFF00;\">VER MÁS DETALLES.</a>",
+        discount: "no"
+      }
+    }
+  },
+  fotos: [
+    ImageData["FC26 1"],
+    ImageData["FC26 2"],
+    ImageData["FC26 3"],
+    ImageData["FC26 4"],
+    ImageData["FC26 5"]
+  ],
+  portadaUrl: ImageData["FC26 Portada"]
+},
  
 ];
 

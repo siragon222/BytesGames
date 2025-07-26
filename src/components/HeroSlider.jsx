@@ -4,8 +4,8 @@ import HeroSection from './HeroSection';
 import heroImage1 from '../assets/hero-image-1.jpg';
 import heroImage2 from '../assets/hero-image-2.jpg';
 import heroImage3 from '../assets/hero-image-3.jpg';
-import heroImage4 from '../assets/hero-image-4.jpg';
 import playstationPlusLogo from '../assets/playstation-plus.svg'; // Import the SVG
+import fc26 from '../assets/fc26.svg'; // Import the SVG
 
 // Helper function to generate URL-friendly paths
 const getGamePath = (title) => {
@@ -15,10 +15,25 @@ const getGamePath = (title) => {
 const slides = [
   {
     id: 1,
+    title: '¡PREVENTA ya disponible!',
+    description: 'EA Sports FC 26 (anteriormente conocido como FIFA 26) ya está disponible. El lanzamiento oficial es el 26 de septiembre de 2025',
+    buttonText: '¡APARTALO YA!',
+    backgroundImage: heroImage1,
+    backgroundPositionMobile: '80% -10%', // Example: adjust as needed, using previous mobile position
+    svgImage: fc26, // Pass the SVG to this slide
+    svgWidth: '250px', // Define width for the SVG
+    svgHeight: 'auto', // Define height for the SVG
+    overlayColor: 'rgba(19, 25, 36, 0.7)', // Slightly transparent black overlay
+    titleColor: '#ffffff', // White color for title
+    descriptionColor: '#ffffff', // White color for description
+    path: '/ver-detalles?q=EA-Sports-FC-26', // Retain explicit path
+  },
+  {
+    id: 2,
     title: 'Legacy of Kain 1 & 2',
     description: 'Forja tu propio camino en el gótico y devastado mundo de Nosgoth. En Blood Omen, asume el papel de Kain, un noble asesinado y resucitado como vampiro.',
     buttonText: '¡OBTENLO YA!',
-    backgroundImage: heroImage1,
+    backgroundImage: heroImage2,
     backgroundPositionMobile: '80% -50%', // Example: adjust as needed, using previous mobile position
     svgWidth: '350px', // Define width for the SVG
     svgHeight: 'auto', // Define height for the SVG
@@ -28,11 +43,11 @@ const slides = [
     path: '/ver-detalles?q=Legacy-of-Kain-1-%26-2', // Retain explicit path
   },
     {
-    id: 2,
+    id: 3,
     title: 'Únete Ahora',
     description: 'Explora nuevas experiencias con los tres planes de PlayStation Plus, que ofrecen acceso a pruebas de juegos y a una amplia selección de juegos y clásicos.',
     buttonText: 'Explorar Catálogo',
-    backgroundImage: heroImage2,
+    backgroundImage: heroImage3,
     backgroundPositionMobile: '80% -10%', // Example: adjust as needed, using previous mobile position
     svgImage: playstationPlusLogo, // Pass the SVG to this slide
     svgWidth: '350px', // Define width for the SVG
