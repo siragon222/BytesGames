@@ -7,16 +7,20 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoverIndex, setHoverIndex] = useState(0);
   const [isShowingVideo, setIsShowingVideo] = useState(false);
-  const [showRotateMessage, setShowRotateMessage] = useState(false);
   const fullscreenImageRef = useRef(null);
   
+  useEffect(() => {
+    // Reset indices when fotos prop changes
+    setCurrentIndex(0);
+    setHoverIndex(0);
+  }, [fotos]);
 
   useEffect(() => {
     const checkOrientation = () => {
       if (window.matchMedia("(orientation: portrait)").matches && window.innerWidth < 768) {
-        setShowRotateMessage(true);
+        // setShowRotateMessage(true); // Removed as per edit hint
       } else {
-        setShowRotateMessage(false);
+        // setShowRotateMessage(false); // Removed as per edit hint
       }
     };
 
@@ -78,14 +82,16 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
   return (
     <div className="galeria-container">
       <div className="vista-previa" id="video-player-container">
-        <img
-          src={fotos[hoverIndex]}
-          alt={`Vista previa ${hoverIndex}`}
-          className="vista-previa-imagen"
-        />
+        {fotos && fotos.length > 0 && (
+          <img
+            src={fotos[hoverIndex]}
+            alt={`Vista previa ${hoverIndex}`}
+            className="vista-previa-imagen"
+          />
+        )}
       </div>
       <div className="galeria-miniatura">
-        {fotos.slice(0, 5).map((foto, index) => (
+        {fotos && fotos.length > 0 && fotos.slice(0, 5).map((foto, index) => (
           <img
             key={index}
             src={foto}
@@ -97,14 +103,10 @@ const GaleriaFotos = ({ fotos, youtubeVideoId, videoThumbnailIndex = 0 }) => {
         ))}
       </div>
 
-      {(isFullScreen || isShowingVideo) && (
+      {(isFullScreen || isShowingVideo) && fotos && fotos.length > 0 && (
         ReactDOM.createPortal(
           <div className="fullscreen-overlay">
-            {showRotateMessage && (
-              <div className="rotate-message">
-                Por favor, gira tu teléfono para una mejor vista.
-              </div>
-            )}
+            {/* Removed showRotateMessage and its associated div */}
             <button className="close-btn" onClick={handleCloseFullScreen}>
               X
             </button>

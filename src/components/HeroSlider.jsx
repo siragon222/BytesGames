@@ -55,7 +55,7 @@ const slides = [
     overlayColor: 'rgba(197, 196, 204, 0.7)', // Slightly transparent black overlay
     titleColor: '#000000', // Black color for title
     descriptionColor: '#333333', // Dark grey for description
-    path: '/playstation-plus', // Retain explicit path
+    path: '/mantenimiento', // Retain explicit path
   },
   
 ];

@@ -20,9 +20,19 @@ const VerDetallesComponente = () => {
   const [selectedConsole, setSelectedConsole] = useState(null);
   const [selectedGiftGameForDisplay, setSelectedGiftGameForDisplay] = useState(null); // New state to hold the selected gift game for display
   const giftCardRef = React.useRef(null); // Create a ref for the gift card
+  const [isLoading, setIsLoading] = useState(false); // New loading state
+  const [currentFotos, setCurrentFotos] = useState([]); // New state for photos
+  const [currentPortadaUrl, setCurrentPortadaUrl] = useState(''); // New state for portadaUrl
+  const [gameKey, setGameKey] = useState(0); // New state for component key
 
   React.useEffect(() => {
     if (gameName) {
+      setIsLoading(true); // Set loading to true when gameName changes
+      setSelectedGame(null); // Clear selectedGame immediately
+      setCurrentFotos([]); // Clear photos
+      setCurrentPortadaUrl(''); // Clear portadaUrl
+      setGameKey(prevKey => prevKey + 1); // Update key to force remount
+
       const decodedGameName = decodeURIComponent(gameName);
       const normalizedDecodedGameName = decodedGameName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '-');
 
@@ -31,10 +41,27 @@ const VerDetallesComponente = () => {
 
       if (game) {
         setSelectedGame(game);
+        setCurrentFotos(game.fotos || [
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-1.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-2.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-3.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-4.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-5.jpg?v=1737545938',
+        ]);
+        setCurrentPortadaUrl(game.portadaUrl || 'https://gaming-cdn.com/img/products/7173/pcover/1920x620/7173.jpg?v=1701338240');
       } else if (dlc) {
         setSelectedGame(dlc);
+        setCurrentFotos(dlc.fotos || [
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-1.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-2.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-3.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-4.jpg?v=1737545938',
+          'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-5.jpg?v=1737545938',
+        ]);
+        setCurrentPortadaUrl(dlc.portadaUrl || 'https://gaming-cdn.com/img/products/7173/pcover/1920x620/7173.jpg?v=1701338240');
       }
       setSelectedGiftGameForDisplay(null); // Reset selected gift game when gameName changes
+      setIsLoading(false); // Set loading to false after game is selected
     }
   }, [gameName, setSelectedGame]);
 
@@ -112,29 +139,18 @@ const VerDetallesComponente = () => {
   const handleCardClick = (title) => {
     const formattedTitle = title.replace(/\s+/g, '-');
     navigate(`/detalles?q=${formattedTitle}`);
-    window.location.reload();
   };
 
-  if (!selectedGame) {
-    return <div>No se ha seleccionado ningún juego.</div>;
+  if (!selectedGame || isLoading) {
+    return <div>Cargando...</div>; // Display loading message or spinner
   }
-
-  const fotos = selectedGame.fotos || [
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-1.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-2.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-3.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-4.jpg?v=1737545938',
-    'https://gaming-cdn.com/images/products/7152/screenshot/crash-bandicoot-4-it-s-about-time-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-wallpaper-5.jpg?v=1737545938',
-  ];
-
-  const portadaUrl = selectedGame.portadaUrl || 'https://gaming-cdn.com/img/products/7173/pcover/1920x620/7173.jpg?v=1701338240';
 
   return (
     <div className="contenedor-principal">
-      <PortadaComponente imagenUrl={portadaUrl} />
+      <PortadaComponente key={gameKey} imagenUrl={currentPortadaUrl} />
       <div className="contenedor-sobrepuesto">
         <div className="contenedor-izquierda">
-          <GaleriaFotos fotos={fotos} />
+          <GaleriaFotos key={gameKey} fotos={currentFotos} />
           <DescripcionComponente descripcion={selectedGame.descripcionContenido} />
           
           {selectedGiftGameForDisplay && (

@@ -46,24 +46,50 @@ const Header2 = () => {
   return (
     <header className="header2">
       <div className="header2-container">
-        <div className="logo-container">
-          <Link to="/">
-            <img src={isMobile ? LogoMobil : Logo} alt="Logo" className={isMobile ? "logo-mobil" : ""} />
-          </Link>
-        </div>
-        <nav ref={menuRef}>
-          <div className={`mobile-menu-icon ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
+        {isMobile ? (
+          <nav ref={menuRef}>
+            <div className={`mobile-menu-icon ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+              <li>
+                <Link to="/ResultSearch" onClick={closeMenu}>Juegos</Link>
+              </li>
+              <li><Link to="/preguntasfrecuentes" onClick={closeMenu}>Ayuda</Link></li>
+            </ul>
+          </nav>
+        ) : (
+          <div className="logo-container">
+            <Link to="/">
+              <img src={Logo} alt="Logo" className={isMobile ? "logo-mobil" : ""} />
+            </Link>
           </div>
-          <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <li>
-              <Link to="/ResultSearch" onClick={closeMenu}>Juegos</Link>
-            </li>
-            <li><Link to="/preguntasfrecuentes" onClick={closeMenu}>Ayuda</Link></li>
-          </ul>
-        </nav>
+        )}
+
+        {isMobile ? (
+          <div className="logo-container">
+            <Link to="/">
+              <img src={Logo} alt="Logo" className={isMobile ? "logo-mobil" : ""} />
+            </Link>
+          </div>
+        ) : (
+          <nav ref={menuRef}>
+            <div className={`mobile-menu-icon ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+              <li>
+                <Link to="/ResultSearch" onClick={closeMenu}>Juegos</Link>
+              </li>
+              <li><Link to="/preguntasfrecuentes" onClick={closeMenu}>Ayuda</Link></li>
+            </ul>
+          </nav>
+        )}
+
         <div className="header-actions">
           <SearchBar />
           <Divisas />

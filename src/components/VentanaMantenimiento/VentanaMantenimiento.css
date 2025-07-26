@@ -1,0 +1,60 @@
+.maintenance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  background-image: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.8), /* Darker black at the top */
+    rgba(0, 0, 0, 0.4)  /* Lighter black towards the bottom */
+  );
+}
+
+.maintenance-content {
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+  max-width: 800px;
+  width: 100%;
+  color: #000; /* Text color changed to black */
+  background-color: #ffffff; /* Background changed to white */
+  background-image: none; /* Remove previous gradient */
+  border: 1px solid #cccccc; /* Lighter border for white background */
+}
+
+.maintenance-logo {
+  width: 350px; /* Increased size further */
+  margin-bottom: 20px;
+  filter: none; /* Revert logo color */
+}
+
+.maintenance-content h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  color: #333333; /* Darker grey for title */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.maintenance-content p {
+  font-size: clamp(18px, 4vw, 20px);
+  color: #666666; /* Darker grey for paragraphs */
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .maintenance-content {
+    padding: 30px;
+  }
+
+  .maintenance-content h1 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .maintenance-content p {
+    font-size: clamp(16px, 4.5vw, 18px);
+  }
+} 

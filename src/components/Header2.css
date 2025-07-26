@@ -121,7 +121,7 @@
 /* Mobile Styles */
 @media (max-width: 1200px) {
   .logo-container img.logo-mobil {
-    height: 30px;
+    height: 15px;
     width: auto;
   }
 
@@ -176,20 +176,15 @@
   }
 
   .mobile-menu-icon.active span:nth-child(1) {
-    transform: translateY(8.25px) rotate(45deg);
-    width: 100%;
-    margin-top: 0;
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
   .mobile-menu-icon.active span:nth-child(2) {
     opacity: 0;
-    transform: translateX(-60px);
   }
 
   .mobile-menu-icon.active span:nth-child(3) {
-    transform: translateY(-8.25px) rotate(-45deg);
-    width: 100%;
-    margin-bottom: 0;
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .header-actions {

@@ -14,6 +14,7 @@ import PreguntasFrecuentes from './components/PreguntasFrecuentes/PreguntasFrecu
 import ScrollToTop from './components/ScrollToTop';
 import Separator from './components/Separator';
 import MembresiasPlaystationPlus from './components/MembresiasPlaystationPlus';
+import VentanaMantenimiento from './components/VentanaMantenimiento/VentanaMantenimiento';
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
               {/* Nueva ruta para VerDetallesDLC */}
               <Route path="/VerDetallesDLC" element={<VerDetallesDLC />} />
               <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
-              <Route path="/playstation-plus" element={<MembresiasPlaystationPlus />} />
+              <Route path="/playstation-plus" element={<MembresiasPlaystationPlus />} /> 
+              <Route path="/mantenimiento" element={<VentanaMantenimiento />} />
             </Routes>
             <Footer />
           </main>
