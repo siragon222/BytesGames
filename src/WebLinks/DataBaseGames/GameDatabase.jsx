@@ -7,7 +7,7 @@ export const games = [
   {
     id: 1,
     image: ImageData["Assassin's Creed Valhalla cover"],
-    title: "Assassin's Creed Valhalla",
+    title: "Assassin's Creed Valhalla (Inglés)",
     Lenguaje: "Ingles",
     platforms: "PS4, PS5",
     price: "$16",
