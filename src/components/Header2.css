@@ -121,7 +121,7 @@
 /* Mobile Styles */
 @media (max-width: 1200px) {
   .logo-container img.logo-mobil {
-    height: 15px;
+    height: 10px;
     width: auto;
   }
 
