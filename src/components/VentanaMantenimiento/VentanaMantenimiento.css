@@ -27,7 +27,7 @@
 }
 
 .maintenance-logo {
-  width: 290px; /* Increased size further */
+  width: 250px; /* Increased size further */
   margin-bottom: 20px;
   filter: none; /* Revert logo color */
 }
