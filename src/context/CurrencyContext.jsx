@@ -19,7 +19,7 @@ export const CurrencyProvider = ({ children }) => {
     switch (currency.code) {
       case 'BS':
         symbol = 'Bs ';
-        factor = 155; // Placeholder: You need to set your actual conversion factor for BS
+        factor = 195; // Placeholder: You need to set your actual conversion factor for BS
         break;
       case 'COP':
         symbol = 'COP ';
